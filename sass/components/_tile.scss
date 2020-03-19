@@ -1,0 +1,80 @@
+$tile-width: 140px;
+$tile-height: 124px;
+
+.tile {
+    @include appearance-reset();
+    @include disabled();
+    flex: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    padding: 1.5rem;
+    min-height: 140px;
+    width: $tile-width;
+    position: relative;
+    color: $color-ui-base;
+    background-color: $color-sand;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 $grid-gutter-sm $grid-gutter-sm 0;
+
+    .icon,
+    .tile__label {
+        position: relative;
+    }
+
+    .icon {
+        width: 100%;
+        height: $icon-size-lg;
+    }
+
+    .tile__label {
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+    }
+
+    &::before {
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        background-color: $color-sand-dark;
+
+        &::before {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        @include focus-shadow();
+    }
+
+    &:active {
+        transform: scale(0.97) translate3d(0, 0, 0);
+    }
+
+    &[aria-selected="true"],
+    &[aria-checked="true"] {
+        &::before {
+            transform: scaleY(1);
+        }
+
+        &:focus {
+            @include focus-shadow($color-primary-darkest);
+        }
+    }
+}
+
+.tile-group {
+    display: flex;
+    flex-wrap: wrap;
+}

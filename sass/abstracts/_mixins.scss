@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains global component-independent mixins.
+// -----------------------------------------------------------------------------
+
+@mixin focus-shadow($shadow-color: $color-slate, $other-shadow: none) {
+    @if ($other-shadow == none) {
+        box-shadow: 0 0 0 $box-shadow-focus-width rgba($shadow-color, 0.2);
+    } @else {
+        box-shadow: 0 0 0 $box-shadow-focus-width rgba($shadow-color, 0.2),
+            $other-shadow;
+    }
+}
+
+@mixin disabled() {
+    &[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+}
+
+@mixin appearance-reset() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

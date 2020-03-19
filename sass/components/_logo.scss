@@ -1,0 +1,61 @@
+.logo {
+    svg {
+        width: 9rem;
+        height: 3rem;
+
+        .letter {
+            fill: $color-slate;
+        }
+        .logo-path {
+            fill: none;
+            stroke-width: 10;
+            stroke-miterlimit: 10;
+            stroke-linecap: square;
+            stroke: $color-primary;
+            clip-path: url("#logo-mask");
+        }
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+
+        svg {
+            .letter {
+                fill: $color-slate;
+            }
+            .logo-path {
+                animation-duration: 2.5s;
+                animation-name: logo-path-fill;
+                stroke-dasharray: $logo-path-length;
+                animation-timing-function: $ease-in-out-quad;
+            }
+        }
+    }
+
+    &:active {
+        opacity: 0.75;
+    }
+
+    &.logo--white {
+        svg {
+            .letter {
+                fill: $color-white;
+            }
+            .logo-path {
+                stroke: $color-white;
+            }
+        }
+    }
+
+    &.logo--black {
+        svg {
+            .letter {
+                fill: $color-slate;
+            }
+            .logo-path {
+                stroke: $color-slate;
+            }
+        }
+    }
+}

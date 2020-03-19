@@ -1,0 +1,52 @@
+$switch-height: 2rem;
+$switch-width: 4.5rem;
+
+$switch-handle-width: 1.6rem;
+$switch-handle-offset: 0.2rem;
+
+.switch {
+    height: $switch-height;
+
+    .switch-paddle {
+        width: $switch-width;
+        height: $switch-height;
+        border-radius: $switch-height * 0.5;
+        background-color: $color-slate-alpha-15;
+
+        &::after {
+            top: $switch-handle-offset;
+            left: $switch-handle-offset;
+            width: $switch-handle-width;
+            height: $switch-handle-width;
+            border-radius: 50%;
+            background: $color-white;
+            box-shadow: 0 2px 4px -1px rgba($color-black, 0.25);
+        }
+
+        &::before {
+            content: "";
+            z-index: 1;
+            opacity: 0;
+            position: absolute;
+            transform: scale(1);
+            top: $switch-handle-offset;
+            right: $switch-handle-offset;
+            width: $switch-handle-width;
+            height: $switch-handle-width;
+            background: url("/img/icons/primary/check-small.svg") no-repeat
+                center/cover;
+        }
+    }
+
+    input:checked ~ .switch-paddle {
+        background-color: $color-primary-dark;
+
+        &::before {
+            transform: scale(1.4);
+            opacity: 0.75;
+        }
+        &::after {
+            left: $switch-width - $switch-handle-width - $switch-handle-offset;
+        }
+    }
+}

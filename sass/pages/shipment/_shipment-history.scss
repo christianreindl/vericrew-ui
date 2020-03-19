@@ -1,0 +1,142 @@
+$shipment-history-status-size: 1.4rem;
+
+.shipment-history {
+    padding: 3rem $shipment-panel-padding-h 0;
+
+    .shipment-history__items {
+        margin-top: 3rem;
+    }
+
+    .shipment-history__item {
+        display: flex;
+        padding: 0 0 3rem;
+        position: relative;
+        align-items: flex-start;
+
+        &:last-child .shipment-history__item__status__dot {
+            transform: scale(1.5);
+
+            &::before {
+                display: block;
+            }
+        }
+
+        &:last-child .shipment-history__item__status::before {
+            display: none;
+        }
+
+        &.alert .shipment-history__item__status__dot {
+            background-color: $color-alert;
+        }
+
+        &.en-route {
+            padding-bottom: 12rem;
+
+            .shipment-history__item__status {
+                &::before {
+                    background: $color-slate;
+                }
+                &::after {
+                    content: "";
+                    left: $shipment-history-status-size * 0.5;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    background-image: url("/img/icons/black/trailer-box-small.svg");
+                    background-size: 2.4rem;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-color: $color-white;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    .shipment-history__item__status {
+        flex: none;
+        margin-top: 0.4rem;
+        margin-right: 1.5rem;
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 0.2rem;
+            position: absolute;
+            transform: translateX(-50%);
+            top: $shipment-history-status-size * 0.5;
+            left: $shipment-history-status-size * 0.5;
+
+            background-image: linear-gradient(
+                $color-slate 33%,
+                rgba($color-white, 0) 0%
+            );
+            background-position: right;
+            background-size: 0.2rem 0.6rem;
+            background-repeat: repeat-y;
+        }
+    }
+
+    .shipment-history__item__status__dot {
+        display: flex;
+        border-radius: 50%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-slate;
+        box-shadow: 0 0 0 8px $color-white;
+        width: $shipment-history-status-size;
+        height: $shipment-history-status-size;
+
+        &::before {
+            content: "";
+            width: 30%;
+            height: 30%;
+            display: none;
+            border-radius: 50%;
+            background-color: $color-white;
+        }
+    }
+
+    .shipment-history__item__content {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: flex-start;
+
+        @include breakpoint(medium down) {
+            flex-wrap: wrap;
+        }
+
+        .shipment-history__item__description {
+            flex: 1 1 auto;
+            padding-top: 0.2rem;
+            padding-right: 2rem;
+
+            @include breakpoint(medium down) {
+                flex: 1 1 100%;
+            }
+
+            .paragraph:first-child {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .shipment-history__item__date {
+            flex: none;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(medium down) {
+                margin: 1em 0;
+                flex: 1 1 100%;
+            }
+
+            img {
+                flex: none;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}

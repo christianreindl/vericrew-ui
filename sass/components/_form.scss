@@ -1,0 +1,61 @@
+$form-group-margin: 3rem;
+$form-group-label-margin: 1rem;
+
+.form-group {
+    position: relative;
+    margin-top: $form-group-margin;
+
+    .label {
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    &:hover,
+    &:focus-within {
+        z-index: 1;
+
+        .form-message-wrapper {
+            pointer-events: auto;
+        }
+        .form-message {
+            opacity: 1;
+        }
+    }
+}
+
+.control-group {
+    .control {
+        &:not(:last-child) {
+            margin-bottom: $control-margin-bottom;
+        }
+    }
+
+    .label {
+        margin-bottom: 2rem;
+    }
+}
+
+.input-group {
+    display: flex;
+
+    > .input,
+    > .input-wrapper {
+        flex: 1;
+    }
+
+    .input:not(:first-child),
+    .input-wrapper:not(:first-child) .input {
+        border-left: none;
+    }
+}
+
+.fieldset {
+    margin-bottom: 8rem;
+
+    .fieldset__header {
+        margin-bottom: 3rem;
+    }
+
+    .fieldset__description {
+        margin-top: 2rem;
+    }
+}

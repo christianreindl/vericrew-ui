@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+// Text Color
+.text-alpha--50 {
+    color: $color-slate-alpha-50 !important;
+}
+
+// Text weight
+.text--demi {
+    font-weight: $font-weight-demi;
+}
+
+@mixin spacing-generator($side, $count: 15) {
+    @for $i from 1 to $count {
+        .margin-#{$side}--#{$i * 10} {
+            margin-#{$side}: $i * 1rem !important;
+        }
+        .padding-#{$side}--#{$i * 10} {
+            padding-#{$side}: $i * 1rem !important;
+        }
+    }
+}
+
+@include spacing-generator(top);
+@include spacing-generator(bottom);
+@include spacing-generator(left);
+@include spacing-generator(right);

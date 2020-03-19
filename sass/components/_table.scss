@@ -1,0 +1,93 @@
+$table-font-size-base: 1.3rem;
+$table-font-size-small: 1.2rem;
+$table-line-height-base: 1.8rem;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $table-font-size-base;
+    line-height: $table-line-height-base;
+    border: 1px solid $color-slate-alpha-15;
+
+    thead,
+    tbody {
+        background-color: $white;
+    }
+
+    th,
+    td {
+        height: 6rem;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    thead {
+        border-bottom: 1px solid $color-slate-alpha-10;
+    }
+
+    th {
+        font-weight: $font-weight-bold;
+        padding: 0.5rem;
+    }
+
+    td {
+        padding: 1.8rem 1.5rem 1.4rem;
+
+        &:first-child {
+            padding-left: 2rem;
+        }
+
+        &:last-child {
+            padding-right: 2rem;
+        }
+    }
+
+    tbody tr {
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color-slate, 0.05);
+        }
+
+        &:active {
+            background-color: rgba($color-slate, 0.1);
+        }
+    }
+
+    .cell--align-right {
+        text-align: right;
+    }
+
+    .cell__text--secondary {
+        font-size: $table-font-size-small;
+        color: $color-slate-alpha-50;
+    }
+
+    .cell__text--bold {
+        font-weight: $font-weight-bold;
+    }
+
+    .table__sort {
+        @include button-base();
+        @include button--transparent();
+        @include heading-small-base();
+        height: 5rem;
+        text-align: left;
+        align-items: center;
+        display: inline-flex;
+        padding: 0.5rem 1.5rem 0;
+        font-size: $table-font-size-small;
+
+        .icon {
+            flex: none;
+            opacity: 0.4;
+            margin-top: -0.5rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .table__sort--active .icon {
+        opacity: 1;
+    }
+}

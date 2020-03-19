@@ -1,0 +1,105 @@
+.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+
+    .menu-item {
+        display: block;
+        line-height: 2rem;
+        text-decoration: none;
+        color: $color-ui-base;
+        font-size: $font-size-base;
+        padding: 1.1rem 1.5rem 0.9rem;
+
+        &:hover,
+        &:focus {
+            background-color: $color-sand;
+        }
+        &:focus {
+            @include focus-shadow();
+            outline: none;
+        }
+        &:active {
+            background-color: $color-sand-dark;
+        }
+
+        .icon {
+            margin-right: 1rem;
+        }
+    }
+
+    .menu-item--alert {
+        color: $color-alert;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color-alert, 0.08);
+        }
+        &:focus {
+            @include focus-shadow($color-alert);
+        }
+        &:active {
+            background-color: rgba($color-alert, 0.15);
+        }
+    }
+
+    .menu-item--large {
+        @include heading-small-base();
+        line-height: 2rem;
+        font-size: $font-size-h6;
+        padding: 1.7rem 2rem 1.3rem;
+    }
+
+    .menu-item--divider {
+        height: 0.1rem;
+        margin: 0.5rem 0;
+        background-color: $color-slate-alpha-10;
+    }
+
+    &.menu--vertical {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    &.menu--sidenav {
+        position: sticky;
+        top: 13rem;
+
+        li a {
+            position: relative;
+
+            &::before {
+                top: 0;
+                left: 0;
+                z-index: -1;
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transform: scaleX(0);
+                background-color: $color-slate;
+                transform-origin: left center;
+            }
+
+            &.active {
+                color: $white;
+
+                &::before {
+                    transform: scaleX(1);
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+
+                    &::before {
+                        background-color: $color-slate-lighter;
+                    }
+                }
+            }
+        }
+    }
+}

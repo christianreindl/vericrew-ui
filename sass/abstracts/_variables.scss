@@ -1,0 +1,107 @@
+/* Colors */
+$color-primary: #ffc651;
+$color-primary-dark: #f4b244;
+$color-primary-darker: #f0a72b;
+$color-primary-darkest: darken($color-primary-darker, 10%);
+
+$color-accent: #305899;
+$color-accent-dark: darken($color-accent, 10%);
+$color-accent-darker: darken($color-accent, 20%);
+
+$color-slate: #111118;
+$color-slate-light: #1b1b21;
+$color-slate-lighter: #24232b;
+$color-slate-alpha-50: rgba($color-slate, 0.5);
+$color-slate-alpha-25: rgba($color-slate, 0.25);
+$color-slate-alpha-20: rgba($color-slate, 0.2);
+$color-slate-alpha-15: rgba($color-slate, 0.15);
+$color-slate-alpha-10: rgba($color-slate, 0.1);
+$color-slate-alpha-05: rgba($color-slate, 0.05);
+
+$color-sand: #f5f1f0;
+$color-sand-light: #fcfafa;
+$color-sand-dark: darken($color-sand, 3%);
+$color-sand-darker: darken($color-sand, 6%);
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-alert: #ff5642;
+$color-alert-dark: darken($color-alert, 10%);
+$color-alert-darker: darken($color-alert, 20%);
+
+/* UI Colors */
+$color-ui-background: $color-sand-light;
+$color-ui-base: $color-slate;
+$color-ui-border: $color-slate-alpha-20;
+
+/* Font */
+$font-family-sans-serif: "URW Din", sans-serif;
+$font-family-icon: "Fletex Icons";
+
+/* Font Size */
+$font-size-h1: 6rem;
+$font-size-h2: 4.8rem;
+$font-size-h3: 3.6rem;
+$font-size-h4: 2.2rem;
+$font-size-h5: 1.8rem;
+$font-size-h6: 1.3rem;
+
+$font-size-paragraph: 1.5rem;
+$font-size-paragraph--smallall: 1.2rem;
+$font-size-paragraph-large: 1.8rem;
+$font-size-paragraph--xlargearge: 2.2rem;
+
+$font-size-ui-button: 1.4rem;
+$font-size-ui-stat: 5rem;
+$font-size-ui-nav: 1.2rem;
+$font-size-ui-badge: 1.1rem;
+$font-size-ui-breadcrumbs: 1.3rem;
+
+$font-size-base: $font-size-paragraph;
+
+/* Line height */
+$line-height-heading-large: 1;
+$line-height-heading-small: 1.2;
+$line-height-base: 1.4;
+$line-height-ui-button: 2rem;
+$line-height-ui-input: 2rem;
+$line-height-ui-stat: 1;
+
+/* Font weight */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+
+/* Letter spacing */
+$letter-spacing-heading-large: 0.05em;
+$letter-spacing-heading-small: 0.1em;
+$letter-spacing-ui-button: 0.175em;
+$letter-spacing-ui-stat: -0.05em;
+
+/* Box shadow */
+$box-shadow-elevation-1: 0 2px 3px 0 rgba($color-black, 0.1),
+    0 10px 15px -5px rgba($color-black, 0.08);
+$box-shadow-elevation-2: 0 10px 15px -5px rgba($color-black, 0.3),
+    0 30px 60px -10px rgba($color-black, 0.15);
+$box-shadow-focus-width: 4px;
+
+/* Component Sizing */
+$navbar-height: 50px;
+
+/* Icons */
+$icon-size-sm: 1.6rem;
+$icon-size-md: 2rem;
+$icon-size-lg: 2.4rem;
+$avatar-size: 3rem;
+$avatar-size-lg: 4rem;
+
+/* Grid */
+$grid-gutter-sm: 1rem;
+
+/* Logo */
+$logo-path-length: 380;
+
+/* z-indices */
+$zindex-navbar: 100;

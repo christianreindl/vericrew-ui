@@ -1,0 +1,96 @@
+$shipment-color--pending-icon: $color-slate;
+$shipment-color--pending-header-base: $color-slate-light;
+$shipment-color--pending-header-alt: $color-slate;
+$shipment-color--pending-header-text: $color-white;
+
+$shipment-color--published-icon: $color-slate;
+$shipment-color--published-header-base: $color-primary;
+$shipment-color--published-header-alt: $color-primary-dark;
+$shipment-color--published-header-text: $color-slate;
+
+$shipment-color--en-route-icon: $color-accent;
+$shipment-color--en-route-header-base: $color-accent;
+$shipment-color--en-route-header-alt: $color-accent-dark;
+$shipment-color--en-route-header-text: $color-white;
+
+$shipment-color--finished-icon: $color-slate;
+$shipment-color--finished-header-base: $color-slate-light;
+$shipment-color--finished-header-alt: $color-slate;
+$shipment-color--finished-header-text: $color-white;
+
+$shipment-color--cancelled-icon: $color-slate;
+$shipment-color--cancelled-header-base: $color-alert;
+$shipment-color--cancelled-header-alt: $color-alert-dark;
+$shipment-color--cancelled-header-text: $color-white;
+
+@mixin shipment-theme(
+    $color-icon,
+    $color-header-base,
+    $color-header-alt,
+    $color-header-text
+) {
+    .shipment-route__origin .shipment__icon {
+        color: $color-white;
+        background-color: $color-icon;
+    }
+
+    .shipment-route__destination .shipment__icon {
+        color: $color-icon;
+        background-color: rgba($color-icon, 0.05);
+    }
+
+    .shipment-summary__head {
+        background-color: $color-header-base;
+        color: $color-header-text;
+
+        .shipment-summary__status {
+            background-color: $color-header-alt;
+        }
+    }
+}
+
+.shipment,
+.shipment--pending {
+    @include shipment-theme(
+        $shipment-color--pending-icon,
+        $shipment-color--pending-header-base,
+        $shipment-color--pending-header-alt,
+        $shipment-color--pending-header-text
+    );
+}
+
+.shipment--published {
+    @include shipment-theme(
+        $shipment-color--published-icon,
+        $shipment-color--published-header-base,
+        $shipment-color--published-header-alt,
+        $shipment-color--published-header-text
+    );
+}
+
+.shipment--en-route {
+    @include shipment-theme(
+        $shipment-color--en-route-icon,
+        $shipment-color--en-route-header-base,
+        $shipment-color--en-route-header-alt,
+        $shipment-color--en-route-header-text
+    );
+}
+
+.shipment--finished {
+    @include shipment-theme(
+        $shipment-color--finished-icon,
+        $shipment-color--finished-header-base,
+        $shipment-color--finished-header-alt,
+        $shipment-color--finished-header-text
+    );
+}
+
+.shipment--cancelled {
+    @include shipment-theme(
+        $shipment-color--cancelled-icon,
+        $shipment-color--cancelled-header-base,
+        $shipment-color--cancelled-header-alt,
+        $shipment-color--cancelled-header-text
+    );
+}

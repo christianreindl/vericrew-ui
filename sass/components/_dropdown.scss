@@ -1,0 +1,41 @@
+@mixin overlay-panel() {
+    padding: 0;
+    width: auto;
+    min-width: 20rem;
+    background: $white;
+    border: 1px solid $color-slate-alpha-15;
+    box-shadow: $box-shadow-elevation-1;
+
+    ul {
+        padding: 0.5rem 0;
+        li {
+            padding: 0 0.5rem;
+        }
+    }
+}
+
+.dropdown-pane {
+    @include overlay-panel();
+    display: none;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateY(-1rem);
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+
+    ul li {
+        transform: translateY(-0.5rem);
+    }
+
+    &.is-open {
+        opacity: 1;
+        display: block;
+        pointer-events: auto;
+        transform: translateY(0);
+
+        ul li {
+            transform: translateY(0);
+        }
+    }
+}

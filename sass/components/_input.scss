@@ -1,0 +1,70 @@
+.input {
+    @include disabled();
+    width: 100%;
+    display: block;
+    font-size: $font-size-base;
+    line-height: $line-height-ui-input;
+
+    background-color: $white;
+    -webkit-appearance: none;
+    padding: 1.6rem 1.9rem 1.2rem;
+    border: 1px solid $color-slate-alpha-25;
+
+    &:hover {
+        border-color: $color-slate;
+    }
+
+    &:focus {
+        @include focus-shadow($color-primary-darker);
+        outline: none;
+        border-color: $color-primary-darker;
+    }
+
+    &.input--small {
+        padding: 1.9rem 2.4rem;
+    }
+
+    &:invalid,
+    &[invalid],
+    &[aria-invalid="true"] {
+        border-color: $color-alert;
+        outline: 1px solid $color-alert;
+
+        &:hover,
+        &:focus {
+            border-color: $color-alert-darker;
+            outline: 1px solid $color-alert-darker;
+        }
+
+        &:focus {
+            @include focus-shadow($color-alert-darker);
+        }
+    }
+
+    &.input--fill,
+    &input:read-only {
+        border-color: transparent;
+        background-color: $color-sand;
+
+        &:hover {
+            border-color: transparent;
+            background-color: $color-sand-dark;
+        }
+
+        &:focus {
+            border-color: $color-primary-darker;
+            background-color: $white;
+        }
+    }
+
+    &.input-select {
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        background-position: right 1.5rem center;
+        background-image: url("/img/icons/black/angle-down.svg");
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.badge {
+    @include heading-small-base();
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $font-size-ui-badge;
+    line-height: $line-height-base;
+    padding: 0.4rem 0.6rem 0.2rem;
+
+    color: $color-slate;
+    background-color: rgba($color-slate, 0.08);
+
+    &.badge--primary {
+        color: $color-primary-darker;
+        background-color: rgba($color-primary-darker, 0.15);
+    }
+
+    &.badge--accent {
+        color: $color-accent;
+        background-color: rgba($color-accent, 0.1);
+    }
+
+    &.badge--alert {
+        color: $color-alert;
+        background-color: rgba($color-alert, 0.08);
+    }
+}

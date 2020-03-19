@@ -1,0 +1,30 @@
+.icon {
+    stroke: none;
+    fill: currentColor;
+    vertical-align: middle;
+    width: $icon-size-md;
+    display: inline-block;
+    height: $icon-size-md;
+
+    &.icon--large {
+        width: $icon-size-lg;
+        height: $icon-size-lg;
+    }
+
+    &.icon--small {
+        width: $icon-size-sm;
+        height: $icon-size-sm;
+    }
+
+    &.icon--truck {
+        width: $icon-size-md * 2;
+
+        &.icon--large {
+            width: $icon-size-lg * 2;
+        }
+
+        &.icon--small {
+            width: $icon-size-sm * 2;
+        }
+    }
+}

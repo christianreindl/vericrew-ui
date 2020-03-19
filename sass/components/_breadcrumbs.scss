@@ -1,0 +1,30 @@
+.breadcrumbs {
+    li {
+        text-transform: none;
+        color: $color-slate-alpha-50;
+        font-size: $font-size-ui-breadcrumbs;
+
+        &:not(:last-child)::after {
+            opacity: 1;
+            content: "—";
+            margin: 0 0.75rem;
+            position: relative;
+            color: $color-slate-alpha-25;
+        }
+    }
+
+    a {
+        @include link-underline();
+        color: $color-ui-base;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+    .disabled {
+        color: rgba($color-ui-base, 0.3);
+    }
+}

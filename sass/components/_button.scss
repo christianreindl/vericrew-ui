@@ -1,0 +1,216 @@
+$button-height-lg: 5rem;
+$button-height-sm: 4rem;
+
+$button-width-lg: 20rem;
+$button-width-xl: 30rem;
+
+@mixin button-base() {
+    @include disabled();
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    font-size: $font-size-ui-button;
+    line-height: $line-height-ui-button;
+    letter-spacing: $letter-spacing-ui-button;
+
+    min-width: $button-height-lg;
+    padding: 1.5rem 1.8rem 1.1rem;
+    border: 2px solid transparent;
+    background-color: transparent;
+
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin button--small() {
+    padding: 1rem 1.3rem 0.6rem;
+    min-width: $button-height-sm;
+
+    &.button--square {
+        padding: 0;
+        height: $button-height-sm;
+    }
+}
+
+@mixin button-outline($color, $color-hover, $background-color-active) {
+    color: $color;
+    border-color: rgba($color, 0.2);
+
+    &:hover,
+    &:focus {
+        color: $color-hover;
+        border-color: $color;
+        background-color: $color;
+        box-shadow: $box-shadow-elevation-1;
+    }
+    &:focus {
+        @include focus-shadow($color, $box-shadow-elevation-1);
+        outline: none;
+    }
+    &:active {
+        @include focus-shadow($color, $box-shadow-elevation-1);
+        color: $color-hover;
+        border-color: $background-color-active;
+        background-color: $background-color-active;
+    }
+}
+
+@mixin button--fill(
+    $color,
+    $background-color,
+    $background-color-hover,
+    $background-color-active
+) {
+    color: $color;
+    border-color: transparent;
+    background-color: $background-color;
+
+    &:hover,
+    &:focus {
+        color: $color;
+        border-color: transparent;
+        box-shadow: $box-shadow-elevation-1;
+        background-color: $background-color-hover;
+    }
+    &:focus {
+        @include focus-shadow($background-color, $box-shadow-elevation-1);
+        outline: none;
+    }
+    &:active {
+        @include focus-shadow($background-color, $box-shadow-elevation-1);
+        background-color: $background-color-active;
+        border-color: transparent;
+        color: $color;
+    }
+}
+
+@mixin button--transparent($color: $color-slate) {
+    color: $color;
+    border-color: transparent;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $color;
+        box-shadow: none;
+        border-color: transparent;
+        background-color: rgba($color, 0.08);
+    }
+    &:focus {
+        @include focus-shadow($color);
+        outline: none;
+    }
+    &:active {
+        @include focus-shadow($color);
+        color: $color;
+        border-color: transparent;
+        background-color: rgba($color, 0.18);
+    }
+}
+
+.button {
+    @include button-base();
+    @include button-outline($color-slate, $color-white, $color-slate-lighter);
+
+    &.button--primary {
+        @include button-outline(
+            $color-primary-darker,
+            $color-slate,
+            $color-primary-darkest
+        );
+    }
+    &.button--alert {
+        @include button-outline($color-alert, $color-white, $color-alert-dark);
+    }
+    &.button--accent {
+        @include button-outline(
+            $color-accent,
+            $color-white,
+            $color-accent-dark
+        );
+    }
+
+    &.button--fill {
+        @include button--fill(
+            $color-white,
+            $color-slate,
+            $color-slate-lighter,
+            $color-slate
+        );
+
+        &.button--primary {
+            @include button--fill(
+                $color-slate,
+                $color-primary,
+                $color-primary-darker,
+                $color-primary-darkest
+            );
+        }
+        &.button--alert {
+            @include button--fill(
+                $color-white,
+                $color-alert,
+                $color-alert-dark,
+                $color-alert-darker
+            );
+        }
+        &.button--accent {
+            @include button--fill(
+                $color-white,
+                $color-accent,
+                $color-accent-dark,
+                $color-accent-darker
+            );
+        }
+    }
+
+    &.button--transparent {
+        @include button--transparent();
+
+        &.button--primary {
+            @include button--transparent($color-primary-darker);
+        }
+        &.button--alert {
+            @include button--transparent($color-alert);
+        }
+        &.button--accent {
+            @include button--transparent($color-accent);
+        }
+    }
+
+    &.button--small {
+        @include button--small();
+    }
+
+    &.button--square {
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        height: $button-height-lg;
+
+        .icon {
+            margin: 0;
+        }
+    }
+
+    .icon {
+        vertical-align: middle;
+        margin: -0.1rem 0.5rem 0.1rem 0;
+    }
+
+    &.button--wide {
+        min-width: $button-width-lg;
+    }
+
+    &.button--full {
+        width: 100%;
+    }
+}

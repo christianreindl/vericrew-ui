@@ -1,0 +1,8 @@
+@keyframes logo-path-fill {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: $logo-path-length * 2.08;
+    }
+}

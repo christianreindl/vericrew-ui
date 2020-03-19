@@ -1,0 +1,14 @@
+.avatar {
+    display: block;
+    width: $avatar-size;
+    height: $avatar-size;
+    object-fit: cover;
+    object-position: center;
+    background-position: center;
+    background-size: cover;
+
+    &.avatar--large {
+        width: $avatar-size-lg;
+        height: $avatar-size-lg;
+    }
+}

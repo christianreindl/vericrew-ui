@@ -1,0 +1,95 @@
+.shipment-summary {
+    overflow: auto;
+    position: sticky;
+    top: $navbar-height + 3rem;
+
+    // This should work like this: https://abouolia.github.io/sticky-sidebar/
+}
+
+.shipment-summary__head {
+    .shipment-summary__status {
+        padding: 3rem $shipment-panel-padding-h 2.6rem;
+    }
+
+    .shipment-summary__head__title {
+        margin-bottom: 1.5rem;
+    }
+
+    .shipment-summary__fare {
+        padding: 2rem 3rem 1rem;
+    }
+
+    .shipment-summary__fare__item {
+        display: flex;
+        padding: 1rem 0;
+        align-items: baseline;
+        font-size: $font-size-base;
+        justify-content: space-between;
+
+        dt {
+            font-weight: $font-weight-demi;
+        }
+    }
+
+    .shipment-summary__fare__total {
+        font-size: $font-size-ui-stat;
+        font-weight: $font-weight-light;
+        letter-spacing: $letter-spacing-ui-stat;
+    }
+
+    .shipment-summary__fare__total__unit {
+        font-size: $font-size-base;
+        font-weight: $font-weight-regular;
+    }
+}
+
+.shipment-summary__panel {
+    @include panel-base();
+    margin-bottom: 2rem;
+    padding: 2.5rem $shipment-panel-padding-h;
+
+    .shipment-summary__head + & {
+        border-top: none;
+    }
+}
+
+.shipment-summary__list {
+    padding: 1.5rem $shipment-panel-padding-h;
+
+    .shipment-summary__list__item {
+        display: flex;
+        padding: 1rem 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    dt {
+        font-weight: $font-weight-demi;
+    }
+}
+
+.shipment-summary__setting {
+    display: flex;
+    justify-content: space-between;
+
+    .shipment-summary__setting__control {
+        flex: none;
+    }
+}
+
+.shipment-summary__actions {
+    .button {
+        margin-bottom: 1.5rem;
+    }
+}
+.shipment-summary__footer {
+    display: flex;
+    align-items: center;
+    color: $color-slate-alpha-50;
+
+    .icon {
+        flex: none;
+        margin-left: 3rem;
+        opacity: 0.5;
+    }
+}

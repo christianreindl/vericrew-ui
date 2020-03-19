@@ -1,0 +1,61 @@
+.form-message {
+    opacity: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    position: relative;
+    min-height: 10.8rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-primary;
+    box-shadow: $box-shadow-elevation-1;
+
+    color: $color-ui-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+
+    .icon {
+        margin-bottom: 1.5rem;
+    }
+
+    &::before {
+        width: 0;
+        height: 0;
+        top: 5.4rem;
+        right: 100%;
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        border: 1rem solid transparent;
+        border-top-color: transparent;
+        border-right-color: $color-primary;
+    }
+
+    &:first-child::before {
+        content: "";
+    }
+
+    &:not(:first-child) {
+        margin-top: 0.5rem;
+    }
+
+    &.form-message--alert {
+        opacity: 1;
+        display: flex;
+        color: $color-white;
+        background-color: $color-alert;
+
+        &::before {
+            border-right-color: $color-alert;
+        }
+    }
+}
+
+.form-message-wrapper {
+    top: 0;
+    right: -2rem;
+    width: 18rem;
+    position: absolute;
+    pointer-events: none;
+    transform: translateX(100%);
+}
