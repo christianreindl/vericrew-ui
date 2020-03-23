@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="40px" viewBox="0 0 64 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>logo/color copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.0132493858" width="63.5904026" height="12.5437868"></rect>
+    </defs>
+    <g id="logo/color-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="crew" transform="translate(0.000000, 22.528320)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask" transform="translate(31.795201, 6.285143) scale(1, -1) translate(-31.795201, -6.285143) "></g>
+            <text mask="url(#mask-2)" font-family="Recoleta-Regular, Recoleta" font-size="21.1968009" font-weight="normal" letter-spacing="-0.529919999" fill="#167767">
+                <tspan x="16.332135" y="9">crew</tspan>
+            </text>
+        </g>
+        <text id="veri" font-family="Recoleta-Regular, Recoleta" font-size="21.1968009" font-weight="normal" letter-spacing="-0.529919999" fill="#000000">
+            <tspan x="6.43322902" y="20.4">veri</tspan>
+        </text>
+    </g>
+</svg>

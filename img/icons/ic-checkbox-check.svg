@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>misc/ic-checkbox-check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="misc/ic-checkbox-check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="check-square" transform="translate(4.000000, 4.000000)" fill="#FFFFFF">
+            <path d="M2.21,6.75 C2.3977666,6.93931265 2.65336246,7.04579832 2.92,7.04579832 C3.18663754,7.04579832 3.4422334,6.93931265 3.63,6.75 L7.71,2.67 C8.10212217,2.27787783 8.10212217,1.64212217 7.71,1.25 C7.31787783,0.857877828 6.68212217,0.857877828 6.29,1.25 L2.92,4.63 L1.71,3.41 C1.31787783,3.01787783 0.682122172,3.01787783 0.29,3.41 C-0.102122172,3.80212217 -0.102122172,4.43787783 0.29,4.83 L2.21,6.75 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
