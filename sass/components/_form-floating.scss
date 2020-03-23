@@ -1,0 +1,113 @@
+$floating-label-background: linear-gradient(to left, rgba($color-white, 0) 0%, $color-white 5%, $color-white 95%, rgba($color-white, 0) 100%);
+
+.form-group--floating {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    order: -1;
+    z-index: 1;
+    padding: 0 8px;
+    margin: -10px 4px;
+    position: relative;
+    pointer-events: none;
+    display: inline-block;
+    color: $color-black-alpha-35;
+    transform-origin: left bottom;
+    background: $floating-label-background;
+  }
+
+  .input {
+    &:placeholder-shown + .label {
+      cursor: text;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transform: scale(1.1666667) translate(-1px, 19px);
+    }
+
+    &:not(:placeholder-shown) + .label,
+    &:focus + .label {
+      cursor: pointer;
+      transform: none;
+    }
+
+    &:focus + .label {
+      color: $color-primary;
+    }
+
+    &:invalid,
+    &[invalid],
+    &[aria-invalid="true"] {
+      &:focus + .label {
+        color: $color-alert-dark;
+      }
+    }
+
+    &:focus::-webkit-input-placeholder {
+      opacity: 1;
+      color: $color-black-alpha-25;
+    }
+  }
+
+  .input--fill {
+    .label {
+      background: $floating-label-background;
+    }
+
+    &:placeholder-shown + .label {
+      background: none;
+    }
+
+    &:not(:placeholder-shown) + .label,
+    &:focus + .label {
+      background: $floating-label-background;
+    }
+  }
+
+  .input--lg {
+    & + .label {
+      padding: 0 11px;
+      margin: -10px 4px;
+      font-size: $font-size-ui-label-lg;
+    }
+
+    &:placeholder-shown + .label {
+      transform: scale(1.153846) translate(-1px, 21px);
+    }
+
+    &:not(:placeholder-shown) + .label,
+    &:focus + .label {
+      transform: none;
+    }
+  }
+
+  .input--sm {
+    & + .label {
+      padding: 0 6px;
+      margin: -10px 4px;
+    }
+
+    &:placeholder-shown + .label {
+      transform: scale(1.153846) translate(-1px, 15px);
+    }
+
+    &:not(:placeholder-shown) + .label,
+    &:focus + .label {
+      transform: none;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+}

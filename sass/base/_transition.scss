@@ -8,17 +8,17 @@ $ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
 $ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $ease-out-back-smooth: cubic-bezier(
-    0.3,
-    1.65,
-    0.4,
-    1
+  0.3,
+  1.65,
+  0.4,
+  1
 ); // Custom smoother transition
 $ease-out-back-hard: cubic-bezier(0.3, 1.65, 0.7, 1.65);
 $ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 $ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 $ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
 $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
-$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 $transition-focus-shadow: box-shadow 0.25s ease;
 
@@ -27,136 +27,62 @@ $transition-focus-shadow: box-shadow 0.25s ease;
 input,
 .button,
 .menu a {
-    transition: $transition-focus-shadow;
+  transition: $transition-focus-shadow;
 }
 
+.form-group--floating .label {
+  transition: all 0.25s $ease-out-cubic;
+}
+
+
 .tile {
-    transition: $transition-focus-shadow, transform 0.2s $ease-out-quad;
+  transition: $transition-focus-shadow, transform 0.2s $ease-out-quad;
 
-    &:active {
-        transition: $transition-focus-shadow, transform 0.1s $ease-out-cubic;
-    }
+  &:active {
+    transition: $transition-focus-shadow, transform 0.1s $ease-out-cubic;
+  }
 
-    &::before {
-        transition: transform 0.4s $ease-in-out-cubic;
-    }
+  &::before {
+    transition: transform 0.4s $ease-in-out-cubic;
+  }
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    &::before,
-    &::after {
-        transition: all 0.25s ease, box-shadow 0.25s ease,
-            border-width 0.2s ease;
-    }
+  &::before,
+  &::after {
+    transition: all 0.25s ease, $transition-focus-shadow;
+  }
+}
+
+
+.nav {
+  transition: box-shadow 0.5s ease;
 }
 
 .dropdown-pane {
-    transition: opacity 0.25s ease, transform 0.35s $ease-out-quad;
-    ul li {
-        transition: transform 0.45s $ease-out-quad;
-    }
-}
-
-.form-group {
-    &:hover,
-    &:focus-within {
-        .form-message {
-            transition: all 0.4s ease;
-            $form-message-max-number: 4;
-            @for $i from 1 to $form-message-max-number {
-                &:nth-child(#{$i}) {
-                    transition-delay: 0.15s * $i;
-                }
-            }
-            &:nth-child(n + #{$form-message-max-number}) {
-                transition-delay: 0.15s $form-message-max-number;
-            }
-        }
-    }
-}
-
-.form-message {
-    transition: all 0.2s ease;
-}
-
-.dropdown-pane {
-    transition: all 0.25s $ease-out-cubic;
-    ul li {
-        transition: transform 0.35s $ease-out-cubic;
-    }
+  transition: all 0.15s $ease-out-cubic;
+  ul li {
+    transition: transform 0.2s $ease-out-cubic;
+  }
 }
 
 .panel-interactive {
-    transition: $transition-focus-shadow, transform 0.2s $ease-out-quad;
-
-    &:active {
-        transition: $transition-focus-shadow, transform 0.1s $ease-out-cubic;
-    }
-}
-
-.onboarding__step {
-    transition: opacity 0.3s ease;
-
-    .onboarding__step__title::after {
-        transition: transform 0.5s $ease-in-out-cubic;
-    }
-
-    &:active {
-        transition: none;
-    }
-}
-
-.menu--sidenav {
-    li a {
-        transition: $transition-focus-shadow, color 0.4s $ease-in-out-quart;
-
-        &::before {
-            transition: transform 0.6s $ease-in-out-quart;
-        }
-    }
-}
-
-.nav__notifications {
-    .icon {
-        transition: transform 0.4s $ease-out-back;
-    }
-
-    &::after {
-        transition: all 0.25s $ease-out-back-smooth;
-    }
+  transition: $transition-focus-shadow;
 }
 
 .switch {
-    .switch-paddle {
-        &::before {
-            transition: all 0.1s ease;
-        }
-
-        &::after {
-            transition: all 0.35s $ease-in-out-cubic;
-        }
+  .switch-paddle {
+    &::before {
+      transition: all 0.1s ease;
     }
 
-    input:checked ~ .switch-paddle::before {
-        transition: all 0.4s 0.2s $ease-out-back-hard;
+    &::after {
+      transition: all 0.35s $ease-in-out-cubic;
     }
-}
+  }
 
-.slider {
-    $slider-transition: all 0.25s $ease-in-out-cubic,
-        box-shadow 0.3s $ease-out-quad;
-
-    .slider-handle,
-    .slider-fill {
-        transition: $slider-transition;
-    }
-
-    .slider-handle:active {
-        transition: $slider-transition, left 0s linear, right 0s linear;
-    }
-
-    .slider-handle-value input {
-        transition: all 0.3s $ease-out-quad;
-    }
+  input:checked ~ .switch-paddle::before {
+    transition: all 0.4s 0.2s $ease-out-back-hard;
+  }
 }

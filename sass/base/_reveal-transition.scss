@@ -1,0 +1,24 @@
+.reveal-full-slide-in {
+  &.mui-enter {
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 0.25s ease, opacity 0.25s ease;
+  }
+  &.mui-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-full-slide-out {
+  &.mui-leave {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.15s $ease-in-cubic;
+    }
+  &.mui-leave-active {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+}
+

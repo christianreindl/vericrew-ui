@@ -1,216 +1,216 @@
-$button-height-lg: 5rem;
-$button-height-sm: 4rem;
-
-$button-width-lg: 20rem;
-$button-width-xl: 30rem;
+$button-height-lg: 48px;
+$button-height-md: 40px;
+$button-height-sm: 32px;
 
 @mixin button-base() {
-    @include disabled();
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    vertical-align: middle;
-    font-stretch: condensed;
-    text-transform: uppercase;
-    font-size: $font-size-ui-button;
-    line-height: $line-height-ui-button;
-    letter-spacing: $letter-spacing-ui-button;
+  @include disabled();
+  @include appearance-reset();
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-ui-input-md;
+  line-height: $line-height-ui-input;
+  letter-spacing: $letter-spacing-base;
 
-    min-width: $button-height-lg;
-    padding: 1.5rem 1.8rem 1.1rem;
-    border: 2px solid transparent;
-    background-color: transparent;
+  padding: 5px 11px;
+  height: $button-height-md;
+  min-width: $button-height-md;
+  background-color: transparent;
+  border-radius: $border-radius-ui-sm;
 
-    cursor: pointer;
-    -webkit-appearance: none;
+  cursor: pointer;
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 }
 
-@mixin button--small() {
-    padding: 1rem 1.3rem 0.6rem;
-    min-width: $button-height-sm;
+@mixin button--sm() {
+  padding: 0 9px;
+  height: $button-height-sm;
+  min-width: $button-height-sm;
 
-    &.button--square {
-        padding: 0;
-        height: $button-height-sm;
+  &.button--square,
+  &.button--round {
+    padding: 0;
+    width: $button-height-sm;
+
+    .uil {
+      @include icon-size($icon-size-md)
     }
+  }
 }
 
-@mixin button-outline($color, $color-hover, $background-color-active) {
-    color: $color;
-    border-color: rgba($color, 0.2);
+@mixin button--lg() {
+  padding: 5px 14px;
+  height: $button-height-lg;
+  min-width: $button-height-lg;
+  font-size: $font-size-ui-input-lg;
 
-    &:hover,
-    &:focus {
-        color: $color-hover;
-        border-color: $color;
-        background-color: $color;
-        box-shadow: $box-shadow-elevation-1;
+  &.button--square,
+  &.button--round {
+    padding: 0;
+    width: $button-height-lg;
+
+    .uil {
+      @include icon-size($icon-size-xl)
     }
-    &:focus {
-        @include focus-shadow($color, $box-shadow-elevation-1);
-        outline: none;
-    }
-    &:active {
-        @include focus-shadow($color, $box-shadow-elevation-1);
-        color: $color-hover;
-        border-color: $background-color-active;
-        background-color: $background-color-active;
-    }
+  }
 }
 
 @mixin button--fill(
-    $color,
-    $background-color,
-    $background-color-hover,
-    $background-color-active
+  $color,
+  $background-color,
+  $background-color-hover,
+  $background-color-active,
+  $border-color: $color-black-alpha-10,
+  $focus-color: $background-color
 ) {
-    color: $color;
-    border-color: transparent;
-    background-color: $background-color;
+  color: $color;
+  border: 1px solid $border-color;
+  background-color: $background-color;
 
-    &:hover,
-    &:focus {
-        color: $color;
-        border-color: transparent;
-        box-shadow: $box-shadow-elevation-1;
-        background-color: $background-color-hover;
-    }
-    &:focus {
-        @include focus-shadow($background-color, $box-shadow-elevation-1);
-        outline: none;
-    }
-    &:active {
-        @include focus-shadow($background-color, $box-shadow-elevation-1);
-        background-color: $background-color-active;
-        border-color: transparent;
-        color: $color;
-    }
+  &:hover {
+    color: $color;
+    background-color: $background-color-hover;
+  }
+  &:focus {
+    @include focus-shadow(rgba($focus-color, 0.2));
+    outline: none;
+  }
+  &:active {
+    color: $color;
+    background-color: $background-color-active;
+  }
 }
 
-@mixin button--transparent($color: $color-slate) {
-    color: $color;
-    border-color: transparent;
-    background-color: transparent;
+@mixin button--transparent(
+  $color,
+  $background-color-hover,
+  $background-color-active,
+  $focus-color: $background-color-active,
+  $border-color: transparent
+) {
+  color: $color;
+  border: 1px solid $border-color;
+  background-color: transparent;
 
-    &:hover,
-    &:focus {
-        color: $color;
-        box-shadow: none;
-        border-color: transparent;
-        background-color: rgba($color, 0.08);
-    }
-    &:focus {
-        @include focus-shadow($color);
-        outline: none;
-    }
-    &:active {
-        @include focus-shadow($color);
-        color: $color;
-        border-color: transparent;
-        background-color: rgba($color, 0.18);
-    }
+  &:hover {
+    color: $color;
+    box-shadow: none;
+    background-color: $background-color-hover;
+  }
+  &:focus {
+    @include focus-shadow($focus-color);
+    outline: none;
+  }
+  &:active {
+    color: $color;
+    background-color: $background-color-active;
+  }
 }
+
 
 .button {
-    @include button-base();
-    @include button-outline($color-slate, $color-white, $color-slate-lighter);
+  @include button-base();
+  @include button--fill($color-ui-base, $color-sand, $color-sand-dark, $color-sand-darker, transparent, $color-ui-focus);
+
+  &.button--primary {
+    @include button--fill($color-white, $color-primary, $color-primary-dark, $color-primary-darker);
+  }
+  &.button--alert {
+    @include button--fill($color-white, $color-alert, $color-alert-dark, $color-alert-darker);
+  }
+
+  &.button--transparent {
+    text-align: left;
+    justify-content: flex-start;
+    @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus);
 
     &.button--primary {
-        @include button-outline(
-            $color-primary-darker,
-            $color-slate,
-            $color-primary-darkest
-        );
+      @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2));
     }
     &.button--alert {
-        @include button-outline($color-alert, $color-white, $color-alert-dark);
+      @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2));
     }
-    &.button--accent {
-        @include button-outline(
-            $color-accent,
-            $color-white,
-            $color-accent-dark
-        );
+  }
+
+  &.button--outline {
+    @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus, $color-black-alpha-10);
+
+    &.button--primary {
+      @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2), $color-primary, $color-primary-faded);
     }
-
-    &.button--fill {
-        @include button--fill(
-            $color-white,
-            $color-slate,
-            $color-slate-lighter,
-            $color-slate
-        );
-
-        &.button--primary {
-            @include button--fill(
-                $color-slate,
-                $color-primary,
-                $color-primary-darker,
-                $color-primary-darkest
-            );
-        }
-        &.button--alert {
-            @include button--fill(
-                $color-white,
-                $color-alert,
-                $color-alert-dark,
-                $color-alert-darker
-            );
-        }
-        &.button--accent {
-            @include button--fill(
-                $color-white,
-                $color-accent,
-                $color-accent-dark,
-                $color-accent-darker
-            );
-        }
+    &.button--alert {
+      @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2), $color-alert, $color-accent-faded);
     }
+  }
 
-    &.button--transparent {
-        @include button--transparent();
+  &.button--sm {
+    @include button--sm();
+  }
 
-        &.button--primary {
-            @include button--transparent($color-primary-darker);
-        }
-        &.button--alert {
-            @include button--transparent($color-alert);
-        }
-        &.button--accent {
-            @include button--transparent($color-accent);
-        }
+  &.button--lg {
+    @include button--lg();
+  }
+
+
+  &.button--square,
+  &.button--round {
+    padding: 0;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    width: $button-height-md;
+
+    .uil {
+      @include icon-size($icon-size-lg);
+      margin: 0;
+      color: $color-black-alpha-35;
     }
+  }
 
-    &.button--small {
-        @include button--small();
+  &.button--round {
+    border-radius: 50%;
+  }
+
+  &.button--full {
+    width: 100%;
+  }
+
+  .uil {
+    @include icon-size($icon-size-sm);
+    vertical-align: initial;
+    margin-right: 5px;
+  }
+
+  .button__loader {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: all 0.25s ease;
+  }
+
+  .button__label {
+    transition: opacity 0.15s 0.15s ease;
+  }
+
+  &.button--loading {
+    .button__label {
+      opacity: 0;
+      transition: opacity 0.15s ease;
     }
-
-    &.button--square {
-        padding: 0;
-        align-items: center;
-        display: inline-flex;
-        justify-content: center;
-        height: $button-height-lg;
-
-        .icon {
-            margin: 0;
-        }
+    .button__loader {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      transition: all 0.25s 0.15s ease;
     }
-
-    .icon {
-        vertical-align: middle;
-        margin: -0.1rem 0.5rem 0.1rem 0;
-    }
-
-    &.button--wide {
-        min-width: $button-width-lg;
-    }
-
-    &.button--full {
-        width: 100%;
-    }
+  }
 }

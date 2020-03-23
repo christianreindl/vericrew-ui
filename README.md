@@ -1,8 +1,7 @@
 # README #
 
 ### What is this repository for? ###
-Maniak Posada 2019 Website
-
+Vericrew basic UI components
 
 ### How do I get set up? ###
 
@@ -12,5 +11,5 @@ Run `npm run start` to watch and compile SASS and start BrowserSync.
 
 ### Who do I talk to? ###
 
-Christian Reindl (reindl@maniak.com)
+Christian Reindl (reindl@maniak.com.mx)
 

@@ -1,30 +1,35 @@
 .breadcrumbs {
-    li {
-        text-transform: none;
-        color: $color-slate-alpha-50;
-        font-size: $font-size-ui-breadcrumbs;
+  margin: 0 0 10px;
 
-        &:not(:last-child)::after {
-            opacity: 1;
-            content: "—";
-            margin: 0 0.75rem;
-            position: relative;
-            color: $color-slate-alpha-25;
-        }
+  li {
+    font-size: inherit;
+    text-transform: none;
+    color: $color-black-alpha-35;
+
+    &:not(:last-child)::after {
+      opacity: 1;
+      width: 1em;
+      speak: none;
+      content: '\e830';
+      margin: 0 0.2em;
+      line-height: 1em;
+      position: relative;
+      font-style: normal;
+      text-align: center;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      font-family: "unicons";
+      display: inline-block;
+      color: $color-black-alpha-35;
     }
+  }
 
-    a {
-        @include link-underline();
-        color: $color-ui-base;
+  a {
+    @include link-base();
+  }
 
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: none;
-        }
-    }
-
-    .disabled {
-        color: rgba($color-ui-base, 0.3);
-    }
+  .disabled {
+    color: $color-black-alpha-35;
+  }
 }

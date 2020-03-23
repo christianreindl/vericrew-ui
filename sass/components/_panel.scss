@@ -1,33 +1,52 @@
 @mixin panel-base() {
-    width: 100%;
-    background-color: $white;
-    border: 1px solid $color-slate-alpha-15;
+  width: 100%;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $color-black-alpha-10;
+  border-radius: $border-radius-ui-lg;
 }
 
 .panel {
-    @include panel-base();
+  @include panel-base();
 
-    .panel__body {
-        display: block;
-        padding: 2rem;
+  .panel__body {
+    display: block;
+    padding: 20px;
+  }
+
+  .panel__separator {
+    height: 1px;
+    width: 100%;
+    background: $color-black-alpha-05;
+  }
+
+  &.panel-interactive {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: $color-black-alpha-35;
+      box-shadow: $box-shadow-elevation-1;
     }
 
-    &.panel-interactive {
-        cursor: pointer;
+    &:hover {
+      .button--transparent:not(.button--alert):not(.button--primary) {
+        @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus, $color-black-alpha-10);
+      }
 
-        &:hover,
-        &:focus {
-            border-color: $color-slate;
-            box-shadow: $box-shadow-elevation-1;
-        }
+      &.button--alert.button--transparent.button--primary {
+        @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2), $color-primary, $color-primary-faded);
+      }
 
-        &:focus {
-            outline: none;
-            @include focus-shadow($color-slate, $box-shadow-elevation-1);
-        }
-
-        &:active {
-            transform: scale(0.97) translate3d(0, 0, 0);
-        }
+      .button--transparent.button--alert {
+        @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2), $color-alert, $color-accent-faded);
+      }
     }
+
+    &:focus {
+      outline: none;
+      @include focus-shadow($color-ui-focus, $box-shadow-elevation-1);
+    }
+  }
 }

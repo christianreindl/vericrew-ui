@@ -1,40 +1,36 @@
-const body = document.querySelector('BODY')
-const linkMaps = document.querySelector('.line__info--location')
-const linkDate = document.querySelector('.line__info--date')
-const linkTime = document.querySelector('.line__info--time')
+$(document).foundation();
 
-const classNameMaps = 'hover--maps'
-const classNameCalendar = 'hover--calendar'
+$(document).ready(function() {
 
-function handleMapsEnter() {
-  console.log('maps enter')
-  body.classList.add(classNameMaps)
-}
+  /*     On scroll add background to navbar and move it up     */
 
-function handleCalendarEnter() {
-  body.classList.add(classNameCalendar)
-}
+  function checkScroll() {
+    var startY = 5; //The point where the navbar changes in px
 
-function handleMouseLeave() {
-  body.classList.remove(classNameCalendar)
-  body.classList.remove(classNameMaps)
-}
+    if ($(window).scrollTop() > startY) {
+      $('.nav').addClass("nav--scrolled");
+    } else {
+      $('.nav').removeClass("nav--scrolled");
+    }
+  }
 
-linkMaps.addEventListener('mouseenter', handleMapsEnter)
-linkDate.addEventListener('mouseenter', handleCalendarEnter)
-linkTime.addEventListener('mouseenter', handleCalendarEnter)
+  $(window).on("scroll load resize", function () {
+    if ($('.nav').length > 0) {
+      checkScroll();
+    }
+  });
 
-linkMaps.addEventListener('mouseleave', handleMouseLeave)
-linkDate.addEventListener('mouseleave', handleMouseLeave)
-linkTime.addEventListener('mouseleave', handleMouseLeave)
+  $('#load-primary, #load-primary-2,  #load-secondary-2').on('click', function() {
+    const el = $(this)
+    el.addClass('button--loading')
+    el.prop("disabled", true);
 
+    setTimeout(function() {
+      el.removeClass('button--loading')
+      el.prop("disabled", false);
+    }, 4000)
+  })
 
-function handleLoad() {
-  body.classList.add('loaded')
-}
+  checkScroll();
 
-function handleBeforeUnload() {
-}
-
-window.addEventListener('load', handleLoad)
-window.addEventListener('beforeunload', handleBeforeUnload);
+})

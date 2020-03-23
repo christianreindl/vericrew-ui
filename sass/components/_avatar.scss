@@ -1,14 +1,51 @@
-.avatar {
-    display: block;
-    width: $avatar-size;
-    height: $avatar-size;
-    object-fit: cover;
-    object-position: center;
-    background-position: center;
-    background-size: cover;
+$avatar-size: 24px;
+$avatar-size-lg: 32px;
+$avatar-size-xl: 64px;
 
-    &.avatar--large {
-        width: $avatar-size-lg;
-        height: $avatar-size-lg;
+.avatar {
+  display: inline-block;
+  width: $avatar-size;
+  height: $avatar-size;
+  object-fit: cover;
+  object-position: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  vertical-align: middle;
+
+
+  &.avatar--placeholder {
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    color: $color-primary;
+    justify-content: center;
+    background: $color-white;
+    font-family: $font-family-title;
+    font-size: 15px;
+
+    &::after {
+      content:'';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $color-primary-faded;
     }
+  }
+
+  &.avatar--lg {
+    font-size: 20px;
+    width: $avatar-size-lg;
+    height: $avatar-size-lg;
+  }
+
+  &.avatar--xl {
+    font-size: 36px;
+    width: $avatar-size-xl;
+    height: $avatar-size-xl;
+  }
+
 }

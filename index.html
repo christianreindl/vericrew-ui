@@ -3,167 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@iconscout/unicons/css/unicons.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <nav class="nav">
-      <button
-        class="nav__top nav__top--primary grid-container fluid"
-        data-open="onboarding-modal"
-      >
-        <span class="link-underline">Finaliza tu registro</span>&nbsp;en 4
-        simples pasos para crear y administrar viajes.
-      </button>
-      <div class="nav__main grid-container fluid">
+      <div class="nav__main">
         <a href="" class="nav__logo logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 252 83"
-            preserveAspectRatio="xMinYMid"
-          >
-            <defs>
-              <path
-                id="logo-mask-path"
-                d="M38.3,0C22.4,0,4.2,6.1,3.4,6.3L0.6,7.3l-0.2,3c0,0.4-0.8,10.2,0,16.3L1,32.1l5.2-1.9
-			c0.1,0,7.2-2.5,18.6-3.6c9.8-0.9,24.6-0.8,41.3,4.2c-0.3,2-0.8,4.7-1.7,7.7c-6.1-1.7-18-4.6-28.4-4.8C20,33.5,7.9,37.5,7.4,37.6
-			L3,39.1l1.6,4.3c2.1,5.7,5.5,12.1,7.8,15.8l1.9,3.2l3.5-1.3c0.1,0,9.3-3.4,19.8-2.6c5.8,0.4,10.8,1.6,14.4,2.6
-			c-5.2,5.9-10.9,9.8-13.8,11.7c-2.9-1.7-8.3-5.5-11.7-9.7c0,0-2.3,0.1-4.8,0.9c-2.8,0.9-4.7,2-4.7,2c5.9,8.3,18.9,15.7,19.3,15.9
-			l2,1l2-1c0.5-0.3,13.6-7,22.9-20.5l3.1-4.6l-5.1-2.1c-0.4-0.2-10.1-4.1-22.9-5.1c-8.2-0.6-15.7,0.9-20,2c-1.1-2-2.3-4.4-3.4-6.7
-			c4.6-1,12.2-2.4,21.1-2.2c13.2,0.2,29.8,5.5,30,5.6l4,1.3l1.5-3.9c3.6-9.2,4-17.5,4-17.8l0.1-3.3l-3.2-1.1
-			c-28.6-9.6-52.9-5.8-63.5-3.3c0-2.2,0.1-4.5,0.1-6.2c5.6-1.6,19.2-5.4,30-4.9c18.5,0.7,37,7.1,37,7.1c0.2-1.7,0.3-3.2,0.3-4.6
-			v-0.2c0-2.3-0.2-3.8-0.2-3.8l-2.7-1C72.8,6.1,56.5,0,38.3,0z"
-              />
-            </defs>
-            <polygon
-              class="letter"
-              points="105,20.9 105,63 112.8,63 112.8,45.8 125.9,45.8 125.9,38.5 112.8,38.5 112.8,28.2
-		126.5,28.2 126.5,20.9 "
-            />
-            <polygon
-              class="letter"
-              points="129.2,63 136.8,63 136.8,20.9 129.2,20.9 "
-            />
-            <path
-              class="letter"
-              id="Fill-3"
-              d="M164,44.5c-0.9-5.1-4.8-7.4-8.6-7.4c-2.8,0-7.5,1.5-9,7.4H164z M146.7,50.6c0.3,2,3.3,6.5,8.7,6.5
-		c3.4,0,5.9-1.4,7.3-4h8c-1.8,5.7-7.9,11-15.3,11c-9.4,0-16.7-7.5-16.7-16.7c0-8.9,6.9-17.1,16.7-17.1c10.1,0,16.4,8.6,16.4,16.6
-		c0,1.5-0.2,2.8-0.5,3.8H146.7z"
-            />
-            <polygon
-              class="letter"
-              points="175.6,38.1 171.9,38.1 171.9,31.4 175.6,31.4 175.6,20.9 183.2,20.9 183.2,31.4
-		187.8,31.4 187.8,38.1 183.2,38.1 183.2,63 175.6,63 "
-            />
-            <path
-              class="letter"
-              d="M212.1,44.7c-0.8-5.1-4.7-7.5-8.4-7.5c-2.8-0.1-7.6,1.4-9.1,7.2L212.1,44.7z M194.7,50.4
-		c0.3,2.1,3.2,6.5,8.6,6.6c3.4,0.1,5.9-1.3,7.4-3.9l8,0.2c-1.9,5.6-8.1,10.8-15.5,10.7c-9.4-0.2-16.6-7.8-16.4-17
-		c0.2-8.9,7.2-17,17-16.8c10.1,0.2,16.2,8.9,16.1,16.9c0,1.5-0.3,2.8-0.5,3.8L194.7,50.4z"
-            />
-            <polygon
-              class="letter"
-              points="230.1,46.7 220.3,31.4 228.8,31.4 234.7,40.9 240.4,31.4 248.9,31.4 239.1,46.7 250.5,63
-	241.5,63 234.7,52.2 227.9,63 218.9,63 "
-            />
-            <clipPath id="logo-mask">
-              <use xlink:href="#logo-mask-path" style="overflow:visible;" />
-            </clipPath>
-            <path
-              class="logo-path"
-              d="M23.5,66.8c2.2,2.8,8.1,6.8,14.7,10.9c7.1-3.7,17.7-13.9,21.3-19c-12.7-5.5-30-6.9-43.6-2
-		c-3.3-5.3-5.5-10.2-7.4-15.2c20-5.8,40.2-2.9,58.8,2.5c2.3-5.9,3.1-9.3,4.1-16.6c-23.1-6.9-41.2-8.1-66.6-1.3
-		c-0.6-3.9-1-9.9-0.9-15.3c21.9-8.4,41.4-8.9,68.9-0.9"
-            />
-          </svg>
+          <img src="img/logo/logo-ondark-color.svg" alt="Vericrew" />
         </a>
         <ul class="nav__menu">
-          <li>
-            <a class="nav__menu-item active" href=""><span>Dashboard</span></a>
-          </li>
-          <li>
-            <a class="nav__menu-item" href=""><span>Viajes</span></a>
-          </li>
-          <li>
-            <a class="nav__menu-item" href=""><span>Balance</span></a>
-          </li>
+          <li><a class="nav__menu-item active" href="">Events</a></li>
+          <li><a class="nav__menu-item" href="">Team</a></li>
+          <li><a class="nav__menu-item" href="">Help</a></li>
         </ul>
         <ul class="nav__actions">
           <li>
-            <button class="button button--transparent button--square">
-              <svg class="icon icon--large">
-                <use
-                  xlink:href="/img/icon-sprite/icons.svg#icon-info-circle"
-                ></use>
-              </svg>
+            <button class="button button--sm button--transparent button--round">
+              <i class="uil uil--md uil-comment-alt"></i>
             </button>
           </li>
-          <li>
-            <button
-              class="button button--transparent button--square nav__notifications nav__notifications--highlight"
-            >
-              <svg class="icon icon--large">
-                <use xlink:href="/img/icon-sprite/icons.svg#icon-bell"></use>
-              </svg>
-            </button>
-          </li>
-          <li>
-            <button
-              class="button button--transparent nav__profile"
-              data-toggle="nav__profile__dropdown"
-            >
-              <img
-                src="/img/dev/profile-pic-client.jpg"
-                alt=""
-                class="nav__profile__avatar avatar"
-              />
-              <span class="nav__profile__label">Salvador Muñoz</span>
-            </button>
-            <div
-              class="dropdown-pane"
-              data-position="bottom"
-              data-alignment="right"
-              id="nav__profile__dropdown"
-              data-dropdown
-            >
-              <div class="nav__profile__user-info">
-                <img
-                  src="/img/dev/profile-pic-client.jpg"
-                  alt=""
-                  class="avatar avatar--large"
-                />
-                <div class="nav__profile__user-info__name">
-                  <p>Salvardor Muñoz</p>
-                  <p class="paragraph--small text-alpha--50">
-                    salvador.muñoz@gmail.com
-                  </p>
+            <li>
+              <button class="button button--sm button--transparent button--round nav__profile" data-toggle="nav__profile__dropdown">
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar-lg"/>
+              </button>
+              <div
+                class="dropdown-pane nav__profile__dropdown"
+                data-position="bottom"
+                data-alignment="right"
+                id="nav__profile__dropdown"
+                data-close-on-click="true"
+                data-dropdown
+              >
+                <div class="nav__profile__user-info">
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar--xl"/>
+                  <p class="heading-5">John Appleseed</p>
+                  <p class="paragraph--sm text-alpha--66">johnappleseed@acmeinc.com</p>
                 </div>
+                <ul class="menu menu--vertical">
+                  <li>
+                    <a class="menu-item" href=""><i class="uil uil-user"></i>User profile</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href=""><i class="uil uil-lock"></i>Change password</a>
+                  </li>
+                  <li>
+                    <a class="menu-item menu-item--alert" href=""><i class="uil uil-exit"></i>Sign out</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="menu menu--vertical">
-                <li>
-                  <a class="menu-item" href="">
-                    <svg class="icon">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-cog"
-                      ></use>
-                    </svg>
-                    Configuración
-                  </a>
-                </li>
-                <li>
-                  <a class="menu-item menu-item--alert" href="">
-                    <svg class="icon">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-arrow-left"
-                      ></use>
-                    </svg>
-                    Salir
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
+            </li>
         </ul>
       </div>
     </nav>
@@ -172,998 +64,1323 @@
       <div class="grid-container header__inner">
         <div class="header__left">
           <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li class="disabled">Gene Splicing</li>
-            <li><span class="show-for-sr">Current: </span> Cloning</li>
+            <li><a href="#">Organizations</a></li>
+            <li><a href="#">BottleRock Org</a></li>
+            <li>
+              <span class="show-for-sr">Current: </span> Vericrew Styleguide
+            </li>
           </ul>
-          <h1 class="heading-1">Styleguide</h1>
+          <h1 class="heading-2">Vericrew Styleguide</h1>
         </div>
         <div class="header__right">
-          <button class="button button--wide">Secondary action</button>
-          <button class="button button--fill button--wide">
-            Primary action
-          </button>
+          <div class="header__stat">
+            <p class="header__stat__number heading-3">5</p>
+            <p class="header__stat__label">Crew size</p>
+          </div>
+          <div class="header__stat">
+            <p class="header__stat__number heading-3 status status--success">
+              <span class="status-badge status-badge--lg"
+                ><i class="uil uil-thumbs-up"></i
+              ></span>
+              96%
+            </p>
+            <p class="header__stat__label">Completion rate</p>
+          </div>
         </div>
       </div>
-      <ul class="grid-container header__progress">
-        <li><a class="header__progress__step" href="">Carga</a></li>
-        <li><a class="header__progress__step" href="">Origen y destino</a></li>
-        <li><a class="header__progress__step" href="" disabled>Carga</a></li>
-        <li>
-          <a class="header__progress__step" href="" disabled>Seguro de viaje</a>
-        </li>
-      </ul>
     </header>
+    <ul class="grid-container tabs" data-tabs id="example-tabs">
+      <li class="tabs-title is-active">
+        <a href="#panel1" aria-selected="true">Dashboard</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel2" href="#panel2">Brief</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel2" href="#panel2">Staff</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel2" href="#panel2">Feedback</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel2" href="#panel2">Details</a>
+      </li>
+    </ul>
 
-    <div class="grid-container">
+    <div class="content grid-container">
       <div class="grid-x grid-margin-x">
-        <div class="cell medium-6 medium-offset-3">
-          <h2 class="heading-2 margin-bottom--20">Typography</h2>
-          <div class="fieldset">
-            <div class="panel">
-              <div class="panel__body">
-                <h1 class="heading-1 margin-bottom--20">Heading 1</h1>
-                <h2 class="heading-2 margin-bottom--20">Heading 2</h2>
-                <h3 class="heading-3 margin-bottom--20">Heading 3</h3>
-                <h4 class="heading-4 margin-bottom--20">Heading 4</h4>
-                <h5 class="heading-5 margin-bottom--20">Heading 5</h5>
-                <h6 class="heading-6 margin-bottom--40">Heading 6</h6>
-                <p class="paragraph paragraph--xlarge margin-bottom--20">
-                  Paragraph x-large
-                </p>
-                <p class="paragraph paragraph--large margin-bottom--20">
-                  Paragraph large
-                </p>
-                <p class="paragraph margin-bottom--20">Paragraph default</p>
-                <p class="paragraph paragraph--small margin-bottom--40">
-                  Paragraph small
-                </p>
-                <span class="label margin-bottom--20">Label</span>
-              </div>
-            </div>
-          </div>
-          <h2 class="heading-2 margin-bottom--20">Icons</h2>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Icon usage and sizes</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
+        <div class="cell medium-9">
+          <div class="onboarding margin-bottom--30">
+            <div class="onboarding__content">
+              <h2 class="heading-3 onboarding__title">Welcome to your event!</h2>
+              <p class="paragraph text-alpha--66 onboarding__description">
+                First things first. Make sure your staff gets briefed on time. Go to the “Brief” tab and start creating this event’s brief and quiz.
               </p>
+              <a href="" class="link-arrow">Go to brief</a>
             </div>
-            <svg class="icon icon--large">
-              <use xlink:href="/img/icon-sprite/icons.svg#icon-wheat"></use>
-            </svg>
-            <svg class="icon">
-              <use xlink:href="/img/icon-sprite/icons.svg#icon-wheat"></use>
-            </svg>
-            <svg class="icon icon--small">
-              <use xlink:href="/img/icon-sprite/icons.svg#icon-wheat"></use>
-            </svg>
+            <img class="onboarding__graphic" src="/img/graphics/graphic-onboarding-devil.png" alt="devil">
           </div>
-          <h2 class="heading-2 margin-bottom--50">Buttons</h2>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Outline Buttons</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <button class="button">Default</button>
-              <button class="button button--primary">Primary</button>
-              <button class="button button--alert">Alert</button>
-              <button class="button button--accent">Accent</button>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Fill Buttons</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <button class="button button--fill">Default</button>
-              <button class="button button--fill button--primary">
-                Primary
-              </button>
-              <button class="button button--fill button--alert">Alert</button>
-              <button class="button button--fill button--accent">Accent</button>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Transparent Buttons</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <button class="button button--transparent">Default</button>
-              <button class="button button--transparent button--primary">
-                Primary
-              </button>
-              <button class="button button--transparent button--alert">
-                Alert
-              </button>
-              <button class="button button--transparent button--accent">
-                Accent
-              </button>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Button Sizes</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <button class="button">Default</button>
-              <button class="button button--small">Small</button>
-              <button class="button button--wide">Wide</button>
-              <button class="button button--full">Full</button>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Icon Buttons</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <button
-                class="button button--transparent button--square"
-                aria-label="Editar"
-              >
-                <svg class="icon">
-                  <use xlink:href="/img/icon-sprite/icons.svg#icon-edit"></use>
-                </svg>
-              </button>
 
-              <button
-                class="button button--transparent button--square button--alert button--small"
-                aria-label="Borrar"
-              >
-                <svg class="icon">
-                  <use xlink:href="/img/icon-sprite/icons.svg#icon-close"></use>
-                </svg>
-              </button>
-
-              <br /><br />
-
-              <button class="button button--transparent button--small">
-                <svg class="icon">
-                  <use xlink:href="/img/icon-sprite/icons.svg#icon-edit"></use>
-                </svg>
-                Editar
-              </button>
-              <button
-                class="button button--transparent button--small button--alert"
-              >
-                <svg class="icon">
-                  <use xlink:href="/img/icon-sprite/icons.svg#icon-close"></use>
-                </svg>
-                Borrar
-              </button>
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Color Scheme</h3>
             </div>
-          </div>
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">
-            Text fields
-          </h2>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">
-                Regular Fields with labels (in form-group)
-              </h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with outline</label>
-              <input type="text" class="input" placeholder="Placeholder" />
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with fill</label>
-              <input
-                type="text"
-                class="input input--fill"
-                placeholder="Placeholder"
-              />
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Input wrapper</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with icon left</label>
-              <div class="input-wrapper input-wrapper--icon-left">
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-search"
-                  ></use>
-                </svg>
-                <input type="text" class="input" placeholder="Placeholder" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with icon Right</label>
-              <div class="input-wrapper input-wrapper--icon-right">
-                <input type="text" class="input" placeholder="Placeholder" />
-                <svg class="icon">
-                  <use xlink:href="/img/icon-sprite/icons.svg#icon-edit"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with button left</label>
-              <div class="input-wrapper input-wrapper--button-left">
-                <button
-                  class="button button--transparent button--square button--alert"
-                  aria-label="Borrar"
-                >
-                  <svg class="icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-close"
-                    ></use>
-                  </svg>
-                </button>
-                <input type="text" class="input" placeholder="Placeholder" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Input with button right</label>
-              <div class="input-wrapper input-wrapper--button-right">
-                <input type="text" class="input" placeholder="Placeholder" />
-                <button
-                  class="button button--transparent button--primary"
-                  aria-label="Borrar"
-                >
-                  Aceptar
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="label"
-                >Input with combined icon left and button right</label
-              >
-              <div
-                class="input-wrapper input-wrapper--icon-left input-wrapper--button-right"
-              >
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-search"
-                  ></use>
-                </svg>
-                <input type="text" class="input" placeholder="Placeholder" />
-                <button class="button button--transparent" aria-label="Borrar">
-                  Buscar
-                </button>
-              </div>
-            </div>
-          </div>
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">Forms</h2>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Helper Tooltips (Hover to see)</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <label for="" class="label"
-                >Input group with helper tooltip</label
-              >
-              <div class="input-group">
-                <input type="text" class="input" placeholder="e.g. 40" />
-                <select
-                  type="text"
-                  class="input input-select"
-                  placeholder="Toneladas"
-                >
-                  <option value="">Toneladas</option>
-                  <option value="">Camiones</option>
-                </select>
-              </div>
-              <div class="form-message-wrapper">
-                <div class="form-message">
-                  <svg class="icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-info-circle"
-                    ></use>
-                  </svg>
-                  <span class="helper-text">
-                    Incluye el peso del empaque.
-                  </span>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <div class="styleguide__colors">
+                <div class="styleguide__color styleguide__color--primary">
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-primary</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-primary-dark</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-primary-darker</code>
+                  </div>
+                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                    <code class="badge badge--code">$color-primary-faded</code>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Invalid fields</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Label</label>
-              <input
-                type="text"
-                class="input"
-                placeholder="Placeholder"
-                invalid
-              />
-
-              <div class="form-message-wrapper">
-                <div class="form-message form-message--alert">
-                  <svg class="icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-info-circle"
-                    ></use>
-                  </svg>
-                  <span class="helper-text">This field is required.</span>
+                <div class="styleguide__color styleguide__color--alert">
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-alert</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-alert-dark</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-alert-darker</code>
+                  </div>
+                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                    <code class="badge badge--code">$color-alert-faded</code>
+                  </div>
                 </div>
 
-                <div class="form-message">
-                  <svg class="icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-info-circle"
-                    ></use>
-                  </svg>
-                  <span class="helper-text">
-                    Incluye el peso del empaque.
-                  </span>
+                <div class="styleguide__color styleguide__color--black">
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-black</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-black-alpha-66</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-black-alpha-35</code>
+                  </div>
+                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                    <code class="badge badge--code">$color-black-alpha-10</code>
+                  </div>
+                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                    <code class="badge badge--code">$color-black-alpha-5</code>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Controls</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group control-group">
-              <h3 class="label control-group__label">Checkboxes</h3>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-            </div>
-            <div class="form-group control-group">
-              <h3 class="label control-group__label">Radio buttons</h3>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-            </div>
-            <div class="form-group control-group">
-              <h3 class="label control-group__label">Switch</h3>
-              <div class="switch">
-                <input
-                  class="switch-input"
-                  id="exampleSwitch"
-                  type="checkbox"
-                  name="exampleSwitch"
-                />
-                <label class="switch-paddle" for="exampleSwitch">
-                  <span class="show-for-sr">Download Kittens</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Sliders</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="form-group">
-              <div
-                class="slider"
-                data-slider
-                data-initial-start="25"
-                data-initial-end="75"
-              >
-                <span
-                  class="slider-handle"
-                  data-slider-handle
-                  role="slider"
-                  tabindex="1"
-                >
-                  <label class="slider-handle-value">
-                    <span>Desde</span> <input type="text" readonly />
-                  </label>
-                </span>
-                <span class="slider-fill" data-slider-fill></span>
-                <span
-                  class="slider-handle"
-                  data-slider-handle
-                  role="slider"
-                  tabindex="1"
-                >
-                  <label class="slider-handle-value">
-                    <span>Hasta</span> <input type="text" readonly />
-                  </label>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Tiles</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-            <div class="tile-group form-group">
-              <button class="tile" aria-selected="false">
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-trailer-box"
-                  ></use>
-                </svg>
-                <span class="tile__label"> Caja </span>
-              </button>
-
-              <button class="tile" aria-selected="true">
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-trailer-dry-box"
-                  ></use>
-                </svg>
-                <span class="tile__label"> Caja Seca </span>
-              </button>
-
-              <button class="tile" aria-selected="false">
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-trailer-cage"
-                  ></use>
-                </svg>
-                <span class="tile__label"> Jaula </span>
-              </button>
-
-              <button class="tile" aria-selected="false">
-                <svg class="icon">
-                  <use
-                    xlink:href="/img/icon-sprite/icons.svg#icon-trailer-container"
-                  ></use>
-                </svg>
-                <span class="tile__label"> Portacontenedor </span>
-              </button>
-            </div>
-          </div>
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">Panels</h2>
-          <div class="fieldset">
-            <div class="grid-x grid-margin-x margin-bottom--30">
-              <div class="cell medium-6">
-                <div class="panel">
-                  <div class="panel__body">
-                    <h6 class="heading-6 margin-bottom--10">Static panel</h6>
-                    <p class="text-alpha--50">
-                      Lorem ipsum dolor sit amet consectetur adipiscing enim ad
-                      lorem ipsum dolor sit amet.
-                    </p>
+                <div class="styleguide__color styleguide__color--sand">
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-sand</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-sand-dark</code>
+                  </div>
+                  <div class="styleguide__color__swatch">
+                    <code class="badge badge--code">$color-sand-darker</code>
+                  </div>
+                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                    <code class="badge badge--code">$color-sand-alt</code>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="cell medium-6">
-                <button class="panel panel-interactive">
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Typography</h3>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h1 class="heading-1">Heading 1</h1>
+              <code class="badge badge--code margin-bottom--30">class="heading-1"</code>
+
+              <h2 class="heading-2">Heading 2</h2>
+              <code class="badge badge--code margin-bottom--30">class="heading-2"</code>
+
+              <h3 class="heading-3">Heading 3</h3>
+              <code class="badge badge--code margin-bottom--30">class="heading-3"</code>
+
+              <h4 class="heading-4">Heading 4</h4>
+              <code class="badge badge--code margin-bottom--30">class="heading-4"</code>
+
+              <p class="paragraph paragraph--lg">Paragraph large</p>
+              <code class="badge badge--code margin-bottom--30">class="paragraph--lg"</code>
+
+              <p class="paragraph">Paragraph default</p>
+              <code class="badge badge--code margin-bottom--30">class="paragraph"</code>
+
+              <p class="paragraph paragraph--sm">Paragraph small</p>
+              <code class="badge badge--code margin-bottom--30">class="paragraph--sm"</code>
+
+              <p class="paragraph paragraph--xs">Paragraph Xsmall</p>
+              <code class="badge badge--code">class="paragraph--xs"</code>
+            </div>
+          </div>
+
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Icons</h3>
+              <p class="paragraph text-alpha--35">Unicons by <a href="https://www.iconscout.com/unicons">Iconscout</a></p>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm margin-bottom--10 text-alpha--66">Icon Sizes</h3>
+              <div class="margin-bottom--10">
+                <i class="uil uil-edit uil--xs"></i>
+                <code class="badge badge--primary badge--code margin-left--10">12px</code>
+                <code class="badge badge--code">class="uil uil--xs uil-edit"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <i class="uil uil-edit uil--sm"></i>
+                <code class="badge badge--primary badge--code margin-left--10">16px</code>
+                <code class="badge badge--code">class="uil uil--sm uil-edit"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <i class="uil uil-edit"></i>
+                <code class="badge badge--primary badge--code margin-left--10">20px</code>
+                <code class="badge badge--code">class="uil uil-edit"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <i class="uil uil-edit uil--lg"></i>
+                <code class="badge badge--primary badge--code margin-left--10">24px</code>
+                <code class="badge badge--code">class="uil uil--lg uil-edit"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <i class="uil uil-edit uil--xl"></i>
+                <code class="badge badge--primary badge--code margin-left--10">28px</code>
+                <code class="badge badge--code">class="uil uil--xl uil-edit"</code>
+              </div>
+              <h3 class="paragraph--sm margin-top--30 margin-bottom--10 text-alpha--66">Common Icons</h3>
+              <i class="uil uil-edit"></i>
+              <i class="uil uil-cloud-download"></i>
+              <i class="uil uil-import"></i>
+              <i class="uil uil-eye"></i>
+              <i class="uil uil-trash"></i>
+              <i class="uil uil-user"></i>
+              <i class="uil uil-lock"></i>
+              <i class="uil uil-search"></i>
+              <i class="uil uil-ellipsis-h"></i>
+              <i class="uil uil-thumbs-up"></i>
+              <i class="uil uil-thumbs-down"></i>
+              <i class="uil uil-plus-square"></i>
+              <i class="uil uil-map"></i>
+              <i class="uil uil-map-pin"></i>
+              <i class="uil uil-arrow-from-right"></i>
+              <i class="uil uil-arrow-to-right"></i>
+              <i class="uil uil-angle-left"></i>
+              <i class="uil uil-angle-right"></i>
+              <i class="uil uil-times"></i>
+              <i class="uil uil-check"></i>
+            </div>
+          </div>
+
+
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Panels</h3>
+              <p class="paragraph text-alpha--35">Use panels to contain related information in a box with rounded corners!</p>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <div class="panel margin-bottom--20">
+                <div class="panel__body">
+                  <p class="paragraph margin-bottom--10">
+                    Regular panel
+                  </p>
+                  <p class="text-alpha--50">Use <code class="badge badge--code">class="panel"</code> to create a container with rounded corners.</p>
+                  <p class="text-alpha--50">Add an element with <code class="badge badge--code">class="panel__body"</code> inside of a panel to add 20px padding on all sides.</p>
+                </div>
+              </div>
+              <button class="panel panel-interactive">
                   <span class="panel__body">
-                    <h6 class="heading-6 margin-bottom--10">
-                      Interactive Panel
-                    </h6>
-                    <p class="text-alpha--50">Hover and click me!</p>
+                    <p class="paragraph margin-bottom--10">
+                      Hover and click me!
+                    </p>
+                    <p class="text-alpha--50">Use <code class="badge badge--code">class="panel panel-interactive"</code> to make a panel look clickable!</p>
                   </span>
+              </button>
+            </div>
+          </div>
+
+
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Buttons</h3>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Button Sizes</h3>
+              <div class="margin-bottom--10">
+                <button class="button button--sm">Small</button>
+                <code class="badge badge--primary badge--code margin-left--10">32px</code>
+                <code class="badge badge--code">class="button button--sm"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <button class="button">Default</button>
+                <code class="badge badge--primary badge--code margin-left--10">40px</code>
+                <code class="badge badge--code">class="button"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <button class="button button--lg">Large</button>
+                <code class="badge badge--primary badge--code margin-left--10">48px</code>
+                <code class="badge badge--code">class="button button--lg"</code>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66">Control the button width</h3>
+              <h3 class="paragraph--sm margin-bottom--20 text-alpha--35">Use any of the classes below to make the button either full-width or square sized. You can combine them with any of the sizing classes above</h3>
+              <div class="margin-bottom--10">
+                <button class="button button--square button--sm">
+                  <i class="uil uil-check-square"></i>
                 </button>
+                <button class="button button--square">
+                  <i class="uil uil-check-square"></i>
+                </button>
+                <button class="button button--square button--lg">
+                  <i class="uil uil-check-square"></i>
+                </button>
+                <code class="badge badge--primary badge--code margin-left--10">Square</code>
+                <code class="badge badge--code">class="button button--square"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <button class="button button--round button--sm">
+                  <i class="uil uil-check-circle"></i>
+                </button>
+                <button class="button button--round">
+                  <i class="uil uil-check-circle"></i>
+                </button>
+
+                <button class="button button--round button--lg">
+                  <i class="uil uil-check-circle"></i>
+                </button>
+                <code class="badge badge--primary badge--code margin-left--10">Round</code>
+                <code class="badge badge--code">class="button button--round"</code>
+              </div>
+              <div>
+                <button class="button button--full">Full width</button>
+                <code class="badge badge--primary badge--code">100% width button</code>
+                <code class="badge badge--code">class="button button--full"</code>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Button Styles</h3>
+              <div class="margin-bottom--10">
+                <button class="button">Default</button>
+                <button class="button button--primary">Primary</button>
+                <button class="button button--alert">Alert</button>
+                <code class="badge badge--primary badge--code margin-left--10">Fill Buttons</code>
+                <code class="badge badge--code">class="button button--primary"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <button class="button button--outline">Default</button>
+                <button class="button button--outline button--primary">Primary</button>
+                <button class="button button--outline button--alert">Alert</button>
+                <code class="badge badge--primary badge--code margin-left--10">Outline Buttons</code>
+                <code class="badge badge--code">class="button button--outline button--primary"</code>
+              </div>
+              <div class="margin-bottom--10">
+                <button class="button button--transparent">Default</button>
+                <button class="button button--transparent button--primary">Primary</button>
+                <button class="button button--transparent button--alert">Alert</button>
+                <code class="badge badge--primary badge--code margin-left--10">Transparent Buttons</code>
+                <code class="badge badge--code">class="button button--transparent button--primary"</code>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Common buttons</h3>
+              <div class="margin-bottom--10">
+                <button class="button button--transparent button--sm button--primary">
+                  <i class="uil uil-cloud-download"></i>
+                  Download PDF
+                </button>
+                <code class="badge badge--primary badge--code margin-left--10">Transparent with icon</code>
+                <code class="badge badge--code">class="button button--transparent button--sm button--primary"</code>
+              </div>
+              <div>
+                <button id="load-primary" class="button button--primary">
+                  <span class="button__loader"><img src="/img/icons/ic-spinner-white.svg"></span>
+                  <span class="button__label">Click me to show a spinner</span>
+                </button>
+                <code class="badge badge--primary badge--code margin-left--10">Spinner button</code>
+                <code class="badge badge--code">Please check the markup</code>
               </div>
             </div>
           </div>
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">Modals</h2>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Regular modals</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
 
-            <button data-open="exampleModal1" class="button button--wide">
-              Click me for a regular modal
-            </button>
-          </div>
-          <div class="fieldset">
-            <div class="fieldset__header">
-              <h2 class="heading-5">Fullscreen modals</h2>
-              <p class="fieldset__description paragraph text-alpha--50">
-                Lorem ipsum dolor sit amet consectetur
-              </p>
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Text Fields</h3>
             </div>
-
-            <button
-              data-open="onboarding-modal"
-              class="button button--wide button--fill button--primary"
-            >
-              Click me for a fullscreen modal
-            </button>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Text field sizes Sizes</h3>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input input--sm" placeholder="e.g. John" />
+                <label for="" class="label">Small input</label>
+              </div>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input" placeholder="e.g. John" />
+                <label for="" class="label">Default input</label>
+              </div>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input input--lg" placeholder="e.g. John" />
+                <label for="" class="label">Large input</label>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66">Input Styles</h3>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input" placeholder="e.g. John" />
+                <label for="" class="label">Default input</label>
+              </div>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input input--fill" placeholder="e.g. John" />
+                <label for="" class="label">Flat input</label>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Other input types</h3>
+              <div class="form-group form-group--floating">
+                <div class="input-wrapper input-wrapper--icon-right">
+                  <input type="text" class="input input--fill" placeholder="e.g. John Appleseed" />
+                  <label for="" class="label">Input with icon to the right</label>
+                  <i class="uil uil-search"></i>
+                </div>
+              </div>
+              <div class="form-group form-group--floating">
+                <div class="input-wrapper input-wrapper--icon-left">
+                  <i class="uil uil-lock"></i>
+                  <input type="password" class="input" placeholder="e.g. John Appleseed" />
+                  <label for="" class="label">Input with icon to the left</label>
+                </div>
+              </div>
+              <div class="form-group form-group--floating">
+                <div class="input-wrapper input-wrapper--icon-left input-wrapper--button-right">
+                  <i class="uil uil-search"></i>
+                  <input type="text" class="input" placeholder="Placeholder" />
+                  <label for="" class="label">Combination of left icon and right button</label>
+                  <button
+                      class="button button--transparent button--square button--alert"
+                      aria-label="Clear"
+                  >
+                    <i class="uil uil-times-circle"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="label">Input without the floating label</label>
+                <input type="email" class="input" placeholder="e.g. John Doe" />
+              </div>
+              <div class="form-group">
+                <label for="" class="label">Select field</label>
+                <select type="text" class="input input--fill input--select">
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Invalid fields</h3>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input" placeholder="e.g. John Appleseed" invalid />
+                <label for="" class="label">User</label>
+                <div class="form-message form-message--alert">
+                  <p class="paragraph paragraph--sm">
+                    This field is required.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">Tables</h2>
+
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Other interactive elements</h3>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Links</h3>
+              <div class="margin-bottom--10">
+                <a href="">Regular link</a>
+                <code class="badge badge--code margin-left--10">Just an &lt;a href="" /&gt; tag</code>
+              </div>
+              <div class="margin-bottom--10">
+                <a class="link-arrow" href="">Link with cool arrow</a>
+                <code class="badge badge--code margin-left--10">class="link-arow"</code>
+              </div>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Checkboxes</h3>
+              <label class="control">
+                <input class="checkbox" type="checkbox" /> Checkbox label
+              </label>
+              <label class="control">
+                <input class="checkbox" type="checkbox" /> Checkbox label
+              </label>
+              <label class="control">
+                <input class="checkbox" type="checkbox" /> Checkbox label
+              </label>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Radio buttons</h3>
+              <label class="control">
+                <input class="radio" name="styleguide-radio" type="radio" />
+                Radio button label
+              </label>
+              <label class="control">
+                <input class="radio" name="styleguide-radio" type="radio" />
+                Radio button label
+              </label>
+              <label class="control">
+                <input class="radio" name="styleguide-radio" type="radio" />
+                Radio button label
+              </label>
+            </div>
+          </div>
+
+
+          <div class="panel margin-bottom--60">
+            <div class="panel__body">
+              <h3 class="paragraph">Other interactive elements</h3>
+            </div>
+            <div class="panel__separator"></div>
+            <div class="panel__body">
+              <button data-open="reveal-form" class="button button--full button--primary">
+                Click me for a fullscreen modal
+              </button>
+            </div>
+          </div>
         </div>
-
-        <div class="cell medium-9 medium-offset-3">
+        <div class="cell medium-9 margin-bottom--60">
+          <div class="panel margin-bottom--20">
+            <div class="panel__body">
+              <h3 class="paragraph">Tables</h3>
+              <p class="paragraph text-alpha--35">Note how the header docks to the top</p>
+            </div>
+          </div>
           <table class="table">
             <thead>
               <tr>
-                <th>
-                  <button class="table__sort">
-                    Estado
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
-                <th>
-                  <button class="table__sort">
-                    Origen
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
-                <th>
-                  <button class="table__sort table__sort--active">
-                    Fecha de carga
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
+                <th><button class="table__sort">Name</button></th>
+                <th><button class="table__sort">Phone</button></th>
+                <th><button class="table__sort table__sort--down">Joined</button></th>
+                <th class="cell--align-right"><button class="table__sort">Briefed</button></th>
+                <th class="cell--align-right"><button class="table__sort">Score</button></th>
+                <th class="cell--align-right"><button class="table__sort">Attempts</button></th>
                 <th></th>
-                <th>
-                  <button class="table__sort">
-                    Destino
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
-                <th>
-                  <button class="table__sort">
-                    Fecha de descarga
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
-                <th class="cell--align-right">
-                  <button class="table__sort">
-                    Tarifa
-                    <svg class="icon icon--small">
-                      <use
-                        xlink:href="/img/icon-sprite/icons.svg#icon-sort"
-                      ></use>
-                    </svg>
-                  </button>
-                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="badge">Cotizado</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <div class="avatar avatar--placeholder">
+                    A
+                  </div>
+                  <span class="text-alpha--66">amanda@acmeinc.com</span>
                 </td>
+                <td></td>
                 <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <span class="badge">Pending</span>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status">
+                    <span class="status-badge"><i class="uil uil-minus"></i></span>
+                    0%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status">
+                    <span class="status-badge"><i class="uil uil-minus"></i></span>
+                    0%
+                  </p>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">0</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent" data-toggle="table__dropdown">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                  <div
+                      class="dropdown-pane"
+                      data-position="bottom"
+                      data-alignment="right"
+                      id="table__dropdown"
+                      data-dropdown
+                      data-close-on-click="true"
+                  >
+                    <ul class="menu menu--vertical">
+                      <li>
+                        <a class="menu-item" href=""><i class="uil uil-user-square"></i>View profile</a>
+                      </li>
+                      <li>
+                        <a class="menu-item menu-item--alert" href=""><i class="uil uil-ban"></i>Remove from event</a>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
               </tr>
               <tr>
-                <td><span class="badge badge--primary">Publicado</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
-                </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td><span class="badge badge--alert">Cancelado</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
-                </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td><span class="badge">Cotizado</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
-                </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td><span class="badge badge--accent">En camino</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
-                </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td><span class="badge badge--primary">Publicado</span></td>
                 <td>
-                  <p>Guadalajara</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr><tr>
                 <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">Jalisco</p>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
                 </td>
-                <td>
-                  <svg class="icon cell__arrow-icon">
-                    <use
-                      xlink:href="/img/icon-sprite/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
                 </td>
-                <td>
-                  <p>Ciudad de México</p>
-                  <p class="cell__text--secondary">Distrito Federal</p>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
                 </td>
-                <td>
-                  <p>12-Nov-2018</p>
-                  <p class="cell__text--secondary">12 AM – 8 PM</p>
-                </td>
-                <td class="cell--align-right">
-                  <p class="cell__text--bold">$ 100,000</p>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
+                  <span>John Kevin Raymond Appleseed</span>
+                </td>
+                <td>555 321 4578</td>
+                <td>3 days ago</td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--success">
+                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                    100%
+                  </p>
+                </td>
+                <td class="cell--align-right cell__text--strong">
+                  <p class="status status--alert">
+                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                    50%
+                  </p>
+                </td>
+                <td class="cell--align-right">3</td>
+                <td class="cell--actions">
+                  <button class="button button--sm button--square button--transparent">
+                    <i class="uil uil-ellipsis-h"></i>
+                  </button>
+                </td>
+              </tr>
+
             </tbody>
           </table>
         </div>
-
-        <div class="cell medium-12">
-          <h2 class="heading-2 margin-top--130 margin-bottom--50">
-            Sticky Sidenav and Placeholders
-          </h2>
-        </div>
-        <div class="cell medium-3">
-          <ul class="menu--sidenav menu--vertical menu">
-            <li><a class="menu-item menu-item--large active">Mi cuenta</a></li>
-            <li><a class="menu-item menu-item--large">Documentos</a></li>
-            <li><a class="menu-item menu-item--large">Pago</a></li>
-            <li>
-              <a class="menu-item menu-item--large">Ubicaciones registradas</a>
-            </li>
-            <li><a class="menu-item menu-item--large">Notificaciones</a></li>
-            <li>
-              <a class="menu-item menu-item--large">Términos y servicios</a>
-            </li>
-          </ul>
-        </div>
-        <div class="cell medium-7 medium-offset-1">
-          <div class="placeholder placeholder--height-1000">
-            <div class="placeholder__description">
-              Aquí podrás ver todos tus viajes.
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div
-      class="reveal tiny"
-      id="exampleModal1"
+      class="reveal full"
+      id="reveal-form"
       data-reveal
-      data-animation-in="reveal-slide-in"
-      data-animation-out="reveal-slide-out"
+      data-animation-in="reveal-full-slide-in"
+      data-animation-out="reveal-full-slide-out"
     >
       <button
-        class="close-button button button--transparent button--small button--square"
+        class="close-button button button--fill button--square button--lg"
         data-close
         aria-label="Close modal"
       >
-        <svg class="icon">
-          <use xlink:href="/img/icon-sprite/icons.svg#icon-close"></use>
-        </svg>
+          <i class="uil uil-times"></i>
       </button>
-      <div class="reveal__header">
-        <h2 class="heading-5">Ingresa tu contraseña</h2>
-      </div>
-      <div class="reveal__body">
-        <p>
-          Por favor verifica que eres realmente tú.<br />Ingresa tu contraseña
-          para poder continuar.
-        </p>
-        <input type="text" placeholder="Input" class="input" />
-      </div>
-      <div class="reveal__actions">
-        <button class="button" data-close>Cancel</button>
-        <button class="button button--fill button--primary">Continuar</button>
-      </div>
-    </div>
-
-    <div
-      class="reveal full onboarding onboarding--primary"
-      id="onboarding-modal"
-      data-reveal
-      data-animation-in="reveal-full-zoom-in"
-      data-animation-out="reveal-full-zoom-out"
-    >
-      <a href="" class="onboarding__logo logo logo--black">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 252 83"
-          preserveAspectRatio="xMinYMid"
-        >
-          <defs>
-            <path
-              id="logo-mask-path"
-              d="M38.3,0C22.4,0,4.2,6.1,3.4,6.3L0.6,7.3l-0.2,3c0,0.4-0.8,10.2,0,16.3L1,32.1l5.2-1.9
-			c0.1,0,7.2-2.5,18.6-3.6c9.8-0.9,24.6-0.8,41.3,4.2c-0.3,2-0.8,4.7-1.7,7.7c-6.1-1.7-18-4.6-28.4-4.8C20,33.5,7.9,37.5,7.4,37.6
-			L3,39.1l1.6,4.3c2.1,5.7,5.5,12.1,7.8,15.8l1.9,3.2l3.5-1.3c0.1,0,9.3-3.4,19.8-2.6c5.8,0.4,10.8,1.6,14.4,2.6
-			c-5.2,5.9-10.9,9.8-13.8,11.7c-2.9-1.7-8.3-5.5-11.7-9.7c0,0-2.3,0.1-4.8,0.9c-2.8,0.9-4.7,2-4.7,2c5.9,8.3,18.9,15.7,19.3,15.9
-			l2,1l2-1c0.5-0.3,13.6-7,22.9-20.5l3.1-4.6l-5.1-2.1c-0.4-0.2-10.1-4.1-22.9-5.1c-8.2-0.6-15.7,0.9-20,2c-1.1-2-2.3-4.4-3.4-6.7
-			c4.6-1,12.2-2.4,21.1-2.2c13.2,0.2,29.8,5.5,30,5.6l4,1.3l1.5-3.9c3.6-9.2,4-17.5,4-17.8l0.1-3.3l-3.2-1.1
-			c-28.6-9.6-52.9-5.8-63.5-3.3c0-2.2,0.1-4.5,0.1-6.2c5.6-1.6,19.2-5.4,30-4.9c18.5,0.7,37,7.1,37,7.1c0.2-1.7,0.3-3.2,0.3-4.6
-			v-0.2c0-2.3-0.2-3.8-0.2-3.8l-2.7-1C72.8,6.1,56.5,0,38.3,0z"
-            />
-          </defs>
-          <polygon
-            class="letter"
-            points="105,20.9 105,63 112.8,63 112.8,45.8 125.9,45.8 125.9,38.5 112.8,38.5 112.8,28.2
-		126.5,28.2 126.5,20.9 "
-          />
-          <polygon
-            class="letter"
-            points="129.2,63 136.8,63 136.8,20.9 129.2,20.9 "
-          />
-          <path
-            class="letter"
-            id="Fill-3"
-            d="M164,44.5c-0.9-5.1-4.8-7.4-8.6-7.4c-2.8,0-7.5,1.5-9,7.4H164z M146.7,50.6c0.3,2,3.3,6.5,8.7,6.5
-		c3.4,0,5.9-1.4,7.3-4h8c-1.8,5.7-7.9,11-15.3,11c-9.4,0-16.7-7.5-16.7-16.7c0-8.9,6.9-17.1,16.7-17.1c10.1,0,16.4,8.6,16.4,16.6
-		c0,1.5-0.2,2.8-0.5,3.8H146.7z"
-          />
-          <polygon
-            class="letter"
-            points="175.6,38.1 171.9,38.1 171.9,31.4 175.6,31.4 175.6,20.9 183.2,20.9 183.2,31.4
-		187.8,31.4 187.8,38.1 183.2,38.1 183.2,63 175.6,63 "
-          />
-          <path
-            class="letter"
-            d="M212.1,44.7c-0.8-5.1-4.7-7.5-8.4-7.5c-2.8-0.1-7.6,1.4-9.1,7.2L212.1,44.7z M194.7,50.4
-		c0.3,2.1,3.2,6.5,8.6,6.6c3.4,0.1,5.9-1.3,7.4-3.9l8,0.2c-1.9,5.6-8.1,10.8-15.5,10.7c-9.4-0.2-16.6-7.8-16.4-17
-		c0.2-8.9,7.2-17,17-16.8c10.1,0.2,16.2,8.9,16.1,16.9c0,1.5-0.3,2.8-0.5,3.8L194.7,50.4z"
-          />
-          <polygon
-            class="letter"
-            points="230.1,46.7 220.3,31.4 228.8,31.4 234.7,40.9 240.4,31.4 248.9,31.4 239.1,46.7 250.5,63
-	241.5,63 234.7,52.2 227.9,63 218.9,63 "
-          />
-          <clipPath id="logo-mask">
-            <use xlink:href="#logo-mask-path" style="overflow:visible;" />
-          </clipPath>
-          <path
-            class="logo-path"
-            d="M23.5,66.8c2.2,2.8,8.1,6.8,14.7,10.9c7.1-3.7,17.7-13.9,21.3-19c-12.7-5.5-30-6.9-43.6-2
-		c-3.3-5.3-5.5-10.2-7.4-15.2c20-5.8,40.2-2.9,58.8,2.5c2.3-5.9,3.1-9.3,4.1-16.6c-23.1-6.9-41.2-8.1-66.6-1.3
-		c-0.6-3.9-1-9.9-0.9-15.3c21.9-8.4,41.4-8.9,68.9-0.9"
-          />
-        </svg>
-      </a>
-      <button
-        class="close-button button button--transparent button--square"
-        data-close
-        aria-label="Close modal"
-      >
-        <svg class="icon icon--large">
-          <use xlink:href="/img/icon-sprite/icons.svg#icon-close"></use>
-        </svg>
-      </button>
-      <div class="grid-container">
+      <div class="grid-container grid-container--sm">
         <div class="grid-x grid-margin-x">
-          <div class="cell medium-6 medium-offset-3">
-            <div class="reveal__header onboarding__header">
-              <h1 class="heading-1 margin-bottom--40">
-                Comienza con fletex en 4 simples pasos.
-              </h1>
-              <h2 class="heading-6 margin-bottom--10">Lorem ipsum dolor</h2>
-              <p class="paragraph">
-                Mientras finalizas tu registro, ya puedes echar un vistazo a la
-                plataforma y ver lo que tiene para ofrecer.
+          <div class="cell medium-12">
+            <div class="reveal__header margin-bottom--20">
+              <h2 class="heading-2 margin-bottom--20">
+                Welcome to Vericrew.
+              </h2>
+              <p class="paragraph text-alpha--66">
+                You were invited to join an event crew on Vericrew. First, create your account. Already have one? <a href="">Sign in.</a>
               </p>
             </div>
-            <div class="reveal__body onboarding__body">
+            <div class="reveal__body">
               <div class="grid-x grid-margin-x">
                 <div class="cell small-6">
-                  <a href="" class="onboarding__step">
-                    <span class="onboarding__step__number">1</span>
-                    <span class="onboarding__step__title heading-5"
-                      >Confirma tu correo electrónico</span
-                    >
-                    <span class="onboarding__step__description paragraph"
-                      >Te envíamos un correo electrónico con un enlace para
-                      verificar tu correo.
-                    </span>
-                  </a>
+                  <div class="form-group form-group--floating">
+                    <input type="text" class="input" placeholder="e.g. John" />
+                    <label for="" class="label">First name</label>
+                  </div>
                 </div>
                 <div class="cell small-6">
-                  <a href="" class="onboarding__step">
-                    <span class="onboarding__step__number">2</span>
-                    <span class="onboarding__step__title heading-5"
-                      >Confirma tu correo electrónico</span
-                    >
-                    <span class="onboarding__step__description paragraph"
-                      >Te envíamos un correo electrónico con un enlace para
-                      verificar tu correo.
-                    </span>
-                  </a>
+                  <div class="form-group form-group--floating">
+                    <input type="text" class="input" placeholder="e.g. Appleseed" />
+                    <label for="" class="label">Last name</label>
+                  </div>
                 </div>
-                <div class="cell small-6">
-                  <a href="" class="onboarding__step">
-                    <span class="onboarding__step__number">3</span>
-                    <span class="onboarding__step__title heading-5"
-                      >Confirma tu correo electrónico</span
-                    >
-                    <span class="onboarding__step__description paragraph"
-                      >Te envíamos un correo electrónico con un enlace para
-                      verificar tu correo.
-                    </span>
-                  </a>
-                </div>
-                <div class="cell small-6">
-                  <a href="" class="onboarding__step">
-                    <span class="onboarding__step__number">4</span>
-                    <span class="onboarding__step__title heading-5"
-                      >Confirma tu correo electrónico</span
-                    >
-                    <span class="onboarding__step__description paragraph"
-                      >Te envíamos un correo electrónico con un enlace para
-                      verificar tu correo.
-                    </span>
-                  </a>
+              </div>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input" placeholder="e.g. john.appleseed@acmeinc.com" />
+                <label for="" class="label">First name</label>
+              </div>
+              <div class="form-group form-group--floating">
+                <input type="text" class="input" placeholder="e.g. 555 555 5555" />
+                <label for="" class="label">Phone</label>
+              </div>
+              <div class="form-group form-group--floating">
+                <textarea type="text" class="input" placeholder="e.g. 555 555 5555" rows="5"></textarea>
+                <label for="" class="label">Description</label>
+              </div>
+
+              <div class="form-footer">
+                <div class="grid-container grid-container--sm form-footer__actions">
+                  <button id="load-secondary-2" class="button button-square button--lg">
+                    <img class="button__loader" src="/img/icons/ic-spinner-black.svg">
+                    <span class="button__label"><i class="uil uil-angle-left-b"></i></span>
+                  </button>
+
+                  <button id="load-primary-2" class="button button--lg button--full button--primary">
+                    <img class="button__loader" src="/img/icons/ic-spinner-white.svg">
+                    <span class="button__label">Continue</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1171,6 +1388,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Vendor JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/js/foundation.min.js"></script>
 
     <!-- Main JS -->
     <script type="text/javascript" src="js/main.js"></script>

@@ -1,93 +1,157 @@
-$table-font-size-base: 1.3rem;
-$table-font-size-small: 1.2rem;
-$table-line-height-base: 1.8rem;
+$table-font-size-base: $font-size-paragraph-sm;
+$table-font-size-sm: $font-size-paragraph-xs;
+$table-font-size-lg: $font-size-paragraph-md;
+$table-line-height-base: $line-height-paragraph-sm;
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: $table-font-size-base;
-    line-height: $table-line-height-base;
-    border: 1px solid $color-slate-alpha-15;
+  width: 100%;
+  position: relative;
+  border-collapse: initial;
+  font-size: $table-font-size-base;
+  line-height: $table-line-height-base;
+  border-radius: $border-radius-ui-lg;
+  border: 1px solid $color-black-alpha-10;
 
-    thead,
-    tbody {
-        background-color: $white;
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 6px;
+
+    &:first-child {
+      padding-left: 20px;
     }
 
-    th,
-    td {
-        height: 6rem;
-        text-align: left;
-        vertical-align: middle;
+    &:last-child {
+      padding-right: 20px;
     }
 
-    thead {
-        border-bottom: 1px solid $color-slate-alpha-10;
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  th {
+    z-index: 1;
+    height: 50px;
+    position: sticky;
+    top: $navbar-height;
+    background-color: $color-white;
+    font-weight: $font-weight-regular;
+    border-bottom: 1px solid $color-black-alpha-10;
+
+    &:first-child {
+      border-top-left-radius: $border-radius-ui-lg;
     }
 
-    th {
-        font-weight: $font-weight-bold;
-        padding: 0.5rem;
+    &:last-child {
+      border-top-right-radius: $border-radius-ui-lg;
+    }
+  }
+
+  td {
+    height: 40px;
+    border-bottom: 1px solid $color-black-alpha-05;
+  }
+
+  tbody tr {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: $color-sand;
     }
 
-    td {
-        padding: 1.8rem 1.5rem 1.4rem;
+    &:hover {
+      .button--transparent:not(.button--alert):not(.button--primary) {
+        @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus, $color-black-alpha-10);
+      }
 
-        &:first-child {
-            padding-left: 2rem;
-        }
+      &.button--alert.button--transparent.button--primary {
+        @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2), $color-primary, $color-primary-faded);
+      }
 
-        &:last-child {
-            padding-right: 2rem;
-        }
+      .button--transparent.button--alert {
+        @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2), $color-alert, $color-accent-faded);
+      }
     }
 
-    tbody tr {
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-            background-color: rgba($color-slate, 0.05);
-        }
-
-        &:active {
-            background-color: rgba($color-slate, 0.1);
-        }
+    &:last-child td {
+      border-bottom: none;
     }
+  }
 
-    .cell--align-right {
-        text-align: right;
-    }
+  .cell--align-right {
+    text-align: right;
+  }
 
-    .cell__text--secondary {
-        font-size: $table-font-size-small;
-        color: $color-slate-alpha-50;
-    }
+  .cell__text--secondary {
+    font-size: $table-font-size-sm;
+    color: $color-black-alpha-35;
+  }
 
-    .cell__text--bold {
-        font-weight: $font-weight-bold;
-    }
+  .cell__text--strong {
+    font-weight: $font-weight-medium;
+  }
 
-    .table__sort {
-        @include button-base();
-        @include button--transparent();
-        @include heading-small-base();
-        height: 5rem;
-        text-align: left;
-        align-items: center;
-        display: inline-flex;
-        padding: 0.5rem 1.5rem 0;
-        font-size: $table-font-size-small;
+  .cell--actions,
+  .cell--actions:last-child {
+    width: 1px;
+    padding: 0 10px;
+  }
 
-        .icon {
-            flex: none;
-            opacity: 0.4;
-            margin-top: -0.5rem;
-            margin-left: 0.5rem;
-        }
-    }
 
-    .table__sort--active .icon {
+  .table__sort {
+    @include appearance-reset();
+    cursor: pointer;
+    text-align: left;
+    align-items: center;
+    display: inline-flex;
+    color: $color-black-alpha-35;
+
+    &:hover, &:focus {
+      color: $color-ui-base;
+
+      &::after {
         opacity: 1;
+      }
     }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.75;
+    }
+  }
+
+  .table__sort--up::after {
+    @include icon-pseudo('\ebb0');
+  }
+
+  .table__sort--down::after {
+    @include icon-pseudo('\ebaf');
+  }
+
+  .table__sort--up,
+  .table__sort--down {
+    color: $color-black-alpha-66;
+    font-weight: $font-weight-medium;
+
+    &::after {
+      position: relative;
+      top: 1px;
+      margin-left: 5px;
+      font-size: $icon-size-sm;
+      color: inherit;
+      opacity: 0.5;
+    }
+  }
+
+  .avatar {
+    margin-right: 10px;
+  }
 }

@@ -1,45 +1,61 @@
-$input-wrapper-icon-offset: 1.6rem;
-$input-wrapper-button-offset: 0.4rem;
-$input-wrapper-placeholder-offset: 5rem;
+$input-wrapper-icon-offset: 10px;
+$input-wrapper-button-offset: 4px;
+$input-wrapper-placeholder-offset: 40px;
 
 @mixin input-wrapper--icon($side) {
+  .input-wrapper {
     &.input-wrapper--icon-#{$side} {
-        > .icon {
-            #{$side}: $input-wrapper-icon-offset;
-        }
-        .input {
-            padding-#{$side}: $input-wrapper-placeholder-offset;
-        }
+      > .uil {
+        #{$side}: $input-wrapper-icon-offset;
+      }
+      .input {
+        padding-#{$side}: $input-wrapper-placeholder-offset;
+      }
     }
+  }
+
+  .form-group--floating .input-wrapper--icon-#{$side} .label {
+    margin-#{$side}: $input-wrapper-placeholder-offset - 8px;
+  }
 }
 
 @mixin input-wrapper--button($side) {
+  .input-wrapper {
     &.input-wrapper--button-#{$side} {
-        > .button {
-            #{$side}: $input-wrapper-button-offset;
-        }
-        .input {
-            padding-#{$side}: $input-wrapper-placeholder-offset;
-        }
+      > .button {
+        #{$side}: $input-wrapper-button-offset;
+      }
+      .input {
+        padding-#{$side}: $input-wrapper-placeholder-offset;
+      }
     }
+  }
+
+  .form-group--floating .input-wrapper--icon-#{$side} .label {
+    margin-#{$side}: $input-wrapper-placeholder-offset - 8px;
+  }
 }
 
 .input-wrapper {
-    position: relative;
+  position: relative;
 
-    > .icon,
-    > .button {
-        top: 50%;
-        position: absolute;
-        transform: translateY(-50%);
-    }
+  > .uil,
+  > .button {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
 
-    > .button {
-        @include button--small();
-    }
+  > .uil {
+    color: $color-black-alpha-35;
+  }
 
-    @include input-wrapper--icon(left);
-    @include input-wrapper--icon(right);
-    @include input-wrapper--button(left);
-    @include input-wrapper--button(right);
+  > .button {
+    @include button--sm();
+  }
 }
+
+@include input-wrapper--icon(left);
+@include input-wrapper--icon(right);
+@include input-wrapper--button(left);
+@include input-wrapper--button(right);

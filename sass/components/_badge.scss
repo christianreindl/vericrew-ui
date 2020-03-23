@@ -1,26 +1,90 @@
+$badge-size: 16px;
+
 .badge {
-    @include heading-small-base();
-    display: inline-block;
+  padding: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $font-size-ui-badge;
+  line-height: $badge-size;
+
+  color: $color-black-alpha-35;
+  background-color: $color-sand-dark;
+  border-radius: $border-radius-ui-sm;
+
+  &.badge--primary {
+    color: $color-primary;
+    background-color: $color-primary-faded;
+  }
+
+  &.badge--accent {
+    color: $color-accent;
+    background-color: $color-accent-faded;
+  }
+
+  &.badge--success {
+    color: $color-success;
+    background-color: $color-success-faded;
+  }
+
+  &.badge--alert {
+    color: $color-alert;
+    background-color: $color-alert-faded;
+  }
+
+  &.badge--warning {
+    color: $color-warning;
+    background-color: $color-warning-faded;
+  }
+
+  &.badge--code {
+    vertical-align: baseline;
+    font-family: monospace !important;
+  }
+}
+
+.status {
+  color: $color-black-alpha-35;
+
+  .status-badge {
+    background-color: $color-sand-dark;
+  }
+
+  &.status--success {
+    color: $color-primary;
+    .status-badge {
+      background-color: $color-success-faded;
+    }
+  }
+
+  &.status--alert {
+    color: $color-alert;
+    .status-badge {
+      background-color: $color-alert-faded;
+    }
+  }
+
+  .status-badge {
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
     vertical-align: middle;
-    font-size: $font-size-ui-badge;
-    line-height: $line-height-base;
-    padding: 0.4rem 0.6rem 0.2rem;
+    border-radius: $border-radius-ui-sm;
 
-    color: $color-slate;
-    background-color: rgba($color-slate, 0.08);
-
-    &.badge--primary {
-        color: $color-primary-darker;
-        background-color: rgba($color-primary-darker, 0.15);
+    .uil {
+      @include icon-size($icon-size-xs)
     }
 
-    &.badge--accent {
-        color: $color-accent;
-        background-color: rgba($color-accent, 0.1);
-    }
+    &.status-badge--lg {
+      width: 24px;
+      height: 24px;
+      margin-right: 3px;
+      border-radius: $border-radius-ui-lg;
 
-    &.badge--alert {
-        color: $color-alert;
-        background-color: rgba($color-alert, 0.08);
+      .uil {
+        @include icon-size($icon-size-sm)
+      }
     }
+  }
 }

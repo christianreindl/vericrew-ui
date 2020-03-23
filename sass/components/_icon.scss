@@ -1,30 +1,60 @@
-.icon {
-    stroke: none;
-    fill: currentColor;
-    vertical-align: middle;
-    width: $icon-size-md;
-    display: inline-block;
-    height: $icon-size-md;
+@mixin icon-size($size) {
+  height: $size;
+  font-size: $size;
 
-    &.icon--large {
-        width: $icon-size-lg;
-        height: $icon-size-lg;
-    }
+  &::before {
+    font-size: $size;
+  }
+}
 
-    &.icon--small {
-        width: $icon-size-sm;
-        height: $icon-size-sm;
-    }
+@mixin icon-pseudo($icon-code) {
+  opacity: 1;
+  width: 1em;
+  speak: none;
+  content: $icon-code;
+  line-height: 1em;
+  position: relative;
+  font-style: normal;
+  text-align: center;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-family: "unicons";
+  display: inline-block;
+}
 
-    &.icon--truck {
-        width: $icon-size-md * 2;
+.uil {
+  margin: 0;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
 
-        &.icon--large {
-            width: $icon-size-lg * 2;
-        }
+  &::before {
+    margin: 0;
+    font-size: $icon-size-md;
+  }
 
-        &.icon--small {
-            width: $icon-size-sm * 2;
-        }
-    }
+  &.uil--xs {
+    @include icon-size($icon-size-xs)
+  }
+
+  &.uil--sm {
+    @include icon-size($icon-size-sm)
+  }
+
+  &.uil--md {
+    @include icon-size($icon-size-md)
+  }
+
+  &.uil--lg {
+    @include icon-size($icon-size-lg)
+  }
+
+  &.uil--xl {
+    @include icon-size($icon-size-xl)
+  }
+
+  &.uil--xxl {
+    @include icon-size($icon-size-xxl)
+  }
 }

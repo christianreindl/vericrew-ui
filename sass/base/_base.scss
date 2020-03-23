@@ -7,18 +7,17 @@
  */
 :root,
 html {
-    font-size: 62.5%;
 }
 
 /**
  * Set up a decent box model on the root element
  */
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $color-ui-background;
+  background-color: $color-ui-background;
 }
 
 /**
@@ -30,5 +29,9 @@ body {
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.content {
+  padding-top: 40px;
 }

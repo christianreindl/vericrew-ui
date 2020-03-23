@@ -16,7 +16,7 @@ $tile-height: 124px;
     background-color: $color-sand;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 $grid-gutter-sm $grid-gutter-sm 0;
+    margin: 0 $grid-gutter-md $grid-gutter-md 0;
 
     .icon,
     .tile__label {

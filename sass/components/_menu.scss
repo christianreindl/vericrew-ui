@@ -1,69 +1,66 @@
 .menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  position: relative;
 
-    .menu-item {
-        display: block;
-        line-height: 2rem;
-        text-decoration: none;
-        color: $color-ui-base;
-        font-size: $font-size-base;
-        padding: 1.1rem 1.5rem 0.9rem;
+  .menu-item {
+    display: block;
+    text-decoration: none;
+    color: $color-ui-base;
+    font-size: $font-size-paragraph-sm;
+    line-height: $line-height-paragraph-sm;
+    padding: 6px 15px;
 
-        &:hover,
-        &:focus {
-            background-color: $color-sand;
-        }
-        &:focus {
-            @include focus-shadow();
-            outline: none;
-        }
-        &:active {
-            background-color: $color-sand-dark;
-        }
-
-        .icon {
-            margin-right: 1rem;
-        }
+    &:hover {
+      background-color: $color-sand;
+    }
+    &:focus {
+      @include focus-shadow();
+      outline: none;
+    }
+    &:active {
+      background-color: $color-sand-dark;
     }
 
-    .menu-item--alert {
-        color: $color-alert;
-
-        &:hover,
-        &:focus {
-            background-color: rgba($color-alert, 0.08);
-        }
-        &:focus {
-            @include focus-shadow($color-alert);
-        }
-        &:active {
-            background-color: rgba($color-alert, 0.15);
-        }
+    .uil {
+      @include icon-size($icon-size-md);
+      margin-right: 10px;
+      color: $color-black-alpha-35;
     }
+  }
 
-    .menu-item--large {
-        @include heading-small-base();
-        line-height: 2rem;
-        font-size: $font-size-h6;
-        padding: 1.7rem 2rem 1.3rem;
+  .menu-item--alert {
+    color: $color-alert;
+
+    &:hover {
+      background-color: rgba($color-alert, 0.08);
     }
-
-    .menu-item--divider {
-        height: 0.1rem;
-        margin: 0.5rem 0;
-        background-color: $color-slate-alpha-10;
+    &:focus {
+      @include focus-shadow($color-alert);
     }
-
-    &.menu--vertical {
-        flex-wrap: nowrap;
-        flex-direction: column;
+    &:active {
+      background-color: rgba($color-alert, 0.15);
     }
+    .uil {
+      color: $color-alert;
+    }
+  }
 
+  .menu-item--divider {
+    height: 1px;
+    margin: 5px 0;
+    background-color: $color-black-alpha-05;
+  }
+
+  &.menu--vertical {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  /*
     &.menu--sidenav {
         position: sticky;
         top: 13rem;
@@ -101,5 +98,5 @@
                 }
             }
         }
-    }
+    }*/
 }

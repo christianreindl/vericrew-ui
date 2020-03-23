@@ -1,40 +1,80 @@
-$modal-padding: 4rem;
+$modal-padding: 40px;
 
 .reveal-overlay {
-    background-color: rgba($black, 0.66);
+    background-color: $color-black-alpha-66;
 }
 
 .reveal {
     padding: 0;
     border: none;
     background-color: $white;
-    box-shadow: $box-shadow-elevation-2;
+    box-shadow: $box-shadow-elevation-1;
+    border-radius: $border-radius-ui-lg;
 
     &.tiny,
     &.small,
     &.large {
-        margin-top: 10rem;
+        margin-top: 100px;
+    }
+
+    &.full {
+      border-radius: 0;
+      padding-top: 100px;
     }
 
     &:focus {
         outline: none;
     }
 
-    .close-button {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
+    .button.close-button {
+      top: 15px;
+      right: 15px;
+      display: flex;
+      padding: 9px 0;
+      overflow: hidden;
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: $button-height-lg;
+      transition: $transition-focus-shadow, height 0.2s $ease-out-cubic;
+
+      .uil {
+        flex: none;
+        margin-bottom: 2px;
+      }
+
+      &::after {
+        opacity: 0;
+        content: 'ESC';
+        display: block;
+        transform: translateY(-3px);
+        color: $color-black-alpha-35;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-paragraph-xs;
+        line-height: $line-height-paragraph-sm;
+        transition: all 0.25s $ease-out-cubic;
+      }
+
+      &:hover {
+        height: 64px;
+
+        &::after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
 
+
     .reveal__header {
-        padding: $modal-padding $modal-padding 0;
+       // padding: $modal-padding $modal-padding 0;
     }
 
     .reveal__body {
-        padding: 3rem $modal-padding 5rem;
+       // padding: 30px $modal-padding 50px;
         p {
-            color: $color-slate-alpha-50;
-            margin-bottom: 3.5rem;
+         //   color: $color-black-alpha-66;
+          //  margin-bottom: 35px;
         }
     }
 

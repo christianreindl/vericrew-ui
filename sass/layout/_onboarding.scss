@@ -1,104 +1,28 @@
+$onboarding-graphic-offset: 15px;
+
 .onboarding {
-    color: $white;
-    padding: 14rem 0;
-    background-color: $color-slate;
-
-    &.onboarding--primary {
-        color: $color-slate;
-        background-color: $color-primary;
-    }
-
-    .onboarding__header {
-        max-width: 38rem;
-        padding: 0;
-    }
-
-    .onboarding__body {
-        margin-top: 8rem;
-        padding: 0;
-    }
-
-    .close-button {
-        position: fixed;
-    }
-
-    .onboarding__logo {
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        padding: 0 3rem;
-        cursor: pointer;
-        position: fixed;
-        height: $navbar-height;
-    }
+  display: flex;
+  min-height: 280px;
+  background: $color-sand;
+  border-radius: $border-radius-ui-lg;
+  align-items: flex-end;
+  position: relative;
+  padding: 30px;
 }
 
-.onboarding__step {
-    display: block;
-    color: inherit;
-    opacity: 0.5;
-    padding: 2rem 0 5rem;
+.onboarding__content {
+  width: 50%;
+  max-width: 400px;
+}
 
-    .onboarding__step__number,
-    .onboarding__step__title,
-    .onboarding__step__description {
-        display: block;
-        max-width: 22rem;
-        position: relative;
-    }
+.onboarding__title,
+.onboarding__description {
+  margin-bottom: 10px;
+}
 
-    .onboarding__step__number {
-        display: block;
-        line-height: 1;
-        font-size: 8rem;
-        padding-bottom: 1rem;
-        margin-right: -0.5rem;
-        font-weight: $font-weight-light;
-    }
-
-    .onboarding__step__title {
-        padding-top: 2rem;
-
-        &::before,
-        &::after {
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            max-width: 22rem;
-            position: absolute;
-        }
-
-        &::before {
-            border-top: 1px dotted rgba($color-slate, 0.75);
-        }
-
-        &::after {
-            border-top: 1px solid $color-slate;
-            transform: scaleX(0);
-            transform-origin: right center;
-        }
-    }
-
-    .onboarding__step__description {
-        margin-top: 1.5rem;
-        opacity: 0.75;
-    }
-
-    &:hover,
-    &:focus {
-        outline: none;
-        opacity: 1;
-
-        .onboarding__step__title::after {
-            transform: scaleX(1);
-            transform-origin: left center;
-        }
-    }
-
-    &:active {
-        opacity: 0.5;
-    }
+.onboarding__graphic {
+  position: absolute;
+  bottom: 0;
+  right: -$onboarding-graphic-offset;
+  height: calc(100% + #{$onboarding-graphic-offset});
 }

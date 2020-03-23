@@ -1,26 +1,29 @@
-$form-group-margin: 3rem;
-$form-group-label-margin: 1rem;
+$form-group-margin: 25px;
+$form-group-label-margin: 5px;
 
 .form-group {
-    position: relative;
-    margin-top: $form-group-margin;
+  position: relative;
+  margin-top: $form-group-margin;
 
-    .label {
-        margin-bottom: 1rem;
-        display: inline-block;
-    }
-    &:hover,
-    &:focus-within {
-        z-index: 1;
-
-        .form-message-wrapper {
-            pointer-events: auto;
-        }
-        .form-message {
-            opacity: 1;
-        }
-    }
+  .label {
+    margin-bottom: 5px;
+    display: inline-block;
+    color: $color-black-alpha-55;
+  }
+  &:hover,
+  &:focus-within {
+    z-index: 1;
+  }
 }
+
+.form-message {
+  margin-top: 5px;
+
+  &.form-message--alert {
+    color: $color-alert-dark;
+  }
+}
+
 
 .control-group {
     .control {
@@ -35,27 +38,51 @@ $form-group-label-margin: 1rem;
 }
 
 .input-group {
-    display: flex;
+  display: flex;
 
-    > .input,
-    > .input-wrapper {
-        flex: 1;
-    }
+  > .input,
+  > .input-wrapper {
+    flex: 1;
+  }
 
-    .input:not(:first-child),
-    .input-wrapper:not(:first-child) .input {
-        border-left: none;
-    }
+  .input:not(:first-child),
+  .input-wrapper:not(:first-child) .input {
+    border-left: none;
+  }
 }
 
 .fieldset {
-    margin-bottom: 8rem;
+  margin-bottom: 80px;
 
-    .fieldset__header {
-        margin-bottom: 3rem;
-    }
+  .fieldset__header {
+    margin-bottom: 30px;
+  }
 
-    .fieldset__description {
-        margin-top: 2rem;
-    }
+  .fieldset__description {
+    margin-top: 20px;
+  }
+}
+
+.form-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: $color-white;
+  border-top: 1px solid $color-black-alpha-10;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.form-footer__actions {
+  display: flex;
+
+  .button:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .button--square,
+  .button--round {
+    flex: none;
+  }
 }

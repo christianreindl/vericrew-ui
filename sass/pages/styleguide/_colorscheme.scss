@@ -1,0 +1,95 @@
+.styleguide__colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.styleguide__color {
+  flex: 1 0 50%;
+  margin-bottom: 40px;
+}
+
+.styleguide__color__swatch {
+  display: flex;
+  align-items: flex-end;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  &:first-child::before {
+    height: 100px;
+    border-top-left-radius: $border-radius-ui-lg;
+    border-top-right-radius: $border-radius-ui-lg;
+  }
+  &:last-child::before {
+    border-bottom-left-radius: $border-radius-ui-lg;
+    border-bottom-right-radius: $border-radius-ui-lg;
+  }
+}
+
+.styleguide__color--primary .styleguide__color__swatch {
+  &:nth-child(1)::before {
+    background: $color-primary;
+  }
+  &:nth-child(2)::before {
+    background: $color-primary-dark;
+  }
+  &:nth-child(3)::before {
+    background: $color-primary-darker;
+  }
+  &:nth-child(4)::before {
+    background: $color-primary-faded;
+  }
+}
+
+.styleguide__color--alert .styleguide__color__swatch {
+  &:nth-child(1)::before {
+    background: $color-alert;
+  }
+  &:nth-child(2)::before {
+    background: $color-alert-dark;
+  }
+  &:nth-child(3)::before {
+    background: $color-alert-darker;
+  }
+  &:nth-child(4)::before {
+    background: $color-alert-faded;
+  }
+}
+
+.styleguide__color--black .styleguide__color__swatch {
+  &:nth-child(1)::before {
+    background: $color-black;
+  }
+  &:nth-child(2)::before {
+    background: $color-black-alpha-66;
+  }
+  &:nth-child(3)::before {
+    background: $color-black-alpha-35;
+  }
+  &:nth-child(4)::before {
+    background: $color-black-alpha-10;
+  }
+  &:nth-child(5)::before {
+    background: $color-black-alpha-05;
+  }
+}
+
+.styleguide__color--sand .styleguide__color__swatch {
+  &:nth-child(1)::before {
+    background: $color-sand;
+  }
+  &:nth-child(2)::before {
+    background: $color-sand-dark;
+  }
+  &:nth-child(3)::before {
+    background: $color-sand-darker;
+  }
+  &:nth-child(4)::before {
+    background: $color-sand-alt;
+  }
+}

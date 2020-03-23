@@ -1,0 +1,60 @@
+.tabs {
+  display: flex;
+}
+
+.tabs-title a {
+  padding: 6px 0;
+  position: relative;
+  margin-right: 25px;
+  color: $color-black-alpha-35;
+
+  &::after,
+  &::before {
+    content: '';
+    height: 1px;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    position: absolute;
+  }
+
+  &::before {
+    opacity: 0;
+    background-color: $color-black-alpha-10;
+    transition: opacity 0.15s ease;
+  }
+
+  &::after {
+    transform: scaleX(0);
+    transform-origin: right center;
+    background-color: $color-primary;
+    transition: transform 0.25s $ease-in-cubic;
+  }
+
+  &:hover, &:focus {
+    color: $color-ui-base;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.66;
+  }
+}
+
+.tabs-title.is-active a {
+  color: $color-ui-base;
+
+  &::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition: transform 0.25s 0.25s $ease-out-cubic;
+  }
+}
+

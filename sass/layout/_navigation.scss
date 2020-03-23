@@ -1,239 +1,189 @@
-$navbar-height: 7rem;
-$navbar-height-mobile: 6rem;
-$navbar-top-height: 5rem;
+$navbar-height: 56px;
+$navbar-height-mobile: 50px;
 
 $navbar-outer-margin: 3rem;
-$navbar-item-shadow-size: inset 0 0 0 0;
-$navbar-item-shadow-size-active: inset 0 0.3rem 0 0;
-$navbar-item-shadow-size-active-mobile: inset 0 -0.3rem 0 0;
-$navbar-item-padding-top: 0.2rem;
 
 .nav {
-    background: $white;
-    z-index: $zindex-navbar;
+  background: $white;
+  z-index: $zindex-navbar;
+
+  @include breakpoint(large up) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  @include breakpoint(medium down) {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: -$navbar-height-mobile;
+  }
+
+  &.nav--scrolled {
+    box-shadow: 0 1px 0 0 $color-black-alpha-10;
+  }
+
+  .nav__main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: $navbar-height-mobile * 2;
 
     @include breakpoint(large up) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+      flex-wrap: nowrap;
+      height: $navbar-height;
     }
+  }
+
+  .nav__logo,
+  .nav__actions {
+    flex: 1 1 calc(50vw - #{$grid-container-width * 0.5});
+  }
+
+  .nav__logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 $grid-gutter-md * 0.5;
+    height: $navbar-height-mobile;
+
+    @include breakpoint(large up) {
+      height: 100%;
+      padding: 0 $grid-gutter-md * 0.5;
+    }
+
+    img {
+      width: 64px
+    }
+  }
+
+  .nav__menu {
+    display: flex;
+    flex: 0 1 $grid-container-width;
+    padding: 0 $grid-gutter-md * 0.5;
 
     @include breakpoint(medium down) {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: -$navbar-height-mobile;
-        box-shadow: inset 0 -1px 0 0 $color-slate-alpha-10;
+      width: 100%;
+      order: 3;
+
+      li {
+        flex: 1;
+      }
     }
 
-    &.nav--scrolled {
-        box-shadow: 0 1px 0 0 $color-slate-alpha-10;
-    }
+    .nav__menu-item {
+      color: $color-black-alpha-35;
+      display: block;
+      height: 100%;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
 
-    .nav__top {
-        display: flex;
-        align-items: center;
-        min-height: $navbar-top-height;
-        font-size: $font-size-base;
-        line-height: $line-height-base;
-        text-align: center;
-        background-color: $color-slate;
-        color: $color-white;
-        width: 100%;
-        justify-content: center;
-        cursor: pointer;
+      &.active {
+        color: $color-ui-base;
+      }
+
+      @include breakpoint(large up) {
+        padding: 0 25px 0 0;
 
         &:hover,
         &:focus {
-            outline: none;
-            background-color: $color-slate-lighter;
+          color: $color-ui-base;
         }
 
         &:active {
-            color: rgba($white, 0.5);
+          opacity: 0.66;
         }
+      }
+    }
+  }
 
-        &.nav__top--primary {
-            color: $color-slate;
-            background-color: $color-primary;
-            border-bottom: 1px solid $color-slate-alpha-10;
+  .nav__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: $grid-gutter-md * 0.5;
+  }
 
-            &:hover,
-            &:focus {
-                background-color: $color-primary-dark;
-            }
+  .nav__profile {
+    padding: 0;
+    display: block;
+    margin-left: 10px;
 
-            &:active {
-                color: rgba($color-slate, 0.5);
-            }
-        }
+    .avatar {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-        @include breakpoint(medium down) {
-            display: block;
-            order: 2;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
+  .nav__profile__dropdown {
+    width: 300px;
+
+    &::before {
+      content: '';
+      height: 80px;
+      display: block;
+      background-position: center;
+      background-color: $color-sand;
+      background-image: url('/img/graphics/graphic-background-profile.png');
+      background-size: cover;
+      border-bottom: solid 1px $color-black-alpha-05;
+    }
+  }
+
+  .nav__profile__user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    border-bottom: solid 1px $color-black-alpha-05;
+    text-align: center;
+    margin-top: -$avatar-size-xl * 0.5;
+    padding-bottom: 20px;
+
+    .avatar {
+      margin-bottom: 15px;
+    }
+  }
+
+  /*
+  .nav__notifications {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: 30%;
+      background-color: $color-primary;
+      display: block;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0.3rem $color-white;
+      transform: scale(0.5);
+      opacity: 0;
     }
 
-    .nav__main {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        height: $navbar-height-mobile * 2;
+    &.nav__notifications--highlight {
+      .icon {
+        transform: rotate(-30deg);
+      }
 
-        @include breakpoint(large up) {
-            flex-wrap: nowrap;
-            height: $navbar-height;
-        }
-    }
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
 
-    .nav__logo {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        padding: 0 3rem 0 0;
-        height: $navbar-height-mobile;
-
-        @include breakpoint(large up) {
-            height: 100%;
-            padding: 0 3rem 0 1rem;
-        }
-    }
-
-    .nav__menu {
-        display: flex;
-        flex-grow: 1;
-
-        @include breakpoint(medium down) {
-            width: 100%;
-            order: 3;
-
-            li {
-                flex: 1;
-            }
-        }
-
-        .nav__menu-item {
-            @include heading-small-base();
-            font-size: $font-size-ui-nav;
-            color: $color-slate-alpha-50;
-            display: block;
-            height: 100%;
-            cursor: pointer;
-            text-align: center;
-
-            span {
-                line-height: $navbar-height-mobile - $navbar-item-padding-top;
-                display: block;
-                height: 100%;
-                box-shadow: $navbar-item-shadow-size $color-primary;
-            }
-
-            &.active span {
-                color: $color-ui-base;
-                box-shadow: $navbar-item-shadow-size-active-mobile
-                    $color-primary;
-            }
-
-            @include breakpoint(large up) {
-                padding: 0 2rem;
-
-                span {
-                    padding-top: $navbar-item-padding-top;
-                    line-height: $navbar-height - $navbar-item-padding-top;
-                }
-                &:hover,
-                &:focus {
-                    span {
-                        color: $color-ui-base;
-                    }
-                }
-
-                &:active span {
-                    opacity: 0.66;
-                }
-
-                &.active span {
-                    box-shadow: $navbar-item-shadow-size-active $color-primary;
-                }
-            }
-        }
-    }
-
-    .nav__actions {
-        display: flex;
-    }
-
-    .nav__profile {
-        @include heading-small-base();
-        font-size: $font-size-ui-nav;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        margin: 0 0 0 1rem;
-
-        @include breakpoint(medium down) {
-            font-size: 0;
-            line-height: 0;
-            margin: 0;
-        }
-    }
-
-    .nav__profile__avatar {
-        @include breakpoint(large up) {
-            margin-right: 1rem;
-        }
-    }
-
-    .nav__profile__user-info {
-        display: flex;
-        align-items: center;
-        padding: 2.5rem 2rem 2.5rem;
-        border-bottom: solid 1px $color-slate-alpha-10;
-    }
-
-    .nav__profile__user-info__name {
-        margin-left: 1.5rem;
-    }
-
-    .nav__notifications {
-        position: relative;
-
+      &:hover,
+      &:focus {
         &::after {
-            content: "";
-            position: absolute;
-            top: 20%;
-            right: 30%;
-            background-color: $color-primary;
-            display: block;
-            width: 0.9rem;
-            height: 0.9rem;
-            border-radius: 50%;
-            box-shadow: 0 0 0 0.3rem $color-white;
-            transform: scale(0.5);
-            opacity: 0;
+          box-shadow: 0 0 0 0.3rem transparent;
         }
-
-        &.nav__notifications--highlight {
-            .icon {
-                transform: rotate(-30deg);
-            }
-
-            &::after {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            &:hover,
-            &:focus {
-                &::after {
-                    box-shadow: 0 0 0 0.3rem transparent;
-                }
-            }
-        }
+      }
     }
+  }*/
 }
