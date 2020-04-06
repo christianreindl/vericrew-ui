@@ -42,11 +42,11 @@ $color-warning-faded: rgba($color-warning, 0.25);
 $color-ui-background: $color-white;
 $color-ui-base: rgba($color-black, 0.96);
 $color-ui-border: $color-black-alpha-10;
-$color-ui-focus: #887a7c;
+$color-ui-focus: #86726d;
 
 /* Font */
 $font-family-base: "Inter", sans-serif;
-$font-family-title: "Recoleta", sans-serif;
+$font-family-title: p22-mackinac-pro, serif;
 
 /* Font Size */
 $font-size-h1: 40px;
@@ -86,7 +86,7 @@ $font-weight-bold: 700;
 
 /* Letter spacing */
 $letter-spacing-base: -0.01em;
-$letter-spacing-heading: normal;
+$letter-spacing-heading: -0.035em;
 
 /* Box shadow */
 $box-shadow-elevation-1: 0 3px 5px -1px rgba($color-black,0.04);;
