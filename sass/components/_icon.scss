@@ -35,26 +35,83 @@
   }
 
   &.uil--xs {
-    @include icon-size($icon-size-xs)
+    @include icon-size($icon-size-xs);
   }
 
   &.uil--sm {
-    @include icon-size($icon-size-sm)
+    @include icon-size($icon-size-sm);
   }
 
   &.uil--md {
-    @include icon-size($icon-size-md)
+    @include icon-size($icon-size-md);
   }
 
   &.uil--lg {
-    @include icon-size($icon-size-lg)
+    @include icon-size($icon-size-lg);
   }
 
   &.uil--xl {
-    @include icon-size($icon-size-xl)
+    @include icon-size($icon-size-xl);
   }
 
   &.uil--xxl {
-    @include icon-size($icon-size-xxl)
+    @include icon-size($icon-size-xxl);
+  }
+}
+
+
+
+// Custom Icon Codes
+
+$ic-custom-arrow-long-left: "\e900";
+$ic-custom-arrow-long-right: "\e901";
+$ic-custom-check-double: "\e902";
+$ic-custom-pause: "\e903";
+$ic-custom-play: "\e904";
+$ic-custom-question-share: "\e905";
+$ic-custom-question: "\e906";
+$ic-custom-slide-share: "\e907";
+$ic-custom-slide: "\e908";
+
+.uil--custom {
+  &[class^="uil-"]:before,
+  &[class*=" uil-"]:before {
+    font-family: "unicons custom";
+  }
+
+  &.uil-arrow-long-left:before {
+    content: $ic-custom-arrow-long-left;
+  }
+
+  &.uil-arrow-long-right:before {
+    content: $ic-custom-arrow-long-right;
+  }
+
+  &.uil-check-double:before {
+    content: $ic-custom-check-double;
+  }
+
+  &.uil-pause:before {
+    content: $ic-custom-pause;
+  }
+
+  &.uil-play:before {
+    content: $ic-custom-play;
+  }
+
+  &.uil-question-share:before {
+    content: $ic-custom-question-share;
+  }
+
+  &.uil-question:before {
+    content: $ic-custom-question;
+  }
+
+  &.uil-slide-share:before {
+    content: $ic-custom-slide-share;
+  }
+
+  &.uil-slide:before {
+    content: $ic-custom-slide;
   }
 }

@@ -28,6 +28,19 @@ $font-path: "../../fonts/";
   font-style: normal;
 }
 
+@font-face {
+  font-family: "unicons custom";
+  src:  url($font-path + 'custom-icons.eot?i5pcqz');
+  src:  url($font-path + 'custom-icons.eot?i5pcqz#iefix') format('embedded-opentype'),
+  url($font-path + 'custom-icons.ttf?i5pcqz') format('truetype'),
+  url($font-path + 'custom-icons.woff?i5pcqz') format('woff'),
+  url($font-path + 'custom-icons.svg?i5pcqz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
 
 
 // -----------------------------------------------------------------------------
