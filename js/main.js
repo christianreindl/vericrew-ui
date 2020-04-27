@@ -7,20 +7,20 @@ $(document).ready(function() {
   function checkScroll() {
     var startY = 5; //The point where the navbar changes in px
 
-    if ($('.staff__brief__content, .page-container--quiz').scrollTop() > startY) {
+    if ($('.staff__brief__text, .staff--wrapper').scrollTop() > startY) {
       $('.staff__brief__header').addClass("staff__brief__header--scrolled");
     } else {
       $('.staff__brief__header').removeClass("staff__brief__header--scrolled");
     }
   }
 
-  $('.staff__brief__content').on("scroll load resize", function () {
+  $('.staff__brief__text').on("scroll load resize", function () {
     if ($('.staff__brief__header').length > 0) {
       checkScroll();
     }
   });
 
-  $('.page-container--quiz').on("scroll load resize", function () {
+  $('.staff--wrapper').on("scroll load resize", function () {
     if ($('.staff__brief__header').length > 0) {
       checkScroll();
     }

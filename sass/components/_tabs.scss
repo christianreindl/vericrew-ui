@@ -1,9 +1,5 @@
 .tabs {
   display: flex;
-
-  @include breakpoint(medium down) {
-    box-shadow: inset 0 -1px 0 $color-black-alpha-10;
-  }
 }
 
 .tabs-title a {
@@ -51,17 +47,6 @@
   &:active {
     opacity: 0.66;
   }
-
-  @include breakpoint(medium down) {
-    display: block;
-    padding: 15px 0;
-    font-weight: $font-weight-medium;
-
-    &::before,
-    &::after {
-      height: 2px;
-    }
-  }
 }
 
 .tabs-title.is-active a {
@@ -73,3 +58,5 @@
     transition: transform 0.25s 0.25s $ease-out-cubic;
   }
 }
+
+

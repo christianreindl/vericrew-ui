@@ -1,0 +1,126 @@
+$brief-header-transition: all 0.25s ease;
+
+.staff__brief__header {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  position: fixed;
+  height: $brief-header-height;
+}
+
+.staff__brief__header--scrolled {
+  background-color: $color-white;
+  box-shadow: 0 1px 5px 0 rgba($color-black, 0.1),
+  0 4px 10px -2px rgba($color-black, 0.1);
+}
+
+@include breakpoint(small down) {
+
+  .staff__brief__header--transparent:not(.staff__brief__header--scrolled) {
+    color: $color-white;
+
+    .staff__brief__progress__track {
+      background-color: rgba($color-white, 0.3);
+    }
+
+    .staff__brief__progress__head {
+      background-color: $color-white;
+    }
+
+    .section-icon {
+      background-color: rgba($color-white, 0.08);
+      color: inherit;
+    }
+
+    .staff__brief__section__slides {
+      color: rgba($color-white, 0.66);
+    }
+
+    .staff__brief__close {
+      border: 1px solid rgba($color-white, 0.1);
+      color: inherit;
+
+      &:hover {
+        border: 1px solid rgba($color-white, 0.25);
+      }
+      &:focus {
+        @include focus-shadow($color-white);
+        outline: none;
+      }
+    }
+  }
+}
+
+.staff__brief__header {
+  transition: $brief-header-transition;
+
+  .staff__brief__section__slides {
+    transition: $brief-header-transition;
+  }
+}
+
+
+
+
+.staff__brief__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.staff__brief__section {
+  display: flex;
+  overflow: hidden;
+  margin-right: 15px;
+  align-items: center;
+  white-space: nowrap;
+  align-self: flex-end;
+
+  .section-icon {
+    margin-right: 15px;
+  }
+}
+.staff__brief__section__text {
+  overflow: hidden;
+}
+.staff__brief__section__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.staff__brief__section__slides {
+  color: $color-black-alpha-35;
+}
+
+.staff__brief__close {
+  flex: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 25%;
+  align-items: center;
+  display: inline-flex;
+  align-self: flex-end;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid $color-black-alpha-05;
+
+  .uil {
+    @include icon-size($icon-size-lg);
+    margin: 0;
+  }
+
+  &:hover {
+    border: 1px solid $color-black-alpha-10;
+  }
+  &:focus {
+    @include focus-shadow();
+    outline: none;
+  }
+}

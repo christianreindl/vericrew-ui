@@ -1,0 +1,36 @@
+
+.staff__brief__intro {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: $brief-header-height + 30px;
+  padding-bottom: $floating-buttons-clearspace;
+
+  .section-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 72px;
+    margin: 0 auto;
+  }
+}
+
+.staff__brief__intro__title {
+  max-width: 280px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+.staff__brief__intro__description {
+  max-width: 300px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.staff__brief__stats {
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+  margin-top: 25px;
+}

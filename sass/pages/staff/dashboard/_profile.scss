@@ -1,0 +1,36 @@
+.staff__header--profile {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.staff__avatar-score {
+
+}
+
+.staff__avatar-score__photo {
+  width: 80px;
+  height: 80px;
+}
+
+.staff__avatar-score__rating {
+  background-color: $color-primary;
+  height: 32px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: $font-weight-medium;
+  color: $color-white;
+  background-image: url('/img/graphics/graphic-staff-score-background-success.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin-top: -10px;
+  position: relative;
+  box-shadow: 0 5px 8px -1px rgba($color-black,0.15), 0 2px 3px -1px rgba($color-black,0.25);
+}
+
+.staff__avatar-score__rating__inner {
+
+}

@@ -1,18 +1,20 @@
 .staff__list {
   margin-top: 10px;
 
-  li {
-    &:first-child .staff__list__item {
-      border-top: 1px solid $color-black-alpha-10;
-    }
+  @include breakpoint(small down) {
+    li {
+      &:first-child .staff__list__item {
+        border-top: 1px solid $color-black-alpha-10;
+      }
 
-    &:last-child .staff__list__item {
-      border-bottom: 1px solid $color-black-alpha-10;
+      &:last-child .staff__list__item {
+        border-bottom: 1px solid $color-black-alpha-10;
+      }
     }
   }
 }
 
-.staff__list--brief li:first-child .staff__list__item{
+.staff__list--brief li:first-child .staff__list__item {
   border-top-color: transparent;
 }
 
@@ -20,6 +22,14 @@
   color: inherit;
   display: block;
   border-bottom: 1px solid $color-black-alpha-05;
+
+  @include breakpoint(medium up) {
+    border: none;
+    border-radius: $border-radius-ui-lg;
+    max-width: $grid-container-width-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &:not(.staff__list__item--static) {
     cursor: pointer;
@@ -30,7 +40,8 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: $color-sand;
       }
     }
@@ -71,7 +82,7 @@
   justify-content: center;
   align-items: center;
   background-color: $color-sand-alt-2;
-  border-radius: $border-radius-ui-sm--mobile;
+  border-radius: $border-radius-ui-xl--mobile;
 }
 
 .staff__list-separator {
@@ -81,10 +92,9 @@
   &.staff__list-separator--image {
     background-size: cover;
     background-position: center;
-    background-image: url('/img/graphics/graphic-staff-list-separator.png');
+    background-image: url("/img/graphics/graphic-staff-list-separator.png");
   }
 }
-
 
 .staff__list__item--static {
   .staff__list__item__inner {

@@ -1,0 +1,28 @@
+.staff__brief__progress {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.staff__brief__progress__track,
+.staff__brief__progress__head {
+  height: 2px;
+  transition: $brief-header-transition, width 0.15s $ease-in-out-cubic;
+}
+
+.staff__brief__progress__track {
+  flex: 1;
+  margin-right: 5px;
+  background-color: rgba($color-black, 0.15);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.staff__brief__progress__head {
+  width: 0;
+  background-color: $color-black;
+}

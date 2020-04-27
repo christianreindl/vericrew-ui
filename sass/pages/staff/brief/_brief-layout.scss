@@ -1,0 +1,30 @@
+.staff__brief {
+  @include breakpoint(medium up) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $grid-outer-padding--mobile;
+  }
+}
+
+.staff__brief__content {
+  height: 100%;
+
+  @include breakpoint(medium up) {
+    flex: 1 1 auto;
+    display: flex;
+    max-width: 1000px;
+    margin: 100px auto $floating-buttons-clearspace;
+    overflow: hidden;
+    border-radius: $border-radius-ui-lg;
+    border: 1px solid $color-black-alpha-10;
+
+    .staff__brief__content {
+    }
+
+    .staff__brief__text,
+    .staff__brief__photo,
+    .staff__brief__video {
+      flex: 1;
+    }
+  }
+}

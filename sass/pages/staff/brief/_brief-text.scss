@@ -1,0 +1,57 @@
+.staff__brief__text {
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: $brief-header-height;
+
+  @include breakpoint(medium up) {
+    position: relative;
+    scroll-snap-type: none;
+    scroll-padding: 0;
+  }
+}
+
+.staff__brief__scroll-snap {
+  scroll-snap-align: start;
+  height: calc(100% - #{$brief-content-bottom-offset});
+
+  @include breakpoint(medium up) {
+    display: none;
+  }
+}
+
+.staff__brief__text__inner {
+  padding-top: 30px;
+  position: relative;
+  padding-bottom: $floating-buttons-clearspace;
+  background: $color-white;
+  scroll-snap-align: start;
+  min-height: calc(100% - #{$brief-header-height});
+  box-shadow: 0 -10px 100px 0 rgba($color-black, 0.6);
+
+  @include breakpoint(medium up) {
+    padding: 50px;
+  }
+}
+
+.staff__brief__scroll-indicator {
+  left: 0;
+  top: -40px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+
+  img {
+    width: 40px;
+    opacity: 0.5;
+  }
+}
+
+.staff__brief__body {
+  margin-top: 25px;
+}

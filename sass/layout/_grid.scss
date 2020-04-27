@@ -1,6 +1,9 @@
 .grid-container--sm {
-  padding-right: 20px;
-  padding-left: 20px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $grid-container-width-sm;
+  padding-left: $grid-outer-padding--mobile;
+  padding-right: $grid-outer-padding--mobile;
 /*
   .grid-margin-x {
     margin-left: -$grid-gutter-sm * 0.5;

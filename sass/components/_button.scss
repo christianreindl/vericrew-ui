@@ -32,10 +32,6 @@ $button-height-floating: 56px;
   &:active {
     opacity: 1;
   }
-
-  @include breakpoint(medium down) {
-    border-radius: $border-radius-ui-sm--mobile;
-  }
 }
 
 @mixin button--sm() {
@@ -109,6 +105,9 @@ $button-height-floating: 56px;
   $box-shadow: 0 1px 5px 0 $box-shadow-color, 0 4px 10px -2px $box-shadow-color;
 
   color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: $box-shadow;
   border: 1px solid $border-color;
   height: $button-height-floating;
@@ -318,6 +317,21 @@ $button-height-floating: 56px;
 
     &.button--float .uil {
       color: inherit;
+    }
+  }
+
+  &.button--float {
+    .button__label {
+      flex: auto;
+    }
+
+    .uil {
+      flex: none;
+      @include icon-size($icon-size-xl);
+    }
+
+    .uil + .button__label {
+      padding-right: 15px;
     }
   }
 
