@@ -1,0 +1,22 @@
+.staff__floating-actions {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.staff__floating-actions__inner {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+
+  .button {
+    margin-left: 5px;
+    max-width: 50%;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}
+

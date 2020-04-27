@@ -1,4 +1,5 @@
 $badge-size: 16px;
+$badge-size-lg: 28px;
 
 .badge {
   padding: 0 4px;
@@ -39,6 +40,42 @@ $badge-size: 16px;
   &.badge--code {
     vertical-align: baseline;
     font-family: monospace !important;
+  }
+
+  &.badge--lg {
+    padding: 0px 8px;
+    height: $badge-size-lg;
+    line-height: $badge-size-lg;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-ui-badge-lg;
+
+    @include breakpoint(medium down) {
+      font-size: $font-size-ui-badge-lg--mobile;
+    }
+  }
+
+  &.badge--fill {
+    color: $color-white;
+
+    &.badge--primary {
+      background-color: $color-primary;
+    }
+
+    &.badge--accent {
+      background-color: $color-accent;
+    }
+
+    &.badge--success {
+      background-color: $color-success;
+    }
+
+    &.badge--alert {
+      background-color: $color-alert;
+    }
+
+    &.badge--black {
+      background-color: $color-black;
+    }
   }
 }
 

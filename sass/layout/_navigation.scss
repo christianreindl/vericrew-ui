@@ -148,42 +148,4 @@ $navbar-outer-margin: 3rem;
       margin-bottom: 15px;
     }
   }
-
-  /*
-  .nav__notifications {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 20%;
-      right: 30%;
-      background-color: $color-primary;
-      display: block;
-      width: 0.9rem;
-      height: 0.9rem;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0.3rem $color-white;
-      transform: scale(0.5);
-      opacity: 0;
-    }
-
-    &.nav__notifications--highlight {
-      .icon {
-        transform: rotate(-30deg);
-      }
-
-      &::after {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      &:hover,
-      &:focus {
-        &::after {
-          box-shadow: 0 0 0 0.3rem transparent;
-        }
-      }
-    }
-  }*/
 }

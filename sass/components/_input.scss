@@ -106,6 +106,15 @@ $input-height-sm: 32px;
   &:-moz-placeholder { /* Firefox 18- */
     color: $color-black-alpha-35;
   }
+
+  &.input--accent {
+    &.input--fill {
+      &:focus {
+        @include focus-shadow($color-accent-darker);
+        border-color: $color-accent;
+      }
+    }
+  }
 }
 
 textarea.input {

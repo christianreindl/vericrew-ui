@@ -1,0 +1,33 @@
+.section-icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  color: inherit;
+  font-size: 40px;
+  overflow: hidden;
+  background-color: $color-sand-alt-2;
+  border-radius: $border-radius-ui-sm--mobile;
+
+  .uil {
+    transform: rotate(-8deg) translate(10%, 15%);
+
+    &::before {
+      font-size: inherit;
+    }
+  }
+
+  &.section-icon--primary {
+    background-color: $color-primary-faded;
+    color: $color-primary;
+  }
+
+  &.section-icon--accent {
+    background-color: $color-accent-faded;
+    color: $color-accent;
+  }
+
+  &.section-icon--alert {
+    background-color: $color-alert-faded;
+    color: $color-alert;
+  }
+}

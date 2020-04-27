@@ -13,15 +13,16 @@ $color-primary-dark: #115A4E;
 $color-primary-darker: #0C4037;
 $color-primary-faded: rgba($color-primary,0.12);
 
-$color-accent: #6FA0C8;
-$color-accent-dark: #4E7CA2;
-$color-accent-darker: #325C7F;
+$color-accent: #637EB6;
+$color-accent-dark: darken($color-accent, 5%);
+$color-accent-darker: darken($color-accent, 8%);
 $color-accent-faded: rgba($color-accent,0.16);
 
 $color-sand: rgba(150,99,99,0.05);
 $color-sand-dark: rgba(134,114,109,0.15);
 $color-sand-darker: rgba(126,115,112,0.22);
 $color-sand-alt: rgba(82,61,61,0.04);
+$color-sand-alt-2: rgba(150,99,88,0.08);
 
 $color-alert: #E2705F;
 $color-alert-dark: darken($color-alert, 10%);
@@ -65,6 +66,7 @@ $font-size-ui-input-lg: 15px;
 $font-size-ui-label-md: $font-size-paragraph-xs;
 $font-size-ui-label-lg: $font-size-paragraph-sm;
 $font-size-ui-badge: 12px;
+$font-size-ui-badge-lg: 14px;
 
 $font-size-base: $font-size-paragraph-md;
 
@@ -112,7 +114,42 @@ $icon-size-xxl: 32px;
 $grid-gutter-md: 30px;
 $grid-gutter-sm: 10px;
 $grid-container-width: 1130px;
-$grid-container-width-sm: 430px;
+$grid-container-width-sm: 800px;
 
 /* z-indices */
 $zindex-navbar: 100;
+
+
+///////////////////////
+// Mobile Styles
+//////////////////////
+
+$font-size-h1--mobile: 40px;
+$font-size-h2--mobile: 32px;
+$font-size-h3--mobile: 28px;
+$font-size-h4--mobile: 18px;
+$font-size-h5--mobile: 16px;
+
+$font-size-paragraph-xs--mobile: 12px;
+$font-size-paragraph-sm--mobile: 12px;
+$font-size-paragraph-md--mobile: 14px;
+$font-size-paragraph-lg--mobile: 16px;
+
+$font-size-ui-input-md--mobile: 14px;
+$font-size-ui-input-lg--mobile: 14px;
+$font-size-ui-label-md--mobile: $font-size-paragraph-xs;
+$font-size-ui-label-lg--mobile: $font-size-paragraph-sm;
+$font-size-ui-badge--mobile: 12px;
+$font-size-ui-badge-lg--mobile: 14px;
+
+$line-height-heading-large--mobile: 1.15;
+$line-height-heading-small--mobile: 1.25;
+$line-height-paragraph--mobile: 22px;
+$line-height-paragraph-sm--mobile: 18px;
+$line-height-paragraph-lg--mobile: 26px;
+$line-height-ui-button--mobile: 24px;
+$line-height-ui-input--mobile: 24px;
+
+$border-radius-ui-sm--mobile: 25%;
+
+$floating-buttons-clearspace: 100px;

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@iconscout/unicons/css/unicons.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="page-container page-container--quiz">
+      <div class="staff__brief__header">
+        <div class="staff__brief__progress grid-container--sm">
+          <div class="staff__brief__progress__track">
+            <div class="staff__brief__progress__head" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="staff__brief__info grid-container--sm">
+          <button class="staff__brief__close">
+            <i class="uil uil-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="staff__quiz__content">
+        <div class="grid-container--sm">
+          <p class="staff__quiz__instructions paragraph text-alpha--35 margin-bottom--5">Select one or more correct answers.</p>
+          <h1 class="staff__quiz__question heading-3">Which is the “All Zones” channel on your dispatch radio?</h1>
+          <div class="choices">
+            <input type="text" class="input input--lg input--fill input--accent" placeholder="Enter an answer">
+          </div>
+          <ul class="choices choices--horizontal">
+            <li class="choice choice--lg">
+              <input
+                  class="choice__input"
+                  type="radio"
+                  value="1"
+                  name="trueFalse"
+                  id="trueFalse1"
+              />
+              <label class="choice__label paragraph--lg" for="trueFalse1">
+                True
+              </label>
+            </li>
+            <li class="choice choice--lg">
+              <input
+                  class="choice__input"
+                  type="radio"
+                  value="1"
+                  name="trueFalse"
+                  id="trueFalse2"
+              />
+              <label class="choice__label paragraph--lg" for="trueFalse2">
+                False
+              </label>
+            </li>
+
+          </ul>
+          <ul class="choices">
+            <li class="choice">
+              <input
+                class="choice__input"
+                type="checkbox"
+                value="1"
+                name="radio1"
+                id="radio1"
+              />
+              <label class="choice__label paragraph--lg" for="radio1">
+                Channel 10
+              </label>
+            </li>
+            <li class="choice">
+              <input
+                class="choice__input"
+                type="checkbox"
+                value="1"
+                name="radio1"
+                id="radio2"
+              />
+              <label class="choice__label paragraph--lg" for="radio2">
+                Channel 21
+              </label>
+            </li>
+            <li class="choice">
+              <input
+                class="choice__input"
+                type="checkbox"
+                value="1"
+                name="radio1"
+                id="radio3"
+              />
+              <label class="choice__label paragraph--lg" for="radio3">
+                Channel 5
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="staff__floating-actions">
+        <div class="grid-container--sm staff__floating-actions__inner">
+          <button class="button button--float button--round">
+            <i class="uil uil-arrow-left"></i>
+          </button>
+          <button class="button button--float button--round button--accent" disabled="disabled">
+            <i class="uil uil-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/js/foundation.min.js"></script>
+
+    <!-- Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

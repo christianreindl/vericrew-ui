@@ -1,0 +1,47 @@
+.staff__events {
+  li:first-child .staff__events__item {
+    border: 1px solid $color-black-alpha-10;
+  }
+
+  li:last-child .staff__events__item {
+    margin-bottom: 0;
+    border: 1px solid $color-black-alpha-10;
+  }
+}
+
+.staff__list__item.staff__events__item {
+  $staff-events-item-shadow: 0 3px 5px -1px rgba($color-black, 0.05);
+  margin-bottom: 10px;
+  background: $color-white;
+  padding: 15px 20px 20px 20px;
+  border-radius: $border-radius-ui-lg;
+  border: 1px solid $color-black-alpha-10;
+  box-shadow: $staff-events-item-shadow;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus {
+      background-color: $color-sand;
+    }
+
+    &:focus {
+      @include focus-shadow($color-ui-focus, $staff-events-item-shadow);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+    transition-duration: 0ms;
+  }
+}
+
+.staff__events__item__info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .badge {
+    flex: none;
+    margin-left: 25px;
+  }
+}

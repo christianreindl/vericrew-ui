@@ -1,0 +1,23 @@
+.staff__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .nav__logo {
+    padding: 0;
+    height: 40px;
+    margin-left: -5px;
+  }
+
+  .nav__actions {
+    padding: 0;
+  }
+
+  .grid-container--sm {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r css*//*.css",
-    "scss": "node-sass --output-style compressed sass -o css",
+    "scss": "node-sass sass -o css",
+    "scssCompress": "node-sass --output-style compressed sass -o css",
     "uglify": "terser js/main.js --compress --mangle -o js/main.min.js",
     "serve": "browser-sync start --server --files \"css*//*.css, js/main.js\"",
     "build:css": "npm run scss && npm run autoprefixer",

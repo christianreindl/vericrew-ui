@@ -1,0 +1,135 @@
+@mixin choice-theme($color, $animation-name) {
+  .choice__input {
+    &:checked + .choice__label {
+      color: $color-white;
+      background-color: $color;
+      animation-name: choice-select--#{$animation-name};
+    }
+  }
+
+  @keyframes choice-select--#{$animation-name} {
+    from {
+      background-color: darken($color, 15%);
+    }
+    to {
+      background-color: $color;
+    }
+  }
+}
+
+
+.choices {
+  .choice {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.choices--horizontal {
+    display: flex;
+
+    .choice {
+      flex: 1;
+      margin-left: 5px;
+      margin-bottom: 0;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+
+.choice {
+  @include choice-theme($color-accent, 'accent');
+  display: block;
+
+  &.choice--primary {
+    @include choice-theme($color-primary, 'primary');
+  }
+  &.choice--black {
+    @include choice-theme($color-black, 'black');
+  }
+
+  .choice__input {
+
+    opacity: 0;
+    position: absolute;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:focus + .choice__label {
+        @include focus-shadow();
+      }
+    }
+
+    &:active + .choice__label {
+      background-color: $color-sand-darker;
+    }
+
+    &:checked + .choice__label {
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .choice__label {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 8px 15px;
+    position: relative;
+    padding-right: 40px;
+    min-width: $button-height-md;
+    background-color: $color-sand-alt;
+    border-radius: $border-radius-ui-lg;
+    -webkit-tap-highlight-color: transparent;
+
+    animation-duration: 0.25s;
+    animation-iteration-count: 2;
+    animation-timing-function: steps(2, start);
+    animation-fill-mode: both;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $color-sand-dark;
+      }
+    }
+
+    &::after {
+      @include icon-pseudo("\e8dc");
+      top: 4px;
+      right: 4px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      color: inherit;
+      font-size: 20px;
+      position: absolute;
+      align-items: center;
+      vertical-align: middle;
+      justify-content: center;
+      border-radius: $border-radius-ui-lg;
+      background-color: $color-black-alpha-10;
+
+      opacity: 0;
+    }
+  }
+
+  &.choice--lg .choice__label {
+    padding: 12px 15px;
+
+    &::after {
+      top: 8px;
+      right: 8px;
+    }
+  }
+}

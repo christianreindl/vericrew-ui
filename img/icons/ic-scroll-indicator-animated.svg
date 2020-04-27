@@ -1,0 +1,44 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 30">
+  <path d="M1,13.8l17.5-7.4c0.9-0.4,2-0.4,3,0L39,13.8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+    <animate attributeName="d"
+             attributeType="XML"
+             from="M1,13.8l17.5-7.4c0.9-0.4,2-0.4,3,0L39,13.8"
+             to="M4,16.6L18.6,3.9c0.8-0.7,2-0.7,2.8,0L36,16.6"
+             repeatCount="indefinite"
+             dur="2.5s"
+             values="M1,13.8l17.5-7.4c0.9-0.4,2-0.4,3,0L39,13.8;
+                     M1,13.8l17.5-7.4c0.9-0.4,2-0.4,3,0L39,13.8;
+                     M4,16.6L18.6,3.9c0.8-0.7,2-0.7,2.8,0L36,16.6;
+                     M1,13.8l17.5-7.4c0.9-0.4,2-0.4,3,0L39,13.8; "
+             calcMode="spline"
+             keySplines="0.550, 0.055, 0.675, 0.190;
+                         0.550, 0.055, 0.675, 0.190;
+                         0.215, 0.610, 0.355, 1.000;"
+             keyTimes="0;
+                       0.5;
+                       0.75;
+                       1"
+    />
+    <animateTransform attributeName="transform"
+                      attributeType="XML"
+                      type="translate"
+                      from="0,8"
+                      to="0,0"
+                      dur="2.5s"
+                      values="0,8;
+                              0,8;
+                              0,0;
+                              0,8;"
+                      calcMode="spline"
+                      keySplines="0.550, 0.055, 0.675, 0.190;
+                                  0.550, 0.055, 0.675, 0.190;
+                                  0.215, 0.610, 0.355, 1.000;"
+                      keyTimes="0;
+                                0.5;
+                                0.75;
+                                1"
+                      repeatCount="indefinite"/>
+
+  </path>
+</svg>

@@ -7,18 +7,25 @@ $(document).ready(function() {
   function checkScroll() {
     var startY = 5; //The point where the navbar changes in px
 
-    if ($(window).scrollTop() > startY) {
-      $('.nav').addClass("nav--scrolled");
+    if ($('.staff__brief__content, .page-container--quiz').scrollTop() > startY) {
+      $('.staff__brief__header').addClass("staff__brief__header--scrolled");
     } else {
-      $('.nav').removeClass("nav--scrolled");
+      $('.staff__brief__header').removeClass("staff__brief__header--scrolled");
     }
   }
 
-  $(window).on("scroll load resize", function () {
-    if ($('.nav').length > 0) {
+  $('.staff__brief__content').on("scroll load resize", function () {
+    if ($('.staff__brief__header').length > 0) {
       checkScroll();
     }
   });
+
+  $('.page-container--quiz').on("scroll load resize", function () {
+    if ($('.staff__brief__header').length > 0) {
+      checkScroll();
+    }
+  });
+
 
   $('#load-primary, #load-primary-2,  #load-secondary-2').on('click', function() {
     const el = $(this)

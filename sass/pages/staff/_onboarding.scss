@@ -1,0 +1,26 @@
+.staff__onboarding {
+  padding: 40px 28% 20px 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: $color-sand-alt-2;
+  border-radius: $border-radius-ui-lg;
+
+  &.staff__onboarding--primary {
+    background-color: $color-primary-faded;
+  }
+
+  &.staff__onboarding--accent {
+    background-color: $color-accent-faded;
+  }
+}
+.staff__onboarding__title,
+.staff__onboarding__body,
+.staff__onboarding__stats {
+  max-width: 300px;
+}
+
+.staff__onboarding__body,
+.staff__onboarding__stats {
+  margin-top: 10px;
+}

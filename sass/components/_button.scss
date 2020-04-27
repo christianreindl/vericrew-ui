@@ -1,6 +1,7 @@
 $button-height-lg: 48px;
 $button-height-md: 40px;
 $button-height-sm: 32px;
+$button-height-floating: 56px;
 
 @mixin button-base() {
   @include disabled();
@@ -22,9 +23,18 @@ $button-height-sm: 32px;
   border-radius: $border-radius-ui-sm;
 
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   &:focus {
     outline: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @include breakpoint(medium down) {
+    border-radius: $border-radius-ui-sm--mobile;
   }
 }
 
@@ -39,7 +49,7 @@ $button-height-sm: 32px;
     width: $button-height-sm;
 
     .uil {
-      @include icon-size($icon-size-md)
+      @include icon-size($icon-size-md);
     }
   }
 }
@@ -56,7 +66,7 @@ $button-height-sm: 32px;
     width: $button-height-lg;
 
     .uil {
-      @include icon-size($icon-size-xl)
+      @include icon-size($icon-size-xl);
     }
   }
 }
@@ -87,6 +97,57 @@ $button-height-sm: 32px;
   }
 }
 
+@mixin button--float(
+  $color,
+  $background-color,
+  $background-color-hover,
+  $background-color-active,
+  $focus-color: $background-color-active,
+  $border-color: transparent,
+  $box-shadow-color: rgba(darken($background-color, 25%), 0.2)
+) {
+  $box-shadow: 0 1px 5px 0 $box-shadow-color, 0 4px 10px -2px $box-shadow-color;
+
+  color: $color;
+  box-shadow: $box-shadow;
+  border: 1px solid $border-color;
+  height: $button-height-floating;
+  min-width: $button-height-floating;
+  font-weight: $font-weight-semibold;
+  background-color: $background-color;
+  border-radius: $button-height-floating * 0.5;
+  transition: transform 0.25s $ease-out-quad, $transition-focus-shadow;
+
+  &:not(.button--round):not(.button--square) {
+    flex: 1;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $background-color-hover;
+    }
+
+    &:focus {
+      @include focus-shadow(rgba($focus-color, 0.2), $box-shadow);
+      outline: none;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+    transition-duration: 0ms;
+    background-color: $background-color-active;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[disabled="disabled"] {
+    opacity: 1;
+    box-shadow: none;
+    background-color: lighten($background-color, 35%);
+  }
+}
+
 @mixin button--transparent(
   $color,
   $background-color-hover,
@@ -113,39 +174,123 @@ $button-height-sm: 32px;
   }
 }
 
-
 .button {
   @include button-base();
-  @include button--fill($color-ui-base, $color-sand, $color-sand-dark, $color-sand-darker, transparent, $color-ui-focus);
+  @include button--fill(
+    $color-ui-base,
+    $color-sand,
+    $color-sand-dark,
+    $color-sand-darker,
+    transparent,
+    $color-ui-focus
+  );
 
   &.button--primary {
-    @include button--fill($color-white, $color-primary, $color-primary-dark, $color-primary-darker);
+    @include button--fill(
+      $color-white,
+      $color-primary,
+      $color-primary-dark,
+      $color-primary-darker
+    );
   }
   &.button--alert {
-    @include button--fill($color-white, $color-alert, $color-alert-dark, $color-alert-darker);
+    @include button--fill(
+      $color-white,
+      $color-alert,
+      $color-alert-dark,
+      $color-alert-darker
+    );
   }
 
   &.button--transparent {
     text-align: left;
     justify-content: flex-start;
-    @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus);
+    @include button--transparent(
+      $color-ui-base,
+      $color-sand,
+      $color-sand-dark,
+      $color-ui-focus
+    );
 
     &.button--primary {
-      @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2));
+      @include button--transparent(
+        $color-primary,
+        rgba($color-primary, 0.1),
+        rgba($color-primary, 0.2)
+      );
     }
     &.button--alert {
-      @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2));
+      @include button--transparent(
+        $color-alert,
+        rgba($color-alert, 0.1),
+        rgba($color-alert, 0.2)
+      );
     }
   }
 
   &.button--outline {
-    @include button--transparent($color-ui-base, $color-sand, $color-sand-dark, $color-ui-focus, $color-black-alpha-10);
+    @include button--transparent(
+      $color-ui-base,
+      $color-sand,
+      $color-sand-dark,
+      $color-ui-focus,
+      $color-black-alpha-10
+    );
 
     &.button--primary {
-      @include button--transparent($color-primary, rgba($color-primary, 0.1), rgba($color-primary, 0.2), $color-primary, $color-primary-faded);
+      @include button--transparent(
+        $color-primary,
+        rgba($color-primary, 0.1),
+        rgba($color-primary, 0.2),
+        $color-primary,
+        $color-primary-faded
+      );
     }
     &.button--alert {
-      @include button--transparent($color-alert, rgba($color-alert, 0.1), rgba($color-alert, 0.2), $color-alert, $color-accent-faded);
+      @include button--transparent(
+        $color-alert,
+        rgba($color-alert, 0.1),
+        rgba($color-alert, 0.2),
+        $color-alert,
+        $color-accent-faded
+      );
+    }
+  }
+
+  &.button--float {
+    @include button--float(
+      $color-ui-base,
+      $color-white,
+      darken($color-white, 5%),
+      darken($color-white, 8%),
+      $color-ui-focus,
+      $color-black-alpha-10,
+      rgba(0, 0, 0, 0.08)
+    );
+
+    &.button--primary {
+      @include button--float(
+        $color-white,
+        $color-primary,
+        $color-primary-dark,
+        $color-primary-darker
+      );
+    }
+    &.button--accent {
+      @include button--float(
+        $color-white,
+        $color-accent,
+        $color-accent-dark,
+        $color-accent-darker
+      );
+    }
+    &.button--black {
+      @include button--float(
+        $color-white,
+        $color-black,
+        lighten($color-black, 15%),
+        lighten($color-black, 20%)
+      );
     }
   }
 
@@ -156,7 +301,6 @@ $button-height-sm: 32px;
   &.button--lg {
     @include button--lg();
   }
-
 
   &.button--square,
   &.button--round {
@@ -170,6 +314,10 @@ $button-height-sm: 32px;
       @include icon-size($icon-size-lg);
       margin: 0;
       color: $color-black-alpha-35;
+    }
+
+    &.button--float .uil {
+      color: inherit;
     }
   }
 
