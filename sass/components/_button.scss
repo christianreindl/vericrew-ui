@@ -327,7 +327,7 @@ $button-height-floating: 56px;
 
     .uil {
       flex: none;
-      @include icon-size($icon-size-xl);
+      @include icon-size($icon-size-lg);
     }
 
     .uil + .button__label {

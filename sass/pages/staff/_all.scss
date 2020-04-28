@@ -1,7 +1,9 @@
-@import "base/all";
+.staff-wrapper {
+  @import "base/all";
 
-@import "common/all";
+  @import "common/all";
 
-@import "brief/all";
+  @import "brief/all";
 
-@import "dashboard/all";
+  @import "dashboard/all";
+}
