@@ -1,1335 +1,1316 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="node_modules/@iconscout/unicons/css/unicons.css"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <nav class="nav">
-      <div class="nav__main">
-        <a href="" class="nav__logo logo">
-          <img src="img/logo/logo-ondark-color.svg" alt="Vericrew" />
-        </a>
-        <ul class="nav__menu">
-          <li><a class="nav__menu-item active" href="">Events</a></li>
-          <li><a class="nav__menu-item" href="">Team</a></li>
-          <li><a class="nav__menu-item" href="">Help</a></li>
-        </ul>
-        <ul class="nav__actions">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="node_modules/@iconscout/unicons/css/line.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav__main">
+      <a href="" class="nav__logo logo">
+        <img src="img/logo/logo-ondark-color.svg" alt="Vericrew" />
+      </a>
+      <ul class="nav__menu">
+        <li><a class="nav__menu-item active" href="">Events</a></li>
+        <li><a class="nav__menu-item" href="">Team</a></li>
+        <li><a class="nav__menu-item" href="">Help</a></li>
+      </ul>
+      <ul class="nav__actions">
+        <li>
+          <button class="button button--sm button--transparent button--round">
+            <i class="uil uil--md uil-comment-alt"></i>
+          </button>
+        </li>
+        <li>
+          <button class="button button--sm button--transparent button--round nav__profile"
+            data-toggle="nav__profile__dropdown">
+            <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar-lg" />
+          </button>
+          <div class="dropdown-pane nav__profile__dropdown" data-position="bottom" data-alignment="right"
+            id="nav__profile__dropdown" data-close-on-click="true" data-dropdown>
+            <div class="nav__profile__user-info">
+              <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar--xl" />
+              <p class="heading-5">John Appleseed</p>
+              <p class="paragraph--sm text-alpha--66">johnappleseed@acmeinc.com</p>
+            </div>
+            <ul class="menu menu--vertical">
+              <li>
+                <a class="menu-item" href=""><i class="uil uil-user"></i>User profile</a>
+              </li>
+              <li>
+                <a class="menu-item" href=""><i class="uil uil-lock"></i>Change password</a>
+              </li>
+              <li>
+                <a class="menu-item menu-item--alert" href=""><i class="uil uil-exit"></i>Sign out</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header">
+    <div class="grid-container header__inner">
+      <div class="header__left">
+        <ul class="breadcrumbs">
+          <li><a href="#">Organizations</a></li>
+          <li><a href="#">BottleRock Org</a></li>
           <li>
-            <button class="button button--sm button--transparent button--round">
-              <i class="uil uil--md uil-comment-alt"></i>
-            </button>
+            <span class="show-for-sr">Current: </span> Vericrew Styleguide
           </li>
-            <li>
-              <button class="button button--sm button--transparent button--round nav__profile" data-toggle="nav__profile__dropdown">
-                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar-lg"/>
-              </button>
-              <div
-                class="dropdown-pane nav__profile__dropdown"
-                data-position="bottom"
-                data-alignment="right"
-                id="nav__profile__dropdown"
-                data-close-on-click="true"
-                data-dropdown
-              >
-                <div class="nav__profile__user-info">
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar avatar--xl"/>
-                  <p class="heading-5">John Appleseed</p>
-                  <p class="paragraph--sm text-alpha--66">johnappleseed@acmeinc.com</p>
-                </div>
-                <ul class="menu menu--vertical">
-                  <li>
-                    <a class="menu-item" href=""><i class="uil uil-user"></i>User profile</a>
-                  </li>
-                  <li>
-                    <a class="menu-item" href=""><i class="uil uil-lock"></i>Change password</a>
-                  </li>
-                  <li>
-                    <a class="menu-item menu-item--alert" href=""><i class="uil uil-exit"></i>Sign out</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
         </ul>
+        <h1 class="heading-2">Vericrew Styleguide</h1>
       </div>
-    </nav>
-
-    <header class="header">
-      <div class="grid-container header__inner">
-        <div class="header__left">
-          <ul class="breadcrumbs">
-            <li><a href="#">Organizations</a></li>
-            <li><a href="#">BottleRock Org</a></li>
-            <li>
-              <span class="show-for-sr">Current: </span> Vericrew Styleguide
-            </li>
-          </ul>
-          <h1 class="heading-2">Vericrew Styleguide</h1>
+      <div class="header__right">
+        <div class="header__stat">
+          <p class="header__stat__number heading-3">5</p>
+          <p class="header__stat__label">Crew size</p>
         </div>
-        <div class="header__right">
-          <div class="header__stat">
-            <p class="header__stat__number heading-3">5</p>
-            <p class="header__stat__label">Crew size</p>
-          </div>
-          <div class="header__stat">
-            <p class="header__stat__number heading-3 status status--success">
-              <span class="status-badge status-badge--lg"
-                ><i class="uil uil-thumbs-up"></i
-              ></span>
-              96%
+        <div class="header__stat">
+          <p class="header__stat__number heading-3 status status--success">
+            <span class="status-badge status-badge--lg"><i class="uil uil-thumbs-up"></i></span>
+            96%
+          </p>
+          <p class="header__stat__label">Completion rate</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <ul class="grid-container tabs" data-tabs id="example-tabs">
+    <li class="tabs-title is-active">
+      <a href="#panel1" aria-selected="true">Dashboard</a>
+    </li>
+    <li class="tabs-title">
+      <a data-tabs-target="panel2" href="#panel2">Brief</a>
+    </li>
+    <li class="tabs-title">
+      <a data-tabs-target="panel2" href="#panel2">Staff</a>
+    </li>
+    <li class="tabs-title">
+      <a data-tabs-target="panel2" href="#panel2">Feedback</a>
+    </li>
+    <li class="tabs-title">
+      <a data-tabs-target="panel2" href="#panel2">Details</a>
+    </li>
+  </ul>
+
+  <div class="content grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-9">
+        <div class="onboarding margin-bottom--30">
+          <div class="onboarding__content">
+            <h2 class="heading-3 onboarding__title">Welcome to your event!</h2>
+            <p class="paragraph text-alpha--66 onboarding__description">
+              First things first. Make sure your staff gets briefed on time. Go to the “Brief” tab and start creating
+              this event’s brief and quiz.
             </p>
-            <p class="header__stat__label">Completion rate</p>
+            <a href="" class="link-arrow">Go to brief</a>
+          </div>
+          <img class="onboarding__graphic" src="/img/graphics/graphic-onboarding-devil.png" alt="devil">
+        </div>
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Color Scheme</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <div class="styleguide__colors">
+              <div class="styleguide__color styleguide__color--primary">
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-primary</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-primary-dark</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-primary-darker</code>
+                </div>
+                <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                  <code class="badge badge--code">$color-primary-faded</code>
+                </div>
+              </div>
+              <div class="styleguide__color styleguide__color--alert">
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-alert</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-alert-dark</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-alert-darker</code>
+                </div>
+                <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                  <code class="badge badge--code">$color-alert-faded</code>
+                </div>
+              </div>
+
+              <div class="styleguide__color styleguide__color--black">
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-black</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-black-alpha-66</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-black-alpha-35</code>
+                </div>
+                <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                  <code class="badge badge--code">$color-black-alpha-10</code>
+                </div>
+                <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                  <code class="badge badge--code">$color-black-alpha-5</code>
+                </div>
+              </div>
+
+              <div class="styleguide__color styleguide__color--sand">
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-sand</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-sand-dark</code>
+                </div>
+                <div class="styleguide__color__swatch">
+                  <code class="badge badge--code">$color-sand-darker</code>
+                </div>
+                <div class="styleguide__color__swatch styleguide__color__swatch--faded">
+                  <code class="badge badge--code">$color-sand-alt</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Typography</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h1 class="heading-1">Heading 1</h1>
+            <code class="badge badge--code margin-bottom--30">class="heading-1"</code>
+
+            <h2 class="heading-2">Heading 2</h2>
+            <code class="badge badge--code margin-bottom--30">class="heading-2"</code>
+
+            <h3 class="heading-3">Heading 3</h3>
+            <code class="badge badge--code margin-bottom--30">class="heading-3"</code>
+
+            <h4 class="heading-4">Heading 4</h4>
+            <code class="badge badge--code margin-bottom--30">class="heading-4"</code>
+
+            <p class="paragraph paragraph--lg">Paragraph large</p>
+            <code class="badge badge--code margin-bottom--30">class="paragraph--lg"</code>
+
+            <p class="paragraph">Paragraph default</p>
+            <code class="badge badge--code margin-bottom--30">class="paragraph"</code>
+
+            <p class="paragraph paragraph--sm">Paragraph small</p>
+            <code class="badge badge--code margin-bottom--30">class="paragraph--sm"</code>
+
+            <p class="paragraph paragraph--xs">Paragraph Xsmall</p>
+            <code class="badge badge--code">class="paragraph--xs"</code>
+          </div>
+        </div>
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Icons</h3>
+            <p class="paragraph text-alpha--35">Unicons by <a href="https://www.iconscout.com/unicons">Iconscout</a></p>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm margin-bottom--10 text-alpha--66">Icon Sizes</h3>
+            <div class="margin-bottom--10">
+              <i class="uil uil-edit uil--xs"></i>
+              <code class="badge badge--primary badge--code margin-left--10">12px</code>
+              <code class="badge badge--code">class="uil uil--xs uil-edit"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <i class="uil uil-edit uil--sm"></i>
+              <code class="badge badge--primary badge--code margin-left--10">16px</code>
+              <code class="badge badge--code">class="uil uil--sm uil-edit"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <i class="uil uil-edit"></i>
+              <code class="badge badge--primary badge--code margin-left--10">20px</code>
+              <code class="badge badge--code">class="uil uil-edit"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <i class="uil uil-edit uil--lg"></i>
+              <code class="badge badge--primary badge--code margin-left--10">24px</code>
+              <code class="badge badge--code">class="uil uil--lg uil-edit"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <i class="uil uil-edit uil--xl"></i>
+              <code class="badge badge--primary badge--code margin-left--10">28px</code>
+              <code class="badge badge--code">class="uil uil--xl uil-edit"</code>
+            </div>
+            <h3 class="paragraph--sm margin-top--30 margin-bottom--10 text-alpha--66">Common Icons</h3>
+            <i class="uil uil-edit"></i>
+            <i class="uil uil-cloud-download"></i>
+            <i class="uil uil-import"></i>
+            <i class="uil uil-eye"></i>
+            <i class="uil uil-trash"></i>
+            <i class="uil uil-user"></i>
+            <i class="uil uil-lock"></i>
+            <i class="uil uil-search"></i>
+            <i class="uil uil-ellipsis-h"></i>
+            <i class="uil uil-thumbs-up"></i>
+            <i class="uil uil-thumbs-down"></i>
+            <i class="uil uil-plus-square"></i>
+            <i class="uil uil-map"></i>
+            <i class="uil uil-map-pin"></i>
+            <i class="uil uil-arrow-from-right"></i>
+            <i class="uil uil-arrow-to-right"></i>
+            <i class="uil uil-angle-left"></i>
+            <i class="uil uil-angle-right"></i>
+            <i class="uil uil-times"></i>
+            <i class="uil uil-check"></i>
+          </div>
+        </div>
+
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Panels</h3>
+            <p class="paragraph text-alpha--35">Use panels to contain related information in a box with rounded corners!
+            </p>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <div class="panel margin-bottom--20">
+              <div class="panel__body">
+                <p class="paragraph margin-bottom--10">
+                  Regular panel
+                </p>
+                <p class="text-alpha--50">Use <code class="badge badge--code">class="panel"</code> to create a container
+                  with rounded corners.</p>
+                <p class="text-alpha--50">Add an element with <code class="badge badge--code">class="panel__body"</code>
+                  inside of a panel to add 20px padding on all sides.</p>
+              </div>
+            </div>
+            <button class="panel panel-interactive">
+              <span class="panel__body">
+                <p class="paragraph margin-bottom--10">
+                  Hover and click me!
+                </p>
+                <p class="text-alpha--50">Use <code class="badge badge--code">class="panel panel-interactive"</code> to
+                  make a panel look clickable!</p>
+              </span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Buttons</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Button Sizes</h3>
+            <div class="margin-bottom--10">
+              <button class="button button--sm">Small</button>
+              <code class="badge badge--primary badge--code margin-left--10">32px</code>
+              <code class="badge badge--code">class="button button--sm"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <button class="button">Default</button>
+              <code class="badge badge--primary badge--code margin-left--10">40px</code>
+              <code class="badge badge--code">class="button"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <button class="button button--lg">Large</button>
+              <code class="badge badge--primary badge--code margin-left--10">48px</code>
+              <code class="badge badge--code">class="button button--lg"</code>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66">Control the button width</h3>
+            <h3 class="paragraph--sm margin-bottom--20 text-alpha--35">Use any of the classes below to make the button
+              either full-width or square sized. You can combine them with any of the sizing classes above</h3>
+            <div class="margin-bottom--10">
+              <button class="button button--square button--sm">
+                <i class="uil uil-check-square"></i>
+              </button>
+              <button class="button button--square">
+                <i class="uil uil-check-square"></i>
+              </button>
+              <button class="button button--square button--lg">
+                <i class="uil uil-check-square"></i>
+              </button>
+              <code class="badge badge--primary badge--code margin-left--10">Square</code>
+              <code class="badge badge--code">class="button button--square"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <button class="button button--round button--sm">
+                <i class="uil uil-check-circle"></i>
+              </button>
+              <button class="button button--round">
+                <i class="uil uil-check-circle"></i>
+              </button>
+
+              <button class="button button--round button--lg">
+                <i class="uil uil-check-circle"></i>
+              </button>
+              <code class="badge badge--primary badge--code margin-left--10">Round</code>
+              <code class="badge badge--code">class="button button--round"</code>
+            </div>
+            <div>
+              <button class="button button--full">Full width</button>
+              <code class="badge badge--primary badge--code">100% width button</code>
+              <code class="badge badge--code">class="button button--full"</code>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Button Styles</h3>
+            <div class="margin-bottom--10">
+              <button class="button">Default</button>
+              <button class="button button--primary">Primary</button>
+              <button class="button button--alert">Alert</button>
+              <code class="badge badge--primary badge--code margin-left--10">Fill Buttons</code>
+              <code class="badge badge--code">class="button button--primary"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <button class="button button--outline">Default</button>
+              <button class="button button--outline button--primary">Primary</button>
+              <button class="button button--outline button--alert">Alert</button>
+              <code class="badge badge--primary badge--code margin-left--10">Outline Buttons</code>
+              <code class="badge badge--code">class="button button--outline button--primary"</code>
+            </div>
+            <div class="margin-bottom--10">
+              <button class="button button--transparent">Default</button>
+              <button class="button button--transparent button--primary">Primary</button>
+              <button class="button button--transparent button--alert">Alert</button>
+              <code class="badge badge--primary badge--code margin-left--10">Transparent Buttons</code>
+              <code class="badge badge--code">class="button button--transparent button--primary"</code>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Common buttons</h3>
+            <div class="margin-bottom--10">
+              <button class="button button--transparent button--sm button--primary">
+                <i class="uil uil-cloud-download"></i>
+                Download PDF
+              </button>
+              <code class="badge badge--primary badge--code margin-left--10">Transparent with icon</code>
+              <code class="badge badge--code">class="button button--transparent button--sm button--primary"</code>
+            </div>
+            <div>
+              <button id="load-primary" class="button button--primary">
+                <span class="button__loader"><img src="/img/icons/ic-spinner-white.svg"></span>
+                <span class="button__label">Click me to show a spinner</span>
+              </button>
+              <code class="badge badge--primary badge--code margin-left--10">Spinner button</code>
+              <code class="badge badge--code">Please check the markup</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Text Fields</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Text field sizes Sizes</h3>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input input--sm" placeholder="e.g. John" />
+              <label for="" class="label">Small input</label>
+            </div>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input" placeholder="e.g. John" />
+              <label for="" class="label">Default input</label>
+            </div>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input input--lg" placeholder="e.g. John" />
+              <label for="" class="label">Large input</label>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66">Input Styles</h3>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input" placeholder="" />
+              <label for="" class="label">Default input</label>
+            </div>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input input--fill" placeholder="e.g. John" />
+              <label for="" class="label">Flat input</label>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Other input types</h3>
+            <div class="form-group form-group--floating">
+              <div class="input-wrapper input-wrapper--icon-right">
+                <input type="text" class="input input--fill" placeholder="e.g. John Appleseed" />
+                <label for="" class="label">Input with icon to the right</label>
+                <i class="uil uil-search"></i>
+              </div>
+            </div>
+            <div class="form-group form-group--floating">
+              <div class="input-wrapper input-wrapper--icon-left">
+                <i class="uil uil-lock"></i>
+                <input type="password" class="input" placeholder="e.g. John Appleseed" />
+                <label for="" class="label">Input with icon to the left</label>
+              </div>
+            </div>
+            <div class="form-group form-group--floating">
+              <div class="input-wrapper input-wrapper--icon-left input-wrapper--button-right">
+                <i class="uil uil-search"></i>
+                <input type="text" class="input" placeholder="Placeholder" />
+                <label for="" class="label">Combination of left icon and right button</label>
+                <button class="button button--transparent button--square button--alert" aria-label="Clear">
+                  <i class="uil uil-times-circle"></i>
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="label">Input without the floating label</label>
+              <input type="email" class="input" placeholder="e.g. John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="" class="label">Select field</label>
+              <select type="text" class="input input--fill input--select">
+                <option value="">Option 1</option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+                <option value="">Option 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Invalid fields</h3>
+            <div class="form-group form-group--floating">
+              <input type="text" class="input" placeholder="e.g. John Appleseed" invalid />
+              <label for="" class="label">User</label>
+              <div class="form-message form-message--alert">
+                <p class="paragraph paragraph--sm">
+                  This field is required.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Other interactive elements</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Links</h3>
+            <div class="margin-bottom--10">
+              <a href="">Regular link</a>
+              <code class="badge badge--code margin-left--10">Just an &lt;a href="" /&gt; tag</code>
+            </div>
+            <div class="margin-bottom--10">
+              <a class="link-arrow" href="">Link with cool arrow</a>
+              <code class="badge badge--code margin-left--10">class="link-arow"</code>
+            </div>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Checkboxes</h3>
+            <label class="control">
+              <input class="checkbox" type="checkbox" /> Checkbox label
+            </label>
+            <label class="control">
+              <input class="checkbox" type="checkbox" /> Checkbox label
+            </label>
+            <label class="control">
+              <input class="checkbox" type="checkbox" /> Checkbox label
+            </label>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Radio buttons</h3>
+            <label class="control">
+              <input class="radio" name="styleguide-radio" type="radio" />
+              Radio button label
+            </label>
+            <label class="control">
+              <input class="radio" name="styleguide-radio" type="radio" />
+              Radio button label
+            </label>
+            <label class="control">
+              <input class="radio" name="styleguide-radio" type="radio" />
+              Radio button label
+            </label>
+          </div>
+        </div>
+
+
+        <div class="panel margin-bottom--60">
+          <div class="panel__body">
+            <h3 class="paragraph">Other interactive elements</h3>
+          </div>
+          <div class="panel__separator"></div>
+          <div class="panel__body">
+            <button data-open="reveal-form" class="button button--full button--primary">
+              Click me for a fullscreen modal
+            </button>
           </div>
         </div>
       </div>
-    </header>
-    <ul class="grid-container tabs" data-tabs id="example-tabs">
-      <li class="tabs-title is-active">
-        <a href="#panel1" aria-selected="true">Dashboard</a>
-      </li>
-      <li class="tabs-title">
-        <a data-tabs-target="panel2" href="#panel2">Brief</a>
-      </li>
-      <li class="tabs-title">
-        <a data-tabs-target="panel2" href="#panel2">Staff</a>
-      </li>
-      <li class="tabs-title">
-        <a data-tabs-target="panel2" href="#panel2">Feedback</a>
-      </li>
-      <li class="tabs-title">
-        <a data-tabs-target="panel2" href="#panel2">Details</a>
-      </li>
-    </ul>
-
-    <div class="content grid-container">
-      <div class="grid-x grid-margin-x">
-        <div class="cell medium-9">
-          <div class="onboarding margin-bottom--30">
-            <div class="onboarding__content">
-              <h2 class="heading-3 onboarding__title">Welcome to your event!</h2>
-              <p class="paragraph text-alpha--66 onboarding__description">
-                First things first. Make sure your staff gets briefed on time. Go to the “Brief” tab and start creating this event’s brief and quiz.
-              </p>
-              <a href="" class="link-arrow">Go to brief</a>
-            </div>
-            <img class="onboarding__graphic" src="/img/graphics/graphic-onboarding-devil.png" alt="devil">
-          </div>
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Color Scheme</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <div class="styleguide__colors">
-                <div class="styleguide__color styleguide__color--primary">
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-primary</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-primary-dark</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-primary-darker</code>
-                  </div>
-                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
-                    <code class="badge badge--code">$color-primary-faded</code>
-                  </div>
-                </div>
-                <div class="styleguide__color styleguide__color--alert">
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-alert</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-alert-dark</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-alert-darker</code>
-                  </div>
-                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
-                    <code class="badge badge--code">$color-alert-faded</code>
-                  </div>
-                </div>
-
-                <div class="styleguide__color styleguide__color--black">
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-black</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-black-alpha-66</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-black-alpha-35</code>
-                  </div>
-                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
-                    <code class="badge badge--code">$color-black-alpha-10</code>
-                  </div>
-                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
-                    <code class="badge badge--code">$color-black-alpha-5</code>
-                  </div>
-                </div>
-
-                <div class="styleguide__color styleguide__color--sand">
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-sand</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-sand-dark</code>
-                  </div>
-                  <div class="styleguide__color__swatch">
-                    <code class="badge badge--code">$color-sand-darker</code>
-                  </div>
-                  <div class="styleguide__color__swatch styleguide__color__swatch--faded">
-                    <code class="badge badge--code">$color-sand-alt</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Typography</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h1 class="heading-1">Heading 1</h1>
-              <code class="badge badge--code margin-bottom--30">class="heading-1"</code>
-
-              <h2 class="heading-2">Heading 2</h2>
-              <code class="badge badge--code margin-bottom--30">class="heading-2"</code>
-
-              <h3 class="heading-3">Heading 3</h3>
-              <code class="badge badge--code margin-bottom--30">class="heading-3"</code>
-
-              <h4 class="heading-4">Heading 4</h4>
-              <code class="badge badge--code margin-bottom--30">class="heading-4"</code>
-
-              <p class="paragraph paragraph--lg">Paragraph large</p>
-              <code class="badge badge--code margin-bottom--30">class="paragraph--lg"</code>
-
-              <p class="paragraph">Paragraph default</p>
-              <code class="badge badge--code margin-bottom--30">class="paragraph"</code>
-
-              <p class="paragraph paragraph--sm">Paragraph small</p>
-              <code class="badge badge--code margin-bottom--30">class="paragraph--sm"</code>
-
-              <p class="paragraph paragraph--xs">Paragraph Xsmall</p>
-              <code class="badge badge--code">class="paragraph--xs"</code>
-            </div>
-          </div>
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Icons</h3>
-              <p class="paragraph text-alpha--35">Unicons by <a href="https://www.iconscout.com/unicons">Iconscout</a></p>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm margin-bottom--10 text-alpha--66">Icon Sizes</h3>
-              <div class="margin-bottom--10">
-                <i class="uil uil-edit uil--xs"></i>
-                <code class="badge badge--primary badge--code margin-left--10">12px</code>
-                <code class="badge badge--code">class="uil uil--xs uil-edit"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <i class="uil uil-edit uil--sm"></i>
-                <code class="badge badge--primary badge--code margin-left--10">16px</code>
-                <code class="badge badge--code">class="uil uil--sm uil-edit"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <i class="uil uil-edit"></i>
-                <code class="badge badge--primary badge--code margin-left--10">20px</code>
-                <code class="badge badge--code">class="uil uil-edit"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <i class="uil uil-edit uil--lg"></i>
-                <code class="badge badge--primary badge--code margin-left--10">24px</code>
-                <code class="badge badge--code">class="uil uil--lg uil-edit"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <i class="uil uil-edit uil--xl"></i>
-                <code class="badge badge--primary badge--code margin-left--10">28px</code>
-                <code class="badge badge--code">class="uil uil--xl uil-edit"</code>
-              </div>
-              <h3 class="paragraph--sm margin-top--30 margin-bottom--10 text-alpha--66">Common Icons</h3>
-              <i class="uil uil-edit"></i>
-              <i class="uil uil-cloud-download"></i>
-              <i class="uil uil-import"></i>
-              <i class="uil uil-eye"></i>
-              <i class="uil uil-trash"></i>
-              <i class="uil uil-user"></i>
-              <i class="uil uil-lock"></i>
-              <i class="uil uil-search"></i>
-              <i class="uil uil-ellipsis-h"></i>
-              <i class="uil uil-thumbs-up"></i>
-              <i class="uil uil-thumbs-down"></i>
-              <i class="uil uil-plus-square"></i>
-              <i class="uil uil-map"></i>
-              <i class="uil uil-map-pin"></i>
-              <i class="uil uil-arrow-from-right"></i>
-              <i class="uil uil-arrow-to-right"></i>
-              <i class="uil uil-angle-left"></i>
-              <i class="uil uil-angle-right"></i>
-              <i class="uil uil-times"></i>
-              <i class="uil uil-check"></i>
-            </div>
-          </div>
-
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Panels</h3>
-              <p class="paragraph text-alpha--35">Use panels to contain related information in a box with rounded corners!</p>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <div class="panel margin-bottom--20">
-                <div class="panel__body">
-                  <p class="paragraph margin-bottom--10">
-                    Regular panel
-                  </p>
-                  <p class="text-alpha--50">Use <code class="badge badge--code">class="panel"</code> to create a container with rounded corners.</p>
-                  <p class="text-alpha--50">Add an element with <code class="badge badge--code">class="panel__body"</code> inside of a panel to add 20px padding on all sides.</p>
-                </div>
-              </div>
-              <button class="panel panel-interactive">
-                  <span class="panel__body">
-                    <p class="paragraph margin-bottom--10">
-                      Hover and click me!
-                    </p>
-                    <p class="text-alpha--50">Use <code class="badge badge--code">class="panel panel-interactive"</code> to make a panel look clickable!</p>
-                  </span>
-              </button>
-            </div>
-          </div>
-
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Buttons</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Button Sizes</h3>
-              <div class="margin-bottom--10">
-                <button class="button button--sm">Small</button>
-                <code class="badge badge--primary badge--code margin-left--10">32px</code>
-                <code class="badge badge--code">class="button button--sm"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <button class="button">Default</button>
-                <code class="badge badge--primary badge--code margin-left--10">40px</code>
-                <code class="badge badge--code">class="button"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <button class="button button--lg">Large</button>
-                <code class="badge badge--primary badge--code margin-left--10">48px</code>
-                <code class="badge badge--code">class="button button--lg"</code>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66">Control the button width</h3>
-              <h3 class="paragraph--sm margin-bottom--20 text-alpha--35">Use any of the classes below to make the button either full-width or square sized. You can combine them with any of the sizing classes above</h3>
-              <div class="margin-bottom--10">
-                <button class="button button--square button--sm">
-                  <i class="uil uil-check-square"></i>
-                </button>
-                <button class="button button--square">
-                  <i class="uil uil-check-square"></i>
-                </button>
-                <button class="button button--square button--lg">
-                  <i class="uil uil-check-square"></i>
-                </button>
-                <code class="badge badge--primary badge--code margin-left--10">Square</code>
-                <code class="badge badge--code">class="button button--square"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <button class="button button--round button--sm">
-                  <i class="uil uil-check-circle"></i>
-                </button>
-                <button class="button button--round">
-                  <i class="uil uil-check-circle"></i>
-                </button>
-
-                <button class="button button--round button--lg">
-                  <i class="uil uil-check-circle"></i>
-                </button>
-                <code class="badge badge--primary badge--code margin-left--10">Round</code>
-                <code class="badge badge--code">class="button button--round"</code>
-              </div>
-              <div>
-                <button class="button button--full">Full width</button>
-                <code class="badge badge--primary badge--code">100% width button</code>
-                <code class="badge badge--code">class="button button--full"</code>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Button Styles</h3>
-              <div class="margin-bottom--10">
-                <button class="button">Default</button>
-                <button class="button button--primary">Primary</button>
-                <button class="button button--alert">Alert</button>
-                <code class="badge badge--primary badge--code margin-left--10">Fill Buttons</code>
-                <code class="badge badge--code">class="button button--primary"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <button class="button button--outline">Default</button>
-                <button class="button button--outline button--primary">Primary</button>
-                <button class="button button--outline button--alert">Alert</button>
-                <code class="badge badge--primary badge--code margin-left--10">Outline Buttons</code>
-                <code class="badge badge--code">class="button button--outline button--primary"</code>
-              </div>
-              <div class="margin-bottom--10">
-                <button class="button button--transparent">Default</button>
-                <button class="button button--transparent button--primary">Primary</button>
-                <button class="button button--transparent button--alert">Alert</button>
-                <code class="badge badge--primary badge--code margin-left--10">Transparent Buttons</code>
-                <code class="badge badge--code">class="button button--transparent button--primary"</code>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Common buttons</h3>
-              <div class="margin-bottom--10">
-                <button class="button button--transparent button--sm button--primary">
-                  <i class="uil uil-cloud-download"></i>
-                  Download PDF
-                </button>
-                <code class="badge badge--primary badge--code margin-left--10">Transparent with icon</code>
-                <code class="badge badge--code">class="button button--transparent button--sm button--primary"</code>
-              </div>
-              <div>
-                <button id="load-primary" class="button button--primary">
-                  <span class="button__loader"><img src="/img/icons/ic-spinner-white.svg"></span>
-                  <span class="button__label">Click me to show a spinner</span>
-                </button>
-                <code class="badge badge--primary badge--code margin-left--10">Spinner button</code>
-                <code class="badge badge--code">Please check the markup</code>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Text Fields</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm margin-bottom--20 text-alpha--66">Text field sizes Sizes</h3>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input input--sm" placeholder="e.g. John" />
-                <label for="" class="label">Small input</label>
-              </div>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input" placeholder="e.g. John" />
-                <label for="" class="label">Default input</label>
-              </div>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input input--lg" placeholder="e.g. John" />
-                <label for="" class="label">Large input</label>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66">Input Styles</h3>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input" placeholder="" />
-                <label for="" class="label">Default input</label>
-              </div>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input input--fill" placeholder="e.g. John" />
-                <label for="" class="label">Flat input</label>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Other input types</h3>
-              <div class="form-group form-group--floating">
-                <div class="input-wrapper input-wrapper--icon-right">
-                  <input type="text" class="input input--fill" placeholder="e.g. John Appleseed" />
-                  <label for="" class="label">Input with icon to the right</label>
-                  <i class="uil uil-search"></i>
-                </div>
-              </div>
-              <div class="form-group form-group--floating">
-                <div class="input-wrapper input-wrapper--icon-left">
-                  <i class="uil uil-lock"></i>
-                  <input type="password" class="input" placeholder="e.g. John Appleseed" />
-                  <label for="" class="label">Input with icon to the left</label>
-                </div>
-              </div>
-              <div class="form-group form-group--floating">
-                <div class="input-wrapper input-wrapper--icon-left input-wrapper--button-right">
-                  <i class="uil uil-search"></i>
-                  <input type="text" class="input" placeholder="Placeholder" />
-                  <label for="" class="label">Combination of left icon and right button</label>
-                  <button
-                      class="button button--transparent button--square button--alert"
-                      aria-label="Clear"
-                  >
-                    <i class="uil uil-times-circle"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="" class="label">Input without the floating label</label>
-                <input type="email" class="input" placeholder="e.g. John Doe" />
-              </div>
-              <div class="form-group">
-                <label for="" class="label">Select field</label>
-                <select type="text" class="input input--fill input--select">
-                  <option value="">Option 1</option>
-                  <option value="">Option 2</option>
-                  <option value="">Option 3</option>
-                  <option value="">Option 4</option>
-                </select>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Invalid fields</h3>
-              <div class="form-group form-group--floating">
-                <input type="text" class="input" placeholder="e.g. John Appleseed" invalid />
-                <label for="" class="label">User</label>
-                <div class="form-message form-message--alert">
-                  <p class="paragraph paragraph--sm">
-                    This field is required.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Other interactive elements</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Links</h3>
-              <div class="margin-bottom--10">
-                <a href="">Regular link</a>
-                <code class="badge badge--code margin-left--10">Just an &lt;a href="" /&gt; tag</code>
-              </div>
-              <div class="margin-bottom--10">
-                <a class="link-arrow" href="">Link with cool arrow</a>
-                <code class="badge badge--code margin-left--10">class="link-arow"</code>
-              </div>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Checkboxes</h3>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-              <label class="control">
-                <input class="checkbox" type="checkbox" /> Checkbox label
-              </label>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <h3 class="paragraph--sm text-alpha--66 margin-bottom--20">Radio buttons</h3>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-              <label class="control">
-                <input class="radio" name="styleguide-radio" type="radio" />
-                Radio button label
-              </label>
-            </div>
-          </div>
-
-
-          <div class="panel margin-bottom--60">
-            <div class="panel__body">
-              <h3 class="paragraph">Other interactive elements</h3>
-            </div>
-            <div class="panel__separator"></div>
-            <div class="panel__body">
-              <button data-open="reveal-form" class="button button--full button--primary">
-                Click me for a fullscreen modal
-              </button>
-            </div>
+      <div class="cell medium-9 margin-bottom--60">
+        <div class="panel margin-bottom--20">
+          <div class="panel__body">
+            <h3 class="paragraph">Tables</h3>
+            <p class="paragraph text-alpha--35">Note how the header docks to the top</p>
           </div>
         </div>
-        <div class="cell medium-9 margin-bottom--60">
-          <div class="panel margin-bottom--20">
-            <div class="panel__body">
-              <h3 class="paragraph">Tables</h3>
-              <p class="paragraph text-alpha--35">Note how the header docks to the top</p>
-            </div>
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th><button class="table__sort">Name</button></th>
-                <th><button class="table__sort">Phone</button></th>
-                <th><button class="table__sort table__sort--down">Joined</button></th>
-                <th class="cell--align-right"><button class="table__sort">Briefed</button></th>
-                <th class="cell--align-right"><button class="table__sort">Score</button></th>
-                <th class="cell--align-right"><button class="table__sort">Attempts</button></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="avatar avatar--placeholder">
-                    A
-                  </div>
-                  <span class="text-alpha--66">amanda@acmeinc.com</span>
-                </td>
-                <td></td>
-                <td>
-                  <span class="badge">Pending</span>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status">
-                    <span class="status-badge"><i class="uil uil-minus"></i></span>
-                    0%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status">
-                    <span class="status-badge"><i class="uil uil-minus"></i></span>
-                    0%
-                  </p>
-                </td>
-                <td class="cell--align-right">0</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent" data-toggle="table__dropdown">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                  <div
-                      class="dropdown-pane"
-                      data-position="bottom"
-                      data-alignment="right"
-                      id="table__dropdown"
-                      data-dropdown
-                      data-close-on-click="true"
-                  >
-                    <ul class="menu menu--vertical">
-                      <li>
-                        <a class="menu-item" href=""><i class="uil uil-user-square"></i>View profile</a>
-                      </li>
-                      <li>
-                        <a class="menu-item menu-item--alert" href=""><i class="uil uil-ban"></i>Remove from event</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr><tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar"/>
-                  <span>John Kevin Raymond Appleseed</span>
-                </td>
-                <td>555 321 4578</td>
-                <td>3 days ago</td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--success">
-                    <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
-                    100%
-                  </p>
-                </td>
-                <td class="cell--align-right cell__text--strong">
-                  <p class="status status--alert">
-                    <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
-                    50%
-                  </p>
-                </td>
-                <td class="cell--align-right">3</td>
-                <td class="cell--actions">
-                  <button class="button button--sm button--square button--transparent">
-                    <i class="uil uil-ellipsis-h"></i>
-                  </button>
-                </td>
-              </tr>
+        <table class="table">
+          <thead>
+            <tr>
+              <th><button class="table__sort">Name</button></th>
+              <th><button class="table__sort">Phone</button></th>
+              <th><button class="table__sort table__sort--down">Joined</button></th>
+              <th class="cell--align-right"><button class="table__sort">Briefed</button></th>
+              <th class="cell--align-right"><button class="table__sort">Score</button></th>
+              <th class="cell--align-right"><button class="table__sort">Attempts</button></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="avatar avatar--placeholder">
+                  A
+                </div>
+                <span class="text-alpha--66">amanda@acmeinc.com</span>
+              </td>
+              <td></td>
+              <td>
+                <span class="badge">Pending</span>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status">
+                  <span class="status-badge"><i class="uil uil-minus"></i></span>
+                  0%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status">
+                  <span class="status-badge"><i class="uil uil-minus"></i></span>
+                  0%
+                </p>
+              </td>
+              <td class="cell--align-right">0</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent" data-toggle="table__dropdown">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+                <div class="dropdown-pane" data-position="bottom" data-alignment="right" id="table__dropdown"
+                  data-dropdown data-close-on-click="true">
+                  <ul class="menu menu--vertical">
+                    <li>
+                      <a class="menu-item" href=""><i class="uil uil-user-square"></i>View profile</a>
+                    </li>
+                    <li>
+                      <a class="menu-item menu-item--alert" href=""><i class="uil uil-ban"></i>Remove from event</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/img/dev/profile-pic-staff.jpg" alt="" class="avatar" />
+                <span>John Kevin Raymond Appleseed</span>
+              </td>
+              <td>555 321 4578</td>
+              <td>3 days ago</td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--success">
+                  <span class="status-badge"><i class="uil uil-thumbs-up"></i></span>
+                  100%
+                </p>
+              </td>
+              <td class="cell--align-right cell__text--strong">
+                <p class="status status--alert">
+                  <span class="status-badge"><i class="uil uil-thumbs-down"></i></span>
+                  50%
+                </p>
+              </td>
+              <td class="cell--align-right">3</td>
+              <td class="cell--actions">
+                <button class="button button--sm button--square button--transparent">
+                  <i class="uil uil-ellipsis-h"></i>
+                </button>
+              </td>
+            </tr>
 
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div
-      class="reveal full"
-      id="reveal-form"
-      data-reveal
-      data-animation-in="reveal-full-slide-in"
-      data-animation-out="reveal-full-slide-out"
-    >
-      <button
-        class="close-button button button--fill button--square button--lg"
-        data-close
-        aria-label="Close modal"
-      >
-          <i class="uil uil-times"></i>
+    <div class="reveal full" id="reveal-form" data-reveal data-animation-in="reveal-full-slide-in"
+      data-animation-out="reveal-full-slide-out">
+      <button class="close-button button button--fill button--square button--lg" data-close aria-label="Close modal">
+        <i class="uil uil-times"></i>
       </button>
       <div class="grid-container grid-container--sm">
         <div class="grid-x grid-margin-x">
@@ -1339,7 +1320,8 @@
                 Welcome to Vericrew.
               </h2>
               <p class="paragraph text-alpha--66">
-                You were invited to join an event crew on Vericrew. First, create your account. Already have one? <a href="">Sign in.</a>
+                You were invited to join an event crew on Vericrew. First, create your account. Already have one? <a
+                  href="">Sign in.</a>
               </p>
             </div>
             <div class="reveal__body">
@@ -1395,5 +1377,6 @@
 
     <!-- Main JS -->
     <script type="text/javascript" src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

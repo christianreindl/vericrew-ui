@@ -1,0 +1,103 @@
+import { Meta, Canvas, Story, Props } from "@storybook/addon-docs/blocks";
+
+<Meta
+  title="Components/Input"
+  argTypes={{
+    label: {
+      name: "Label",
+      control: "text",
+    },
+    size: {
+      name: "Size",
+      type: "select",
+      options: ["Default", "input--sm", "input--lg"],
+    },
+    style: {
+      name: "Style",
+      type: "select",
+      options: ["Default", "input--fill"],
+    },
+    floatingLabel: { name: "Floating label", control: "boolean" },
+    invalid: { name: "Invalid", control: "boolean" },
+  }}
+/>
+
+# Input
+
+Buttons are used to show the user’s choice of options for actions and assign these to a clear hierarchy. A button helps the user to find the most important actions of a page or within a viewport and enables them to perform these actions. The label is used to clearly indicate to the user what action will be triggered. Buttons allow users to commit a change, complete steps in a task, or make choices.
+
+Any DOM element can be a button as long as it has the class `button` applied. I.e. you can use the `button` class on a `<button></button>`, `<a href="#"></a>` or any other element. To modify your button's appearance use any of the classes specified below.
+
+
+export const Input = ({
+  label = "Enter something",
+  size = "",
+  style = "",
+  floatingLabel = true,
+  invalid = false,
+}) => {
+  return floatingLabel
+    ? ` <div class="form-group form-group--floating">
+          <input type="text" class="input ${size} ${style}" placeholder="Placeholder" ${invalid ? 'Invalid' : ''}/>
+          <label for="" class="label">${label}</label>
+          ${invalid ? '<div class="form-message form-message--alert"><p class="paragraph paragraph--sm">This field is required.</p></div>' : ''}
+        </div>`
+    : ` <div class="form-group">
+          <label for="" class="label">${label}</label>
+          <input type="email" class="input ${size} ${style}" placeholder="Placeholder" />
+          ${invalid ? '<div class="form-message form-message--alert"><p class="paragraph paragraph--sm">This field is required.</p></div>' : ''}
+        </div>`;
+};
+
+
+<Canvas>
+  <Story name="Input">{Input.bind({})}</Story>
+</Canvas>
+
+<Props story="Input" />
+
+## Button Intent
+
+By default a button has a height of 32px. Use classes `button--sm` (24px height) or `button--lg` (48px height) to modify a button's size. You can combine them with any of the other appearance classes.
+
+<Canvas>
+  <button class="button">Default</button>
+  <button class="button button--primary">Primary button</button>
+  <button class="button button--alert">Alert button</button>
+</Canvas>
+
+## Button Style
+
+By default a button has a height of 32px. Use classes `button--sm` (24px height) or `button--lg` (48px height) to modify a button's size. You can combine them with any of the other appearance classes.
+
+<Canvas>
+  <button class="button button--primary">Default</button>
+  <button class="button button--primary button--outline">Outline button</button>
+  <button class="button button--primary button--transparent">
+    Transparent button
+  </button>
+</Canvas>
+
+## Button Size
+
+By default a button has a height of 32px. Use classes `button--sm` (24px height) or `button--lg` (48px height) to modify a button's size. You can combine them with any of the other appearance classes.
+
+<Canvas>
+  <button class="button button--sm">Small</button>
+  <button class="button">Default</button>
+  <button class="button button--lg">Large</button>
+</Canvas>
+
+## Button Shape
+
+Use classes `button--square` (square shape) `button--round` (circle shape) or `button--full` to control a button's width. You can combine them with any of the other appearance classes. Note that square and circular buttons only work well with an icon but no label. When using icon buttons that don't have a readable label add the ` arial-label` property so they remain accessible.
+
+<Canvas>
+  <button class="button button--square" aria-label="Edit">
+    <i class="uil uil-edit"></i>
+  </button>
+  <button class="button button--round" aria-label="Edit">
+    <i class="uil uil-edit"></i>
+  </button>
+  <button class="button button--full">Full width</button>
+</Canvas>

@@ -1,0 +1,64 @@
+import { Meta, Canvas, Props, Story } from "@storybook/addon-docs/blocks";
+
+<Meta title="General/Icon"
+  argTypes={{
+    icon: {
+      name: "Icon",
+      control: "text",
+    },
+    size: {
+      name: "Size Class",
+      type: "select",
+      options: ["Default", "uil--xs", "uil--sm", "uil--lg", "uil--xl"],
+    },
+  }} />
+
+# Icons
+
+export const Icon = ({
+  icon = "search",
+  size = "",
+}) => {
+  return `<i class="uil uil-${icon} ${size}"></i>`
+};
+
+<Canvas>
+  <Story name="Icon">{Icon.bind({})}</Story>
+</Canvas>
+
+<Props story="Icon" />
+
+## Icon Sizes
+
+<Canvas>
+  <i class="uil uil-search uil--xs"></i>
+  <i class="uil uil-search uil--sm"></i>
+  <i class="uil uil-search"></i>
+  <i class="uil uil-search uil--lg"></i>
+  <i class="uil uil-search uil--xl"></i>
+</Canvas>
+
+## Common Icons
+
+<Canvas>
+  <i class="uil uil-edit"></i>
+  <i class="uil uil-cloud-download"></i>
+  <i class="uil uil-import"></i>
+  <i class="uil uil-eye"></i>
+  <i class="uil uil-trash"></i>
+  <i class="uil uil-user"></i>
+  <i class="uil uil-lock"></i>
+  <i class="uil uil-search"></i>
+  <i class="uil uil-ellipsis-h"></i>
+  <i class="uil uil-thumbs-up"></i>
+  <i class="uil uil-thumbs-down"></i>
+  <i class="uil uil-plus-square"></i>
+  <i class="uil uil-map"></i>
+  <i class="uil uil-map-pin"></i>
+  <i class="uil uil-arrow-from-right"></i>
+  <i class="uil uil-arrow-to-right"></i>
+  <i class="uil uil-angle-left"></i>
+  <i class="uil uil-angle-right"></i>
+  <i class="uil uil-times"></i>
+  <i class="uil uil-check"></i>
+</Canvas>

@@ -1,0 +1,81 @@
+import { Meta, Canvas, Story, EmptyBlock } from "@storybook/addon-docs/blocks";
+
+import { customTypeset } from "./assets/CustomTypeset";
+
+<style>
+  {`
+    .typeset__specimen {
+        padding-bottom: 64px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .typeset__specimen:last-child {
+        border: none; 
+        margin: 0;
+    }
+
+    .typeset__specimen__specs {
+        font-size: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .typeset__specimen__classname {
+        font-family: monospace, monospace;
+        opacity: 0.4;
+    }
+
+    .typeset__specimen__size {
+        font-weight: bold;
+    }
+
+    .docs-block {
+        position: relative;
+        overflow: hidden;
+        margin: 25px 0 40px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: rgb(0 0 0 / 10%) 0 1px 3px 0;
+        border: 1px solid #0000001a;
+    }
+
+    `}
+</style>
+
+<Meta title="General/Type" />
+
+export const typeSpecimens = [
+  { className: "heading-1", sampleText: "Heading 1" },
+  { className: "heading-2", sampleText: "Heading 2" },
+  { className: "heading-3", sampleText: "Heading 3" },
+  { className: "heading-4", sampleText: "Heading 4" },
+  { className: "paragraph paragraph--lg", sampleText: "Body Large" },
+  { className: "paragraph", sampleText: "Body Default" },
+  { className: "paragraph paragraph--sm", sampleText: "Body Small" },
+  { className: "paragraph paragraph--xs", sampleText: "Body XSmall" },
+];
+
+# Type
+
+## Typeface
+
+|  | Font Name | Font Weights | Font Stack |
+| --------  | --------  | --------     | --------   |
+| **Primary** | P22 Mackinac Pro     |`300` `400` |   `“Recoleta”, serif;`    |
+| **Secondary** | Inter     |`300` `400` `500` |   `“Inter”, "Helvetica Neue", system-ui, -apple-system;`    |
+
+
+## Type Scale
+
+<Canvas>
+  <Story
+    name="Type"
+    args={{
+      specimens: typeSpecimens,
+    }}
+  >
+    {customTypeset.bind({})}
+  </Story>
+</Canvas>
